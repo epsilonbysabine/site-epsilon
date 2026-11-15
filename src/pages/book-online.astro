@@ -1,0 +1,80 @@
+---
+import Base from '../layouts/Base.astro';
+import PageHead from '../components/PageHead.astro';
+import { getServices } from '../lib/wix';
+import { site } from '../config/site';
+const services = await getServices();
+const clientId = import.meta.env.PUBLIC_WIX_CLIENT_ID;
+---
+<Base title="Réservation en ligne | Epsilon" description="Réservez en ligne un entretien de 30 minutes ou un atelier de préparation mentale avec Sabine Djaouane." contact={false}>
+  <PageHead
+    eyebrow="Réservation en ligne"
+    title="Réserver un créneau"
+    lead="Un échange de 30 minutes suffit pour voir si nous pouvons travailler ensemble. Appelez-moi ou réservez directement un créneau."
+  />
+  <section class="section section-tint">
+    <div class="wrap stack-lg">
+      <div class="grid-3">
+        {services.map((service) => (
+          <article class="panel-card">
+            {service.image && <img src={service.image} alt="" loading="lazy" style="border-radius: 0.8rem; aspect-ratio: 3/2; object-fit: cover; width: 100%" />}
+            {service.tagLine && <p class="eyebrow">{service.tagLine}</p>}
+            <h2 style="font-size: var(--step-2)">{service.name}</h2>
+            <div class="prose" style="font-size: 0.98rem">
+              {service.description.split(/\n{2,}/).map((block) => {
+                const lines = block.split('\n');
+                const items = lines.filter((l) => l.trim().startsWith('- '));
+                const text = lines.filter((l) => !l.trim().startsWith('- ')).join(' ');
+                return (
+                  <>
+                    {text && <p>{text}</p>}
+                    {items.length > 0 && <ul>{items.map((i) => <li>{i.trim().slice(2)}</li>)}</ul>}
+                  </>
+                );
+              })}
+            </div>
+            <button class="btn btn-primary" type="button" data-book data-client-id={clientId}>Réserver</button>
+          </article>
+        ))}
+      </div>
+      <p class="form-status" id="booking-status" role="status" aria-live="polite" style="color: var(--violet)"></p>
+      <p>
+        Vous préférez en parler de vive voix ? Appelez-moi au <a href={site.phoneHref}><strong>{site.phone}</strong></a>.
+      </p>
+    </div>
+  </section>
+</Base>
+
+<script>
+  // La réservation se termine sur les pages sécurisées de Wix Bookings (choix du créneau, coordonnées, paiement),
+  // puis le visiteur revient sur le site.
+  import { createClient, OAuthStrategy } from '@wix/sdk';
+  import { redirects } from '@wix/redirects';
+
+  const status = document.querySelector<HTMLElement>('#booking-status')!;
+  const phoneMessage = 'La réservation en ligne est momentanément indisponible. Appelez-moi au 06.70.79.24.63.';
+
+  document.querySelectorAll<HTMLButtonElement>('[data-book]').forEach((button) => {
+    button.addEventListener('click', async () => {
+      const clientId = button.dataset.clientId;
+      if (!clientId) {
+        status.textContent = phoneMessage;
+        return;
+      }
+      button.disabled = true;
+      status.textContent = 'Ouverture du calendrier…';
+      try {
+        const wix = createClient({ modules: { redirects }, auth: OAuthStrategy({ clientId }) });
+        const { redirectSession } = await wix.redirects.createRedirectSession({
+          bookingsBook: {},
+          callbacks: { postFlowUrl: window.location.origin },
+        });
+        window.location.href = redirectSession!.fullUrl!;
+      } catch (error) {
+        console.error(error);
+        status.textContent = phoneMessage;
+        button.disabled = false;
+      }
+    });
+  });
+</script>

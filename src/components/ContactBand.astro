@@ -1,0 +1,81 @@
+---
+import { site, contactForm } from '../config/site';
+import Bird from './Bird.astro';
+const formId = import.meta.env.PUBLIC_WIX_FORM_ID;
+const clientId = import.meta.env.PUBLIC_WIX_CLIENT_ID;
+const showForm = Boolean(formId && clientId);
+---
+<section class="contact-band section" id="contact">
+  <Bird />
+  <div class="wrap contact-grid">
+    <div class="stack">
+      <p class="eyebrow" style="color: var(--lime)">Contact</p>
+      <h2>Parlons de votre objectif</h2>
+      <p class="lead" style="color: var(--on-dark-soft)">
+        Un échange de 30 minutes suffit pour voir si nous pouvons travailler ensemble. Appelez-moi ou réservez directement un créneau.
+      </p>
+      <div class="hero-actions">
+        <a class="btn btn-lime" href="/book-online">Réserver un entretien de 30 minutes</a>
+      </div>
+    </div>
+    <div class="stack">
+      <address class="contact-card">
+        <a class="phone" href={site.phoneHref}>{site.phone}</a>
+        <strong>Votre coach : DJAOUANE Sabine</strong>
+        {site.address.map((line) => <span>{line}</span>)}
+        <a href={`mailto:${site.email}`}>{site.email}</a>
+      </address>
+      {showForm && (
+        <form class="form" id="contact-form" data-form-id={formId} data-client-id={clientId} data-fields={JSON.stringify(contactForm.fields)}>
+          <label for="contact-name">Nom
+            <input id="contact-name" name="name" autocomplete="name" required />
+          </label>
+          <label for="contact-email">E-mail
+            <input id="contact-email" name="email" type="email" autocomplete="email" required />
+          </label>
+          <label for="contact-phone">Téléphone
+            <input id="contact-phone" name="phone" type="tel" autocomplete="tel" />
+          </label>
+          <label for="contact-message">Votre message
+            <textarea id="contact-message" name="message" rows="4" required></textarea>
+          </label>
+          <button class="btn btn-on-dark" type="submit">Envoyer le message</button>
+          <p class="form-status" role="status" aria-live="polite"></p>
+        </form>
+      )}
+    </div>
+  </div>
+</section>
+{showForm && (
+  <script>
+    import { createClient, OAuthStrategy } from '@wix/sdk';
+    import { submissions } from '@wix/forms';
+
+    const form = document.querySelector<HTMLFormElement>('#contact-form');
+    form?.addEventListener('submit', async (event) => {
+      event.preventDefault();
+      const status = form.querySelector<HTMLElement>('.form-status')!;
+      const button = form.querySelector<HTMLButtonElement>('button')!;
+      const keys = JSON.parse(form.dataset.fields!) as Record<string, string>;
+      const data = new FormData(form);
+      const values: Record<string, string> = {};
+      for (const [field, key] of Object.entries(keys)) {
+        const value = String(data.get(field) ?? '').trim();
+        if (value) values[key] = value;
+      }
+      button.disabled = true;
+      status.textContent = 'Envoi en cours…';
+      try {
+        const wix = createClient({ modules: { submissions }, auth: OAuthStrategy({ clientId: form.dataset.clientId! }) });
+        await wix.submissions.createSubmission({ formId: form.dataset.formId!, submissions: values });
+        form.reset();
+        status.textContent = 'Message envoyé. Je vous réponds rapidement.';
+      } catch (error) {
+        console.error(error);
+        status.textContent = "Le message n'a pas pu être envoyé. Appelez-moi au 06.70.79.24.63 ou réessayez dans un instant.";
+      } finally {
+        button.disabled = false;
+      }
+    });
+  </script>
+)}

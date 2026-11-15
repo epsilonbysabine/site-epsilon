@@ -1,0 +1,23 @@
+[
+  {
+    "slug": "coaching-entreprise",
+    "name": "Coaching entreprise",
+    "tagLine": "Entretien de 30 minutes",
+    "description": "Un échange de 30 minutes suffit pour voir si nous pouvons travailler ensemble.",
+    "image": null
+  },
+  {
+    "slug": "preparation-mentale-collective-etudiants",
+    "name": "Préparation mentale collective étudiants",
+    "tagLine": "Ateliers collectifs de 2H30",
+    "description": "Epsilon vous propose des ateliers collectifs de 2H30. Un mardi et un jeudi matin par mois de 9h30 à 12h. De 9h30 à 10h30, travail sur les notions du jour, de 10h30 à 11h temps de glace pour vous défouler, et de 11h à 12h, suite des notions.\n\nDurant ces différents ateliers vous apprendrez :\n- A vous fixer des objectifs clairs et précis afin d'avoir votre ligne de conduite pour l'année, ce qui vous aidera également à rester focus sur ce que vous souhaitez vraiment!\n- A améliorer votre gestion des émotions\n- A augmenter votre confiance en vous\n- A vous relaxer car pour être performant il faut aussi savoir se relaxer!\n- A optimiser votre concentration\n- A booster votre motivation\n- A savoir parler face à un jury\n- A communiquer efficacement dans un groupe notamment pour un travail commun",
+    "image": null
+  },
+  {
+    "slug": "preparation-mentale-collective-sportifs",
+    "name": "Préparation mentale collective sportifs",
+    "tagLine": "Ateliers collectifs",
+    "description": "Epsilon vous propose des ateliers collectifs pour vivre une saison plus performante et sereine!\n\nCes ateliers auront des thématiques variées :\n- Fixer ses objectifs pour une saison performante\n- Améliorer sa gestion des émotions\n- Augmenter sa confiance en soi\n- Se relaxer pour performer\n- S'initier à l'imagerie mentale et optimiser sa concentration\n- Booster sa motivation et réguler avec efficacité son énergie\n- Etablir sa routine de performance\n\nSes ateliers seront reconduits tout au long de la saison",
+    "image": null
+  }
+]

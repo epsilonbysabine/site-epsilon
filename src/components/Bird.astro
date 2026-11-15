@@ -1,0 +1,6 @@
+---
+// L'oiseau du logo Epsilon, repris comme motif (couleur héritée de `color`).
+import bird from '../data/bird.json';
+const { class: className = 'bird' } = Astro.props;
+---
+<svg class={className} viewBox={bird.viewBox} aria-hidden="true" focusable="false" fill-rule="evenodd" clip-rule="evenodd" set:html={bird.inner} />

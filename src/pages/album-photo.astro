@@ -1,0 +1,16 @@
+---
+import Base from '../layouts/Base.astro';
+import PageHead from '../components/PageHead.astro';
+const photos = [5, 1, 3, 6, 2, 7, 4, 8];
+---
+<Base
+  title="EPSILON : Album photo"
+  description="Epsilon: Préparation mentale, entretiens professionnels, partenaires... Avignon, Vaucluse, Hérault, Gard, Bouches du Rhône, Var, Alpes Maritimes, Hautes Alpes, Alpes de Haute Provence, Drôme, Ardèche, Isère, Paris, Lille..."
+>
+  <PageHead eyebrow="Sur le terrain" title="Album photos" />
+  <section class="section" style="padding-top: 1rem">
+    <div class="wrap album">
+      {photos.map((n) => <img src={`/images/album-${n}.jpg`} alt="Epsilon en séance et en compétition" loading="lazy" />)}
+    </div>
+  </section>
+</Base>

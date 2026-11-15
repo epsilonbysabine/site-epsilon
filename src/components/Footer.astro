@@ -1,0 +1,42 @@
+---
+import { nav, site } from '../config/site';
+const year = new Date().getFullYear();
+const groups = nav.filter((item) => item.children);
+---
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="/" aria-label="Epsilon, accueil">
+          <img src="/logo/epsilon-icon.svg" alt="" width="38" height="38" />
+          <span>Epsilon</span>
+        </a>
+        <p>{site.tagline}</p>
+        <p>
+          Appelez votre coach<br />
+          <a href={site.phoneHref}>{site.phone}</a>
+        </p>
+      </div>
+      {groups.map((group) => (
+        <div>
+          <h2>{group.label}</h2>
+          <ul>
+            {group.children!.map((child) => (
+              <li><a href={child.href}>{child.label}</a></li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </div>
+    <div class="footer-bottom">
+      <p>© {year} {site.legalName}</p>
+      <ul>
+        <li><a href="/blog">Le blog Epsilon Coaching</a></li>
+        <li><a href="/book-online">Réservation en ligne</a></li>
+        {site.social.map((s) => (
+          <li><a href={s.href} rel="noopener">{s.label}</a></li>
+        ))}
+      </ul>
+    </div>
+  </div>
+</footer>

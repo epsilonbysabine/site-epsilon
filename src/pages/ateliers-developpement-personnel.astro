@@ -1,0 +1,51 @@
+---
+import Base from '../layouts/Base.astro';
+import PageHead from '../components/PageHead.astro';
+const programme = ['Relooking', 'Nutrition', 'Maquillage', 'Pilate', 'Shooting photo', 'Coiffure', 'Massage', 'Confiance en Soi'];
+---
+<Base title="Ateliers Développement Personnel | Epsilon" description="Des ateliers spécifiques femmes : confiance en soi, nutrition, pilate, relooking, maquillage.">
+  <PageHead eyebrow="Ateliers développement personnel" title="Embrassez ce qui vous rend unique !" />
+  <section class="section section-tint">
+    <div class="wrap split">
+      <figure class="figure" style="margin: 0">
+        <img src="/images/ateliers-femmes.jpg" alt="Affiche des ateliers : Embrassez ce qui vous rend unique" loading="lazy" />
+      </figure>
+      <div class="prose">
+        <p class="lead">
+          Parce que chaque femme est unique,<br />
+          Parce que trop de femmes n'osent pas,<br />
+          Parce que trop de femmes ne savent pas encore le pouvoir qu'elles ont en elles,<br />
+          Parce que nous avons eu envie de prendre soin d'elles.... qu'est venue l'idée de faire des ateliers spécifiques femmes!
+        </p>
+        <h2>Au programme</h2>
+        <ul class="tags">
+          {programme.map((p) => <li>{p}</li>)}
+        </ul>
+      </div>
+    </div>
+  </section>
+  <section class="section">
+    <div class="wrap split">
+      <div class="prose">
+        <h2>Comment ça va se passer?</h2>
+        <p>3 ateliers seront proposés durant le 1er semestre 2023 avec différents professionnels.</p>
+        <ol class="steps">
+          <li><span>Premier atelier Confiance en Soi (intervenante Sabine Djaouane) + présentation des différents intervenants</span></li>
+          <li><span>Deuxième atelier Nutrition et Pilate (intervenantes Julie Ruth &amp; Julie Pilate Renata)</span></li>
+          <li><span>Troisième atelier Relooking et Maquillage (intervenante Minji Vincent)</span></li>
+        </ol>
+        <p>Les séances individuelles seront pour le shooting photo, la coiffure et le massage sur RDV.</p>
+      </div>
+      <div class="panel-card" style="background: var(--mist); border-color: transparent">
+        <ul class="price-list">
+          <li><span>Pack des 3 ateliers</span><b>135€</b></li>
+          <li><span>Participants</span><b>Nombre minimum 6 personnes, maximum 12</b></li>
+          <li><span>Le lieu des ateliers</span><b>Médikinos, 260 rue du Mourelet, 84000 Avignon</b></li>
+        </ul>
+        <p class="note">
+          Les ateliers auront lieu le samedi matin de 9h à 13h. Le premier sera courant janvier. Les dates seront annoncées première semaine de décembre.
+        </p>
+      </div>
+    </div>
+  </section>
+</Base>

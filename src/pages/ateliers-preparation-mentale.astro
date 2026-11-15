@@ -1,0 +1,53 @@
+---
+import Base from '../layouts/Base.astro';
+import PageHead from '../components/PageHead.astro';
+const themes = [
+  'Fixer ses objectifs pour une saison performante',
+  'Améliorer sa gestion des émotions',
+  'Augmenter sa confiance en soi',
+  'Se relaxer pour performer',
+  "S'initier à l'imagerie mentale et optimiser sa concentration",
+  'Booster sa motivation et réguler avec efficacité son énergie',
+  'Etablir sa routine de performance',
+];
+---
+<Base
+  title="Ateliers de préparation mentale pour sportifs | Epsilon"
+  description="Sept ateliers de préparation mentale à suivre au fil de la saison : objectifs, émotions, confiance, relaxation, concentration, motivation."
+>
+  <PageHead
+    eyebrow="Pour sportifs"
+    title="Ateliers de préparation mentale"
+    lead="Différents thèmes seront abordés tout le long de l'année sportive. Ces ateliers sont pour tous sportifs désireux de gagner en efficacité et en mieux-être (comme une meilleure gestion de son anxiété ou de son stress)."
+  />
+  <section class="section section-tint">
+    <div class="wrap split">
+      <div class="prose">
+        <p>
+          L'objectif est que chaque sportif reparte d'un atelier avec des outils qu'il pourra utiliser pour les entrainements ainsi que pour les compétitions en toute autonomie.
+        </p>
+        <p>Les ateliers peuvent être suivis indépendamment les uns des autres. Pour l'instant, 7 thèmes ont été fixés:</p>
+        <p><a class="btn btn-primary" href="/book-online">Réserver un atelier</a></p>
+      </div>
+      <ol class="steps">
+        {themes.map((t) => <li><span style="align-self: center">{t}</span></li>)}
+      </ol>
+    </div>
+  </section>
+  <section class="section">
+    <div class="wrap split">
+      <div class="stack">
+        <p class="eyebrow">Premier atelier</p>
+        <h2>Fixer ses objectifs pour une saison plus performante</h2>
+      </div>
+      <ul class="prose">
+        <li>Permet de régler la direction et l'intensité de la motivation</li>
+        <li>Permet une évaluation de sa progression</li>
+        <li>Permet une prise de conscience de ses aptitudes mais aussi des obstacles à surmonter</li>
+        <li>Focus l'attention sur ce qui est important</li>
+        <li>Accroit l'effort chez le sportif</li>
+        <li>Favorise la mise au point de nouvelles stratégies d'apprentissage</li>
+      </ul>
+    </div>
+  </section>
+</Base>

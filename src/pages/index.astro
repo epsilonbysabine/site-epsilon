@@ -1,0 +1,156 @@
+---
+import Base from '../layouts/Base.astro';
+import Bird from '../components/Bird.astro';
+import PostCard from '../components/PostCard.astro';
+import { getPosts } from '../lib/wix';
+const posts = (await getPosts()).slice(0, 3);
+---
+<Base
+  title="Epsilon by Sabine | Préparation mentale et coaching, Avignon"
+  description="Préparatrice mentale et coach à Avignon : sportifs, étudiants, entreprises. Séances individuelles, ateliers, formations. Réservez un entretien de 30 min."
+>
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div class="stack-lg">
+        <div class="stack">
+          <h1>Préparation mentale et coaching à Avignon et partout en France</h1>
+          <p class="question">Et si un <em>petit ajustement</em> changeait toute votre performance ?</p>
+        </div>
+        <p class="lead">
+          J'accompagne les sportifs, les étudiants, les artistes et les entreprises pour donner le meilleur d'eux-mêmes le jour où ça compte.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="/book-online">Réserver un entretien de 30 minutes</a>
+          <a class="btn btn-ghost" href="tel:0670792463">06.70.79.24.63</a>
+        </div>
+        <p class="epsilon-note">
+          <b aria-hidden="true">ε</b>
+          <span>Epsilon : en mathématiques, une quantité infime. Celle qui, bien placée, fait toute la différence.</span>
+        </p>
+      </div>
+      <figure class="hero-figure">
+        <div class="frame">
+          <img src="/images/sabine-portrait.jpg" alt="Portrait de Sabine Djaouane" width="800" height="1200" />
+          <Bird />
+        </div>
+        <figcaption>Sabine Djaouane, préparatrice mentale et coach</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="section section-tint">
+    <div class="wrap stack-lg">
+      <div class="audiences">
+        <article class="audience">
+          <p class="eyebrow">Sportifs et étudiants</p>
+          <h2>Une compétition, un concours, un examen, une audition ou un oral à venir ?</h2>
+          <p>
+            Nous travaillons ensemble la confiance, la concentration et la gestion du stress, avec des outils simples que vous gardez pour la suite.
+          </p>
+          <a class="text-link" href="/preparation-mentale">En savoir plus</a>
+        </article>
+        <article class="audience dark">
+          <p class="eyebrow" style="color: var(--lime)">Entreprises</p>
+          <h2>Des équipes plus sereines et plus performantes</h2>
+          <p>
+            Coaching individuel ou d'équipe, ateliers, formations et entretiens de parcours professionnel : des interventions sur mesure pour des équipes plus sereines et plus performantes.
+          </p>
+          <a class="text-link" href="/coach-entreprise">En savoir plus</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap split">
+      <div class="stack">
+        <p class="eyebrow">Donner le meilleur de soi pour réussir</p>
+        <blockquote class="pull" style="margin: 0">
+          « Sabine a su me faire prendre conscience que les solutions étaient en moi. »
+          <cite>Boris</cite>
+        </blockquote>
+      </div>
+      <div class="stack">
+        <p class="lead">
+          Je suis Sabine Djaouane, préparatrice mentale et coach, basée à Avignon. Respect, intégrité, authenticité et bienveillance guident mon travail.
+        </p>
+        <p>
+          Vous avez déjà tout en vous pour réussir : je vous aide à vous en convaincre et à retrouver votre autonomie, émotionnelle et intellectuelle.
+        </p>
+        <ul class="values" aria-label="Mes valeurs">
+          <li>Respect</li>
+          <li>Intégrité</li>
+          <li>Authenticité</li>
+          <li>Bienveillance</li>
+        </ul>
+        <p>
+          La préparation mentale vous apprend à faire baisser votre stress et à mieux le gérer, pour mobiliser vos ressources le jour où ça compte. Sportifs, étudiants, artistes ou dirigeants, je vous accompagne à Avignon, dans le Vaucluse et la Drôme, et partout en France, vers plus de confiance en vous et plus d'autonomie.
+        </p>
+        <p><a class="text-link" href="/a-propos">Mon parcours et mes outils</a></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-tint">
+    <div class="wrap split">
+      <div class="stack sticky">
+        <p class="eyebrow">Optimiser votre croissance</p>
+        <h2>Qu’est ce que la préparation mentale ?</h2>
+        <p><a class="text-link" href="/preparation-mentale">Séances, durée et tarifs</a></p>
+      </div>
+      <div class="prose">
+        <p>
+          En entreprise ou sur le terrain, elle permet de se libérer des barrières et blocages mentaux plus ou moins conscients que vous pouvez vous imposer. Un blocage qui peut vous empêcher d’exploiter pleinement votre potentiel physique et moral et qui met à mal vos émotions. Ce travail mental est donc un moyen de valoriser vos compétences et de vous mettre en condition avant une importante présentation professionnelle ou une compétition de haut niveau.
+        </p>
+        <p>
+          Pour cela, il est nécessaire de programmer votre cerveau pour trouver rapidement et sereinement cette attitude positive et cet équilibre et être plus performant. La recherche d’un état d’esprit qui passe par un contrôle respiratoire, des techniques de relaxation et un relâchement du corps et de l’esprit. Préparez votre corps à l’effort en projetant votre discours et les résultats que vous aimeriez obtenir. Par exemple, vous répéter quelques mots positifs peut vous conditionner à donner le meilleur de vous-même. Enfin, associez la compétition ou l’épreuve à venir à un souvenir positif ou un mot clé qui peut vous mettre dans de bonnes conditions. Une ancienne victoire par exemple.
+        </p>
+        <p>
+          Pour les sportifs, ce travail sur soi permet aussi de limiter les blessures. Plus de concentration permet d’être plus conscient de vos mouvements et donc d’éviter les accidents. Lors de compétitions, mettez en place un programme ou une routine qui vous aide à entrer dans cet état d’esprit.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap split">
+      <div class="stack sticky">
+        <p class="eyebrow">Entreprises</p>
+        <h2>Pourquoi faire appel à un coach d'entreprise professionnel ?</h2>
+        <p><a class="text-link" href="/coach-entreprise">Le coaching en entreprise</a></p>
+      </div>
+      <div class="prose">
+        <p>
+          Dans le milieu professionnel particulièrement, cet accompagnement par un coach professionnel ou un coaching en entreprise à Avignon passe par deux étapes :
+        </p>
+        <p>
+          Le coaching individuel, qui permet de combattre le stress dû au travail, aux échéances de dossiers ou aux changements organisationnels, comme un changement de poste ou de direction par exemple. Pour mieux gérer ce poids mental, il est nécessaire de prendre de la distance avec les événements et de prendre conscience des outils et ressources à votre disposition pour avancer et régler les problèmes. De cette manière, vous êtes plus à même de relever les défis, atteindre vos objectifs ou gérer votre état de stress ou les conflits qui peuvent émerger de l’environnement de travail.
+        </p>
+        <p>
+          En équipe, lors de séance collective, il permet de faire la somme de plusieurs compétences et permet à plusieurs personnalités de se coordonner pour travailler ensemble. En développant et optimisant la communication entre les groupes, vous pouvez valoriser les atouts de chacun afin d’aller ensemble vers un même objectif. De même, l’art du langage est important à saisir lors d’une séance collective car il permet de comprendre les intentions d’un collaborateur sans pour autant entrer dans le conflit.
+        </p>
+        <p>
+          Les entretiens professionnels peuvent être un moyen de relâcher la pression. Un accompagnement lors d’une séance individuelle, en accord avec le manager, permet de travailler vos performances et de mieux gérer le stress. Lors d’une mutation ou d’un changement d’environnement, il peut faciliter la transition et vous aider à vous reconstruire une identité professionnelle.
+        </p>
+        <p>
+          Avec Epsilon, cette méthode peut également être appliquée aux études lors de formation en écoles post bac ou écoles d'ingénieur, pour optimiser vos chances lors des examens et concours. Mais aussi dans des domaines spécifiques comme le BTP, pour des entretiens professionnels dans le domaine du bâtiment par exemple, ou la croissance et l’optimisation de votre société.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  {posts.length > 0 && (
+    <section class="section section-tint">
+      <div class="wrap stack-lg">
+        <div class="stack">
+          <p class="eyebrow">Le blog Epsilon Coaching</p>
+          <h2>Derniers articles</h2>
+        </div>
+        <div class="post-list three">
+          {posts.map((post) => <PostCard post={post} />)}
+        </div>
+        <p><a class="text-link" href="/blog">Tous les posts</a></p>
+      </div>
+    </section>
+  )}
+</Base>

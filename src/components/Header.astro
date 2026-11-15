@@ -1,0 +1,46 @@
+---
+import { nav, site } from '../config/site';
+const path = Astro.url.pathname.replace(/\/$/, '') || '/';
+---
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/" aria-label="Epsilon, accueil">
+      <img src="/logo/epsilon-icon.svg" alt="" width="38" height="38" />
+      <span>Epsilon</span>
+    </a>
+    <nav class="nav-desktop" aria-label="Navigation principale">
+      <ul>
+        {nav.map((item) => (
+          <li>
+            <a href={item.href} aria-current={path === item.href ? 'page' : undefined}>{item.label}</a>
+            {item.children && (
+              <ul class="submenu">
+                {item.children.map((child) => (
+                  <li><a href={child.href} aria-current={path === child.href ? 'page' : undefined}>{child.label}</a></li>
+                ))}
+              </ul>
+            )}
+          </li>
+        ))}
+      </ul>
+    </nav>
+    <a class="btn btn-primary btn-small header-cta" href="/book-online">Réserver un entretien</a>
+    <details class="nav-mobile">
+      <summary>Menu</summary>
+      <nav class="panel" aria-label="Navigation mobile">
+        {nav.map((item) => (
+          <div>
+            {item.children ? <p class="group-title">{item.label}</p> : null}
+            <ul>
+              {(item.children ?? [item]).map((child) => (
+                <li><a href={child.href}>{child.label}</a></li>
+              ))}
+            </ul>
+          </div>
+        ))}
+        <a class="btn btn-primary" href="/book-online">Réserver un entretien</a>
+        <a class="btn btn-ghost" href={site.phoneHref}>{site.phone}</a>
+      </nav>
+    </details>
+  </div>
+</header>

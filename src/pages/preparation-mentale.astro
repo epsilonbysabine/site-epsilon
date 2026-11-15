@@ -1,0 +1,88 @@
+---
+import Base from '../layouts/Base.astro';
+import PageHead from '../components/PageHead.astro';
+const themes = ['Performance', 'Confiance en soi', 'Ecoute des autres', 'Estime de soi', 'Motivation', 'Adaptabilité', 'Combativité', 'Réactivité', "Cohésion d'équipe"];
+---
+<Base
+  title="Préparation mentale sportifs et étudiants, Avignon | Epsilon"
+  description="Se préparer à un examen ou une compétition sportive demande une certaine expertise. Epsilon Coaching vous accompagne pour toutes préparations mentales et vous aide à atteindre vos objectifs !"
+>
+  <PageHead
+    eyebrow="Préparation mentale"
+    title="Préparation mentale pour sportifs, étudiants et artistes"
+    lead="À compétence égale, la différence se fait par le mental. La préparation mentale vous apprend à gérer votre stress, vos émotions et votre concentration pour performer le jour de l'épreuve : compétition, examen, concours, audition, permis de conduire, VAE."
+  >
+    <ul class="tags" style="margin-top: 2rem" aria-label="Thèmes travaillés">
+      {themes.map((t) => <li>{t}</li>)}
+    </ul>
+  </PageHead>
+
+  <section class="section section-tint">
+    <div class="wrap grid-2">
+      <div class="panel-card">
+        <h2 style="font-size: var(--step-2)">La préparation mentale couvre un domaine assez large</h2>
+        <ul class="prose">
+          <li>Sport</li>
+          <li>Entreprise</li>
+          <li>Artistique (musiciens, comédiens, chanteurs...)</li>
+          <li>Études</li>
+          <li>Examens de toutes sortes: musique, danse, VAE, permis de conduire...</li>
+        </ul>
+      </div>
+      <div class="panel-card">
+        <h2 style="font-size: var(--step-2)">Ce que vous travaillez</h2>
+        <p>Confiance en soi, motivation, gestion des émotions, concentration, routine de performance, adaptabilité, cohésion d'équipe.</p>
+        <p><a class="text-link" href="/ateliers-preparation-mentale">Les ateliers pour sportifs</a></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap split">
+      <div class="stack sticky">
+        <h2>Comment se déroulent les séances de préparation mentale ?</h2>
+      </div>
+      <div class="prose">
+        <p>
+          Nous avons, dans un premier temps, un entretien de 30 minutes afin de déterminer si nous pouvons travailler ensemble: si je suis la bonne personne pour vous accompagner en fonction de votre objectif, de notre feeling... Si nous décidons de travailler ensemble, nous établissons un contrat pour un nombre de séances déterminées au préalable. Nous planifions nos RDV.
+        </p>
+        <p>
+          La périodicité des rencontres se situe entre 1 et 3 semaines. Les séances sont de 30 minutes à 2 heures, suivant le besoin du moment. Nous pouvons nous rencontrer soit à mon bureau, soit à l'extérieur, soit au club de sport, suivant ce que nous allons travailler.
+        </p>
+        <h3>Combien de temps ?</h3>
+        <p>
+          Cela peut-être ponctuel ou sur l'année, tout dépend de l'objectif fixé au début des séances. Par exemple, pour un étudiant, c'est souvent 2 ou 3 mois avant les examens et nous nous verrons entre 2 et 5 séances (en moyenne). Pour un sportif, il y a souvent des besoins tout au long de la saison, cela ne dépend que des objectifs fixés!
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-tint">
+    <div class="wrap grid-2">
+      <div class="panel-card">
+        <h2 style="font-size: var(--step-2)">Le tarif</h2>
+        <ul class="price-list">
+          <li><span>Étudiant, sportif d'un club partenaire</span><b>40 € la séance de 30 minutes, 75 € l'heure</b></li>
+          <li><span>Salarié</span><b>50 € la séance de 30 minutes, 95 € l'heure</b></li>
+        </ul>
+        <p class="note">
+          Tarifs applicables à partir du 1er janvier 2027. TVA non applicable : les prix affichés sont les prix à payer. Les tarifs actuels restent valables jusqu'au 31 décembre 2026.
+        </p>
+        <p class="note">Pour les entreprises, rendez-vous sur la page <a href="/coach-entreprise">Coach entreprise</a>.</p>
+      </div>
+      <div class="panel-card">
+        <h2 style="font-size: var(--step-2)">Pack découverte : entretien et bilan mental</h2>
+        <p>Le point de départ de votre accompagnement. Nous faisons connaissance et nous définissons ensemble votre objectif.</p>
+        <ol class="steps">
+          <li><span><strong>Entretien semi-directif et tests</strong> : 2 h à 2 h 30 pour comprendre votre situation, vos ressources et vos besoins.</span></li>
+          <li><span><strong>Analyse et compte rendu écrit</strong> : je retranscris et j'analyse vos réponses, puis je rédige un bilan personnalisé.</span></li>
+          <li><span><strong>Restitution</strong> : une séance de 30 minutes, facturée à part au tarif de la séance, pour vous présenter le bilan et construire votre plan d'accompagnement.</span></li>
+        </ol>
+        <p>
+          Prix du pack (entretien, tests, analyse et compte rendu) : <strong>250 €</strong> pour les étudiants et les sportifs d'un club partenaire, <strong>300 €</strong> pour les autres. TVA non applicable.
+        </p>
+        <p><a class="btn btn-primary" href="/book-online">Réserver mon pack découverte</a></p>
+      </div>
+    </div>
+  </section>
+</Base>
