@@ -2,7 +2,7 @@ export const site = {
   name: 'Epsilon',
   legalName: 'EPSILON by Sabine',
   coach: 'Sabine Djaouane',
-  tagline: 'Donner le meilleur de soi pour réussir',
+  tagline: 'Libère et développe ta performance',
   phone: '06.70.79.24.63',
   phoneHref: 'tel:0670792463',
   email: 'sabine@coaching-epsilon.net',

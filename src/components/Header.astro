@@ -7,6 +7,7 @@ const path = Astro.url.pathname.replace(/\/$/, '') || '/';
     <a class="brand" href="/" aria-label="Epsilon, accueil">
       <img src="/logo/epsilon-icon.svg" alt="" width="38" height="38" />
       <span>Epsilon</span>
+      <small>{site.tagline}</small>
     </a>
     <nav class="nav-desktop" aria-label="Navigation principale">
       <ul>
