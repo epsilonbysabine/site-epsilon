@@ -3,7 +3,7 @@
 // les boutons « Réserver » mènent à la page Contact.
 window.EPSILON_CONFIG = {
   // Lien de la page de réservation Wix Bookings (ex. https://www.epsilonbysabine.com/reservation-en-ligne)
-  reservationUrl: "",
+  reservationUrl: "https://www.epsilonbysabine.com/book-online",
 
   // Identifiant client Wix Headless (Wix > Paramètres > Headless > OAuth apps).
   // Sert plus tard au formulaire de contact, à la réservation intégrée et à la vente des audios.
