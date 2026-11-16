@@ -158,3 +158,9 @@ td.prix, th.prix { text-align: right; white-space: nowrap; }
 .case label { font-weight: 400; margin: 0; }
 .erreur { color: #a3152f; font-weight: 600; margin: 0; }
 .formulaire input[aria-invalid="true"] { border-color: #a3152f; }
+
+/* Pages légales et portrait */
+.legal h2 { font-size: 1.3rem; margin-top: 2rem; }
+.legal td { vertical-align: top; }
+.a-completer { background: #fff3c4; padding: 0 .25rem; border-radius: 4px; }
+.portrait { width: 240px; height: auto; aspect-ratio: 4 / 5; object-fit: cover; border-radius: var(--rayon); margin: 0 0 1.5rem; background: var(--violet-clair); }

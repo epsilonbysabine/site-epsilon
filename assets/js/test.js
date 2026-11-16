@@ -85,7 +85,7 @@
       '<form class="formulaire" novalidate>' +
       '<div><label for="test-prenom">Prénom (facultatif)</label><input id="test-prenom" name="prenom" autocomplete="given-name"></div>' +
       '<div><label for="test-email">Adresse e-mail</label><input id="test-email" name="email" type="email" autocomplete="email" required aria-describedby="test-erreur"></div>' +
-      '<div class="case"><input id="test-accord" name="accord" type="checkbox" required> <label for="test-accord">J\'accepte de recevoir l\'extrait et des e-mails d\'Epsilon by Sabine. Je peux me désinscrire à tout moment.</label></div>' +
+      '<div class="case"><input id="test-accord" name="accord" type="checkbox" required> <label for="test-accord">J\'accepte de recevoir l\'extrait et des e-mails d\'Epsilon by Sabine. Je peux me désinscrire à tout moment (<a href="confidentialite.html">politique de confidentialité</a>).</label></div>' +
       '<p class="erreur" id="test-erreur" role="alert" hidden></p>' +
       '<div class="boutons"><button class="btn" type="submit">Voir mon résultat</button>' +
       '<button type="button" class="btn btn-secondaire" data-retour>Question précédente</button></div>' +
