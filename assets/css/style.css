@@ -139,3 +139,4 @@ td.prix, th.prix { text-align: right; white-space: nowrap; }
 .pack .prix-pack { flex: none; font-size: 1.75rem; font-weight: 700; color: var(--violet); margin: 0 0 .5rem; white-space: nowrap; }
 .pack p:last-of-type { color: var(--texte-doux); margin: 0; }
 .grille-packs + .note { margin-top: 1rem; }
+.pack-suivi { border: 2px solid var(--violet); }
