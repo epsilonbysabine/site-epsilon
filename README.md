@@ -9,7 +9,7 @@ Site professionnel d'EPSILON by Sabine (préparation mentale et coaching, Avigno
 | `index.html` | Accueil | — |
 | `sportifs.html` | Préparation mentale (sportifs, étudiants, artistes), tarifs, pack découverte | Sportifs |
 | `ateliers.html` | Les 7 ateliers de préparation mentale | sous Sportifs |
-| `audios.html` | Audios de préparation mentale (13 thèmes, 3 niveaux) | sous Sportifs |
+| `audios.html` | Audios de préparation mentale (13 thèmes, 3 niveaux), packs, lien avec le pack découverte | Audios (+ bloc sur l'accueil) |
 | `entreprises.html` | Coaching, formations, entretien de parcours professionnel, tarifs | Entreprises |
 | `formations.html` | Thèmes de formation | Formations |
 | `a-propos.html` | Parcours, outils, témoignages | À propos |

@@ -19,9 +19,10 @@
       <button class="bouton-menu" type="button" aria-expanded="false" aria-controls="menu" aria-label="Ouvrir le menu">☰</button>
       <nav class="menu" id="menu" aria-label="Menu principal">
         <ul>
-          <li><a href="sportifs.html" aria-current="page">Sportifs</a></li>
+          <li><a href="sportifs.html">Sportifs</a></li>
           <li><a href="entreprises.html">Entreprises</a></li>
           <li><a href="formations.html">Formations</a></li>
+          <li><a href="audios.html" aria-current="page">Audios</a></li>
           <li><a href="a-propos.html">À propos</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
@@ -71,28 +72,34 @@
       </div>
     </section>
 
-    <section class="section-alt">
-      <div class="conteneur etroit">
-        <h2>Tarifs</h2>
+    <section class="section-alt" id="tarifs">
+      <div class="conteneur">
+        <h2>Les packs</h2>
         <!-- Prix proposés, à valider avant la mise en ligne -->
-        <div class="tableau-defile">
-          <table>
-            <thead><tr><th>Offre</th><th>Contenu</th><th class="prix">Prix</th></tr></thead>
-            <tbody>
-              <tr><td>Audio d'essai</td><td>Extrait de 10 minutes, en échange d'une adresse e-mail</td><td class="prix">Gratuit</td></tr>
-              <tr><td>Audio à l'unité</td><td>1 thème, 1 niveau, 1 h, avec fiche d'exercices</td><td class="prix">19 €</td></tr>
-              <tr><td>Pack thème</td><td>1 thème, les 3 niveaux (3 h)</td><td class="prix">49 €</td></tr>
-              <tr><td>Parcours niveau</td><td>Les 13 thèmes d'un même niveau (13 h)</td><td class="prix">189 €</td></tr>
-              <tr><td>Pack complet</td><td>Les 39 audios (39 h)</td><td class="prix">449 €</td></tr>
-              <tr><td>Pack équipe</td><td>Accès pour un club ou une équipe, thème choisi par le staff</td><td class="prix">Sur devis</td></tr>
-            </tbody>
-          </table>
+        <div class="grille grille-packs">
+          <article class="carte pack"><h3>Audio d'essai</h3><p class="prix-pack">Gratuit</p><p>Extrait de 10 minutes, en échange d'une adresse e-mail</p></article>
+          <article class="carte pack"><h3>Audio à l'unité</h3><p class="prix-pack">19 €</p><p>1 thème, 1 niveau, 1 h, avec fiche d'exercices</p></article>
+          <article class="carte pack"><h3>Pack thème</h3><p class="prix-pack">49 €</p><p>1 thème, les 3 niveaux (3 h)</p></article>
+          <article class="carte pack"><h3>Parcours niveau</h3><p class="prix-pack">189 €</p><p>Les 13 thèmes d'un même niveau, dans l'ordre conseillé (13 h)</p></article>
+          <article class="carte pack"><h3>Pack complet</h3><p class="prix-pack">449 €</p><p>Les 39 audios (39 h)</p></article>
+          <article class="carte pack"><h3>Pack équipe</h3><p class="prix-pack">Sur devis</p><p>Accès pour un club ou une équipe, avec un thème choisi par le staff</p></article>
         </div>
         <p class="note">TVA non applicable.</p>
         <!-- Boutons d'achat : à brancher sur Wix (boutique ou programme en ligne) via Wix Headless -->
         <div class="boutons">
           <a class="btn" href="contact.html">Essayer gratuitement un extrait</a>
           <a class="btn btn-secondaire" href="contact.html">Choisir mon pack</a>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="conteneur etroit">
+        <h2>Audios et accompagnement</h2>
+        <p>Les audios prolongent le suivi sans remplacer les séances. Avec le <a href="sportifs.html#pack-decouverte">pack découverte</a>, je vous indique les 3 à 5 audios les plus adaptés à votre objectif. Pour un club ou une équipe, le pack équipe donne accès aux audios avec un thème choisi par le staff.</p>
+        <div class="boutons">
+          <a class="btn" href="sportifs.html#pack-decouverte">Découvrir le pack découverte</a>
+          <a class="btn btn-secondaire" href="contact.html">Demander un devis pour mon club</a>
         </div>
       </div>
     </section>
