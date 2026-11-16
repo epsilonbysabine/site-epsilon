@@ -153,3 +153,8 @@ td.prix, th.prix { text-align: right; white-space: nowrap; }
 .choix-btn:hover { border-color: var(--violet); }
 .choix-btn[aria-pressed="true"] { border: 2px solid var(--violet); background: var(--violet-clair); }
 .test .boutons + .note { margin-top: 1.25rem; }
+.case { display: flex; gap: .6rem; align-items: flex-start; }
+.case input { width: 22px; height: 22px; margin-top: .15rem; flex: none; accent-color: var(--violet); }
+.case label { font-weight: 400; margin: 0; }
+.erreur { color: #a3152f; font-weight: 600; margin: 0; }
+.formulaire input[aria-invalid="true"] { border-color: #a3152f; }

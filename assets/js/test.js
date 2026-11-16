@@ -27,6 +27,7 @@
   var niveau = null;
   var etape = -1; // -1 = question sur l'expérience
   var demarre = false;
+  var email = null;
 
   function el(html) { var d = document.createElement("div"); d.innerHTML = html; return d; }
 
@@ -61,6 +62,8 @@
         b.addEventListener("click", function () { reponses[etape] = +b.dataset.v; etape++; afficher(); });
       });
       bloc.querySelector("[data-retour]").addEventListener("click", function () { etape--; afficher(); });
+    } else if (!email) {
+      bloc = etapeEmail(barre);
     } else {
       bloc = resultat();
     }
@@ -71,6 +74,42 @@
       racine.scrollIntoView({ block: "start" });
     }
     demarre = true;
+  }
+
+  // Adresse e-mail demandée avant le résultat et l'extrait gratuit.
+  // À brancher sur Wix (Forms ou Contacts, via Wix Headless) pour enregistrer l'adresse et envoyer l'extrait.
+  function etapeEmail(barre) {
+    var b = el(barre +
+      '<h2 tabindex="-1">Votre résultat est prêt</h2>' +
+      '<p>Indiquez votre adresse e-mail pour découvrir votre résultat et recevoir gratuitement un extrait audio de 10 minutes.</p>' +
+      '<form class="formulaire" novalidate>' +
+      '<div><label for="test-prenom">Prénom (facultatif)</label><input id="test-prenom" name="prenom" autocomplete="given-name"></div>' +
+      '<div><label for="test-email">Adresse e-mail</label><input id="test-email" name="email" type="email" autocomplete="email" required aria-describedby="test-erreur"></div>' +
+      '<div class="case"><input id="test-accord" name="accord" type="checkbox" required> <label for="test-accord">J\'accepte de recevoir l\'extrait et des e-mails d\'Epsilon by Sabine. Je peux me désinscrire à tout moment.</label></div>' +
+      '<p class="erreur" id="test-erreur" role="alert" hidden></p>' +
+      '<div class="boutons"><button class="btn" type="submit">Voir mon résultat</button>' +
+      '<button type="button" class="btn btn-secondaire" data-retour>Question précédente</button></div>' +
+      '</form>');
+    var f = b.querySelector("form");
+    var champ = f.querySelector("#test-email");
+    var erreur = f.querySelector("#test-erreur");
+    champ.addEventListener("input", function () { erreur.hidden = true; champ.removeAttribute("aria-invalid"); });
+    f.addEventListener("submit", function (e) {
+      e.preventDefault();
+      var v = champ.value.trim();
+      var msg = "";
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v)) msg = "Vérifiez votre adresse e-mail, par exemple prenom@exemple.fr.";
+      else if (!f.querySelector("#test-accord").checked) msg = "Cochez la case pour recevoir l'extrait.";
+      if (msg) {
+        erreur.textContent = msg; erreur.hidden = false;
+        if (msg.indexOf("adresse") > -1) { champ.setAttribute("aria-invalid", "true"); champ.focus(); }
+        return;
+      }
+      email = v;
+      afficher();
+    });
+    b.querySelector("[data-retour]").addEventListener("click", function () { etape--; afficher(); });
+    return b;
   }
 
   function resultat() {
