@@ -33,7 +33,7 @@ Les textes viennent du document « Nouveaux textes du site Epsilon ».
 
 ## Reste à faire avant publication
 
-- Photo de Sabine : reprise du site Wix actuel (image servie par Wix).
+- Photo de Sabine : assets/img/sabine-djaouane.jpg.
 - Ateliers : dates, lieu, durée, prix et bouton « S'inscrire » ; valider les descriptions.
 - Audios : valider les prix, choisir la livraison Wix, conditions générales de vente, TVA à confirmer.
 - Ajouter les autres témoignages et les logos partenaires/clients.
