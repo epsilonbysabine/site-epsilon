@@ -176,3 +176,12 @@ td.prix, th.prix { text-align: right; white-space: nowrap; }
 
 .badge { display: inline-block; margin: 0 0 1rem; padding: .3rem .85rem; border-radius: 999px; background: #fff3c4; color: #5a4500; font-weight: 600; font-size: .95rem; }
 .carte-couleur .badge { background: #fff; color: var(--violet); }
+
+/* Avis */
+.groupe-avis { margin: 2rem 0 1rem; }
+.avis { columns: 3 300px; column-gap: 1.25rem; }
+.avis-carte { break-inside: avoid; margin: 0 0 1.25rem; display: block; font-size: 1rem; }
+.avis-carte p { margin: 0 0 .6rem; }
+.avis-carte cite { display: block; margin-top: .75rem; font-style: normal; font-weight: 700; color: var(--violet); }
+.avis-carte cite span { font-weight: 400; color: var(--texte-doux); }
+.metiers { display: block; margin-top: .6rem; font-size: clamp(1.05rem, 2.2vw, 1.3rem); font-weight: 600; color: var(--violet-doux); line-height: 1.4; }
