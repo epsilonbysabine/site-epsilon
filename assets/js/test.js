@@ -3,7 +3,7 @@
 (function () {
   var THEMES = [
     { nom: "Objectifs", q: ["Je sais précisément ce que je veux atteindre cette saison ou cette année.", "Je découpe mes objectifs en étapes que je peux mesurer."] },
-    { nom: "Respiration", q: ["Je sais utiliser ma respiration pour me calmer avant une épreuve.", "Quand la pression monte, ma respiration reste ample et régulière."] },
+    { nom: "Respiration et cohérence cardiaque", q: ["Je sais utiliser ma respiration pour me calmer avant une épreuve.", "Quand la pression monte, ma respiration reste ample et régulière."] },
     { nom: "Dialogue interne", q: ["Ce que je me dis dans ma tête m'aide plutôt qu'il ne me freine.", "Après une erreur, je retrouve vite des pensées constructives."] },
     { nom: "Imagerie mentale", q: ["J'arrive à me représenter mentalement une épreuve réussie.", "Je prépare mes épreuves en les visualisant à l'avance."] },
     { nom: "Posture", q: ["Mon attitude physique montre que je suis prêt et confiant.", "Je sais adopter une posture qui m'aide à me sentir plus fort."] },
@@ -13,8 +13,7 @@
     { nom: "Gestion des émotions", q: ["Le stress avant une épreuve ne me fait pas perdre mes moyens.", "Je retrouve vite mon calme après une contrariété."] },
     { nom: "Concentration et attention", q: ["Je reste concentré sur ma tâche malgré le bruit ou l'enjeu.", "Quand mon attention s'égare, je la ramène facilement."] },
     { nom: "Relaxation", q: ["Je sais détendre mon corps quand j'en ai besoin.", "Je récupère bien entre deux efforts ou deux épreuves."] },
-    { nom: "Méditation", q: ["Je prends des moments pour être pleinement présent, sans penser à la suite.", "J'arrive à observer mes pensées sans m'y accrocher."] },
-    { nom: "Cohérence cardiaque", q: ["Je connais un exercice simple pour apaiser mon cœur en quelques minutes.", "Mon énergie reste stable en période de pression."] }
+    { nom: "Méditation", q: ["Je prends des moments pour être pleinement présent, sans penser à la suite.", "J'arrive à observer mes pensées sans m'y accrocher."] }
   ];
   var NIVEAUX = ["Débutant", "Intermédiaire", "Confirmé"];
   var ECHELLE = ["Pas du tout", "Plutôt non", "Moyennement", "Plutôt oui", "Tout à fait"];
