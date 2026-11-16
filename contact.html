@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact et réservation | Epsilon by Sabine, Avignon</title>
+  <meta name="description" content="Contactez Sabine Djaouane, préparatrice mentale et coach à Avignon : téléphone, message ou réservation d'un entretien de 30 minutes.">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <a class="lien-evitement" href="#contenu">Aller au contenu</a>
+  <header class="entete">
+    <div class="conteneur">
+      <a class="marque" href="index.html">EPSILON <span>by Sabine</span></a>
+      <button class="bouton-menu" type="button" aria-expanded="false" aria-controls="menu" aria-label="Ouvrir le menu">☰</button>
+      <nav class="menu" id="menu" aria-label="Menu principal">
+        <ul>
+          <li><a href="sportifs.html">Sportifs</a></li>
+          <li><a href="entreprises.html">Entreprises</a></li>
+          <li><a href="formations.html">Formations</a></li>
+          <li><a href="a-propos.html">À propos</a></li>
+          <li><a href="contact.html" aria-current="page">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenu">
+
+    <section class="hero">
+      <div class="conteneur etroit">
+        <h1>Parlons de votre objectif</h1>
+        <p class="intro">Un échange de 30 minutes suffit pour voir si nous pouvons travailler ensemble. Appelez-moi, écrivez-moi ou réservez directement un créneau.</p>
+        <div class="boutons" id="reserver">
+          <a class="btn" href="tel:+33670792463">Appeler : 06 70 79 24 63</a>
+          <a class="btn btn-secondaire" href="#reserver" data-reserver>Réserver un entretien de 30 minutes</a>
+          <a class="btn btn-secondaire" href="#message">Écrire un message</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-alt" id="message">
+      <div class="conteneur">
+        <div class="grille grille-2">
+          <form class="formulaire" data-formulaire-contact>
+            <h2>Écrire un message</h2>
+            <div><label for="nom">Nom</label><input id="nom" name="nom" autocomplete="name" required></div>
+            <div><label for="email">E-mail</label><input id="email" name="email" type="email" autocomplete="email" required></div>
+            <div><label for="tel">Téléphone (facultatif)</label><input id="tel" name="telephone" type="tel" autocomplete="tel"></div>
+            <div><label for="msg">Votre objectif en quelques mots</label><textarea id="msg" name="message" required></textarea></div>
+            <button class="btn" type="submit">Envoyer mon message</button>
+            <p class="message-formulaire" role="status" hidden></p>
+          </form>
+          <div>
+            <h2>Le cabinet</h2>
+            <p>260 rue du Mourelet<br>84000 Avignon</p>
+            <p>J'interviens essentiellement dans le Vaucluse et la Drôme, et partout en France pour les entreprises.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="pied">
+    <div class="conteneur">
+      <div class="grille">
+        <div>
+          <h2>EPSILON by Sabine</h2>
+          <p>Préparation mentale et coaching<br>260 rue du Mourelet, 84000 Avignon</p>
+        </div>
+        <div>
+          <h2>Me joindre</h2>
+          <ul>
+            <li><a href="tel:+33670792463">06 70 79 24 63</a></li>
+            <li><a href="contact.html">Écrire un message</a></li>
+            <li><a href="contact.html#reserver" data-reserver>Réserver en ligne</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Pages</h2>
+          <ul>
+            <li><a href="ateliers.html">Ateliers de préparation mentale</a></li>
+            <li><a href="audios.html">Audios de préparation mentale</a></li>
+            <li><a href="entreprises.html#entretien">Entretien de parcours professionnel</a></li>
+          </ul>
+        </div>
+      </div>
+      <p class="copyright">© <span data-annee>2026</span> EPSILON by Sabine</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/config.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
