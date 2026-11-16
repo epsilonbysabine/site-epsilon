@@ -20,11 +20,10 @@
   }
 
   // Boutons « Réserver » : vers Wix Bookings si le lien est renseigné
-  if (config.reservationUrl) {
-    document.querySelectorAll("[data-reserver]").forEach(function (lien) {
-      lien.href = config.reservationUrl;
-    });
-  }
+  document.querySelectorAll("[data-reserver]").forEach(function (lien) {
+    var url = lien.getAttribute("data-reserver") === "entretien" ? config.entretienUrl : config.reservationUrl;
+    if (url) lien.href = url;
+  });
 
   // Année du pied de page
   document.querySelectorAll("[data-annee]").forEach(function (el) {

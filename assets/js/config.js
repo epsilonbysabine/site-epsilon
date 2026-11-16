@@ -5,6 +5,9 @@ window.EPSILON_CONFIG = {
   // Lien de la page de réservation Wix Bookings (ex. https://www.epsilonbysabine.com/reservation-en-ligne)
   reservationUrl: "https://www.epsilonbysabine.com/book-online",
 
+  // Service Wix Bookings « Entretien découverte gratuit (30 min) »
+  entretienUrl: "https://www.epsilonbysabine.com/booking-calendar/entretien-d%C3%A9couverte-gratuit-30-min",
+
   // Identifiant client Wix Headless (Wix > Paramètres > Headless > OAuth apps).
   // Sert plus tard au formulaire de contact, à la réservation intégrée et à la vente des audios.
   wixClientId: "",
