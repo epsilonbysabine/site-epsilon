@@ -25,6 +25,13 @@
     if (url) lien.href = url;
   });
 
+  // Logos clients : afficher le nom si l'image ne charge pas
+  document.querySelectorAll(".logos img[data-nom]").forEach(function (img) {
+    function remplacer() { img.parentNode.textContent = img.getAttribute("data-nom"); }
+    if (img.complete && img.naturalWidth === 0) remplacer();
+    else img.addEventListener("error", remplacer);
+  });
+
   // Année du pied de page
   document.querySelectorAll("[data-annee]").forEach(function (el) {
     el.textContent = new Date().getFullYear();
