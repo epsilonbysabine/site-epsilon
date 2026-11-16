@@ -140,3 +140,16 @@ td.prix, th.prix { text-align: right; white-space: nowrap; }
 .pack p:last-of-type { color: var(--texte-doux); margin: 0; }
 .grille-packs + .note { margin-top: 1rem; }
 .pack-suivi { border: 2px solid var(--violet); }
+
+/* Test d'orientation */
+.test { max-width: 640px; }
+.test h2 { font-size: clamp(1.3rem, 3vw, 1.6rem); outline: none; }
+.progression { height: 8px; background: var(--violet-clair); border-radius: 999px; overflow: hidden; margin-bottom: 1rem; }
+.progression span { display: block; height: 100%; background: var(--violet); transition: width .2s ease; }
+@media (prefers-reduced-motion: reduce) { .progression span { transition: none; } }
+.choix { display: grid; gap: .6rem; margin: 1.25rem 0; }
+.choix-btn { text-align: left; min-height: 52px; padding: .8rem 1rem; border: 1px solid var(--bord); border-radius: 10px; background: #fff; font: inherit; color: var(--texte); cursor: pointer; }
+.choix-btn strong { display: inline-grid; place-items: center; width: 1.8rem; height: 1.8rem; margin-right: .6rem; border-radius: 50%; background: var(--violet-clair); color: var(--violet); }
+.choix-btn:hover { border-color: var(--violet); }
+.choix-btn[aria-pressed="true"] { border: 2px solid var(--violet); background: var(--violet-clair); }
+.test .boutons + .note { margin-top: 1.25rem; }

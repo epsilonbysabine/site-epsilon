@@ -14,6 +14,7 @@ Site professionnel d'EPSILON by Sabine (préparation mentale et coaching, Avigno
 | `formations.html` | Thèmes de formation | Formations |
 | `a-propos.html` | Parcours, outils, témoignages | À propos |
 | `contact.html` | Téléphone, réservation, formulaire, adresse | Contact |
+| `test.html` | Test d'orientation : par quel audio commencer ? (questions dans `assets/js/test.js`) | depuis Audios et l'accueil |
 
 - `assets/css/style.css` : styles communs (mobile d'abord).
 - `assets/js/config.js` : réglages à compléter (lien de réservation Wix Bookings, identifiant client Wix Headless).
