@@ -18,7 +18,9 @@ Site professionnel d'EPSILON by Sabine (préparation mentale et coaching, Avigno
 - `assets/css/style.css` : styles communs (mobile d'abord).
 - `assets/js/config.js` : réglages à compléter (lien de réservation Wix Bookings, identifiant client Wix Headless).
 - `assets/js/main.js` : menu mobile, boutons de réservation, formulaire.
-- `logo/` : propositions de logo (à choisir ; le site affiche pour l'instant le nom en texte).
+- `logo/` : les déclinaisons du logo (fichiers d'origine).
+- `assets/img/logo-epsilon.png` : logo couleur horizontal (n° 13), utilisé dans l'en-tête ; `logo-epsilon-blanc.png` (n° 16) sur le pied de page violet.
+- `favicon.svg`, `favicon.ico`, `apple-touch-icon.png` : icône du site, tirée de l'icône n° 9.
 
 Les textes viennent du document « Nouveaux textes du site Epsilon ».
 
@@ -30,7 +32,7 @@ Les textes viennent du document « Nouveaux textes du site Epsilon ».
 
 ## Reste à faire avant publication
 
-- Choisir le logo et ajouter la photo de Sabine (À propos).
+- Ajouter la photo de Sabine (À propos).
 - Ateliers : dates, lieu, durée, prix et bouton « S'inscrire » ; valider les descriptions.
 - Audios : valider les prix, choisir la livraison Wix, conditions générales de vente, TVA à confirmer.
 - Ajouter les autres témoignages et les logos partenaires/clients.
