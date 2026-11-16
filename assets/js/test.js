@@ -81,7 +81,7 @@
   function etapeEmail(barre) {
     var b = el(barre +
       '<h2 tabindex="-1">Votre résultat est prêt</h2>' +
-      '<p>Indiquez votre adresse e-mail pour découvrir votre résultat et recevoir gratuitement un extrait audio de 10 minutes.</p>' +
+      '<p>Indiquez votre adresse e-mail pour découvrir votre résultat et recevoir gratuitement un extrait audio de 10 minutes dès la sortie des audios, en janvier 2027.</p>' +
       '<form class="formulaire" novalidate>' +
       '<div><label for="test-prenom">Prénom (facultatif)</label><input id="test-prenom" name="prenom" autocomplete="given-name"></div>' +
       '<div><label for="test-email">Adresse e-mail</label><input id="test-email" name="email" type="email" autocomplete="email" required aria-describedby="test-erreur"></div>' +
