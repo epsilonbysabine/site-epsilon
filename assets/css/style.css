@@ -164,3 +164,12 @@ td.prix, th.prix { text-align: right; white-space: nowrap; }
 .legal td { vertical-align: top; }
 .a-completer { background: #fff3c4; padding: 0 .25rem; border-radius: 4px; }
 .portrait { width: 240px; height: auto; aspect-ratio: 4 / 5; object-fit: cover; border-radius: var(--rayon); margin: 0 0 1.5rem; background: var(--violet-clair); }
+@media (max-width: 600px) {
+  .legal thead { display: none; }
+  .legal tr { display: block; border-bottom: 1px solid var(--bord); padding: .5rem 0; }
+  .legal td { display: block; border: 0; padding: .2rem 1rem; }
+  .legal td:nth-child(1) { font-weight: 700; color: var(--violet-fonce); }
+  .legal td:nth-child(2)::before { content: "Données : "; font-weight: 600; }
+  .legal td:nth-child(3)::before { content: "Pourquoi : "; font-weight: 600; }
+  .legal td:nth-child(4)::before { content: "Base légale : "; font-weight: 600; }
+}
