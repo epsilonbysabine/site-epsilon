@@ -12,7 +12,8 @@ Site professionnel d'EPSILON by Sabine (préparation mentale et coaching, Avigno
 | `audios.html` | Audios de préparation mentale (12 thèmes, 3 niveaux), packs, lien avec le pack découverte | Audios (+ bloc sur l'accueil) |
 | `entreprises.html` | Coaching, formations, entretien de parcours professionnel, tarifs | Entreprises |
 | `formations.html` | Thèmes de formation | Formations |
-| `a-propos.html` | Parcours, outils, témoignages | À propos |
+| `a-propos.html` | Parcours, outils | À propos |
+| `references.html` | Logos clients et témoignages (avis dans /tmp/gen/avis.py au moment de la génération) | Références |
 | `contact.html` | Téléphone, réservation, formulaire, adresse | Contact |
 | `test.html` | Test d'orientation : par quel audio commencer ? (questions dans `assets/js/test.js`) | depuis Audios et l'accueil |
 

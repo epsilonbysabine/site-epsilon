@@ -185,3 +185,10 @@ td.prix, th.prix { text-align: right; white-space: nowrap; }
 .avis-carte cite { display: block; margin-top: .75rem; font-style: normal; font-weight: 700; color: var(--violet); }
 .avis-carte cite span { font-weight: 400; color: var(--texte-doux); }
 .metiers { display: block; margin-top: .6rem; font-size: clamp(1.05rem, 2.2vw, 1.3rem); font-weight: 600; color: var(--violet-doux); line-height: 1.4; }
+
+/* Mur de logos */
+.logos { list-style: none; padding: 0; margin: 0; display: grid; gap: 1rem; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); }
+.logos li { display: grid; place-items: center; min-height: 96px; padding: 1rem; background: #fff; border: 1px solid var(--bord); border-radius: var(--rayon); text-align: center; font-weight: 700; color: var(--violet-fonce); }
+.logos img { max-width: 100%; max-height: 64px; width: auto; height: auto; object-fit: contain; filter: grayscale(1); opacity: .85; transition: filter .2s ease, opacity .2s ease; }
+.logos li:hover img { filter: none; opacity: 1; }
+@media (prefers-reduced-motion: reduce) { .logos img { transition: none; } }
