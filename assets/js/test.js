@@ -124,7 +124,7 @@
 
     var conseil;
     if (faibles >= 5) {
-      conseil = "<p>Plusieurs thèmes ressortent en même temps. Le <strong>parcours " + niv.toLowerCase() + "</strong> (les 13 thèmes dans l'ordre conseillé) ou la formule <strong>Audios + suivi</strong>, où je vous accompagne pendant 4 mois, vous conviendront mieux qu'un audio isolé.</p>";
+      conseil = "<p>Plusieurs thèmes ressortent en même temps. Le <strong>parcours " + niv.toLowerCase() + "</strong> (les 12 thèmes dans l'ordre conseillé) ou la formule <strong>Audios + suivi</strong>, où je vous accompagne pendant 4 mois, vous conviendront mieux qu'un audio isolé.</p>";
     } else {
       conseil = "<p>Commencez par l'audio <strong>« " + priorites[0].nom + " », niveau " + niv.toLowerCase() + "</strong>. Pour travailler ce thème en profondeur, le <strong>pack thème</strong> réunit ses 3 niveaux.</p>";
     }
