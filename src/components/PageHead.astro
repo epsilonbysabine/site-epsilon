@@ -1,11 +1,25 @@
 ---
-const { eyebrow, title, lead } = Astro.props;
+// En-tête des pages intérieures. Par défaut, il propose la prise de rendez-vous et l'appel.
+import { site } from '../config/site';
+interface Props {
+  eyebrow?: string;
+  title: string;
+  lead?: string;
+  cta?: boolean;
+}
+const { eyebrow, title, lead, cta = true } = Astro.props;
 ---
-<header class="page-head">
+<header class="page-head aura">
   <div class="wrap">
-    {eyebrow && <p class="eyebrow" style="margin-bottom: 1rem">{eyebrow}</p>}
+    {eyebrow && <p class="eyebrow">{eyebrow}</p>}
     <h1>{title}</h1>
     {lead && <p class="lead">{lead}</p>}
     <slot />
+    {cta && (
+      <div class="btn-row">
+        <a class="btn btn-primary" href="/book-online">Réserver un entretien de 30 min</a>
+        <a class="btn btn-glass" href={site.phoneHref}>Appeler le {site.phone}</a>
+      </div>
+    )}
   </div>
 </header>

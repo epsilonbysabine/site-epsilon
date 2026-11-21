@@ -1,155 +1,268 @@
 ---
 import Base from '../layouts/Base.astro';
-import Bird from '../components/Bird.astro';
 import PostCard from '../components/PostCard.astro';
 import { getPosts } from '../lib/wix';
+import { clientLogos } from '../data/testimonials';
+import { site } from '../config/site';
 const posts = (await getPosts()).slice(0, 3);
+
+const offers = [
+  {
+    eyebrow: 'Sportifs, étudiants, artistes',
+    title: 'Préparation mentale',
+    text: "Une compétition, un concours, un examen, une audition ou un oral à venir ? Nous travaillons ensemble la confiance, la concentration et la gestion du stress, avec des outils simples que vous gardez pour la suite.",
+    href: '/preparation-mentale',
+    image: '/images/album-7.jpg',
+    alt: 'Atelier de préparation mentale avec des sportifs sur un ring',
+  },
+  {
+    eyebrow: 'Dirigeants et équipes',
+    title: 'Coaching en entreprise',
+    text: "Coaching individuel ou d'équipe, ateliers et formations : des interventions sur mesure pour des équipes plus sereines et plus performantes.",
+    href: '/coach-entreprise',
+    image: '/images/blog-reunions.jpg',
+    alt: "Réunion d'équipe en entreprise",
+  },
+  {
+    eyebrow: 'PME et TPE',
+    title: 'Entretien de parcours professionnel',
+    text: "L'entretien professionnel est obligatoire et prend du temps aux dirigeants et aux DRH. Je vous en libère, partout en France.",
+    href: '/entretien-professionnel',
+    image: '/images/album-5.jpg',
+    alt: "Sabine Djaouane avec l'équipe d'une entreprise cliente",
+  },
+  {
+    eyebrow: 'Écoles et entreprises',
+    title: 'Formations créativité & communication',
+    text: 'Une formation aux résultats concrets et mesurables : écoute, communication dans le groupe, confiance dans sa créativité.',
+    href: '/formations',
+    image: '/images/album-3.jpg',
+    alt: 'Sabine Djaouane lors d’une intervention',
+  },
+];
+
+const quotes = [
+  {
+    text: "Sabine a su me faire prendre conscience que les solutions étaient en moi, ce qui m'a permis de corriger de moi même, d'analyser et de me recentrer.",
+    author: 'Boris, coaching particulier',
+  },
+  {
+    text: "Depuis plus de 7 ans, nous faisons appel aux compétences de Sabine. Une approche bienveillante, une écoute attentive et un accompagnement professionnel essentiel.",
+    author: 'Entreprise Moro Prato, entretiens professionnels et QVCT',
+  },
+  {
+    text: 'Donne confiance en soi, donne des techniques de respiration pour gérer le stress dont je me sers aussi bien pour le sport que pour mon baccalauréat.',
+    author: 'Sully, sportif en jiu-jitsu brésilien',
+  },
+];
 ---
 <Base
   title="Epsilon by Sabine | Préparation mentale et coaching, Avignon"
   description="Préparatrice mentale et coach à Avignon : sportifs, étudiants, entreprises. Séances individuelles, ateliers, formations. Réservez un entretien de 30 min."
+  image="/images/sabine-portrait-2.jpg"
 >
-  <section class="hero">
+  <!-- 1. Héros -->
+  <section class="hero dark aura">
     <div class="wrap hero-grid">
-      <div class="stack-lg">
-        <div class="stack">
-          <h1>Préparation mentale et coaching à Avignon et partout en France</h1>
-          <p class="question">Et si un <em>petit ajustement</em> changeait toute votre performance ?</p>
-        </div>
+      <div class="hero-copy">
+        <h1>
+          <span class="kicker">Préparation mentale et coaching · Avignon et partout en France</span>
+          <span class="display">Libère et développe ta performance.</span>
+        </h1>
         <p class="lead">
           J'accompagne les sportifs, les étudiants, les artistes et les entreprises pour donner le meilleur d'eux-mêmes le jour où ça compte.
         </p>
-        <div class="hero-actions">
-          <a class="btn btn-primary" href="/book-online">Réserver un entretien de 30 minutes</a>
-          <a class="btn btn-ghost" href="tel:0670792463">06.70.79.24.63</a>
+        <div class="btn-row">
+          <a class="btn btn-primary" href="/book-online">Réserver un entretien de 30 min</a>
+          <a class="btn btn-glass-dark" href="#accompagnements">Découvrir les accompagnements</a>
         </div>
-        <p class="epsilon-note">
-          <b aria-hidden="true">ε</b>
-          <span>Epsilon : en mathématiques, une quantité infime. Celle qui, bien placée, fait toute la différence.</span>
-        </p>
+        <ul class="proof">
+          <li>Diplômée universitaire en préparation mentale</li>
+          <li>12 ans à la tête d'une PME</li>
+          <li>Interventions partout en France</li>
+        </ul>
       </div>
-      <figure class="hero-figure">
-        <div class="frame">
-          <img src="/images/sabine-portrait.jpg" alt="Portrait de Sabine Djaouane" width="800" height="1200" />
-          <Bird />
+      <figure class="hero-portrait" style="margin: 0">
+        <div class="frame glass-dark">
+          <img src="/images/sabine-portrait-2.jpg" alt="Sabine Djaouane, préparatrice mentale et coach" width="800" height="1200" fetchpriority="high" />
         </div>
-        <figcaption>Sabine Djaouane, préparatrice mentale et coach</figcaption>
+        <figcaption class="portrait-card glass-dark">
+          <strong>Sabine Djaouane</strong>
+          <span>Préparatrice mentale et coach, Avignon</span>
+          <q>Vous avez déjà tout en vous pour réussir.</q>
+        </figcaption>
       </figure>
     </div>
   </section>
 
-  <section class="section section-tint">
-    <div class="wrap stack-lg">
-      <div class="audiences">
-        <article class="audience">
-          <p class="eyebrow">Sportifs et étudiants</p>
-          <h2>Une compétition, un concours, un examen, une audition ou un oral à venir ?</h2>
-          <p>
-            Nous travaillons ensemble la confiance, la concentration et la gestion du stress, avec des outils simples que vous gardez pour la suite.
-          </p>
-          <a class="text-link" href="/preparation-mentale">En savoir plus</a>
-        </article>
-        <article class="audience dark">
-          <p class="eyebrow" style="color: var(--lime)">Entreprises</p>
-          <h2>Des équipes plus sereines et plus performantes</h2>
-          <p>
-            Coaching individuel ou d'équipe, ateliers, formations et entretiens de parcours professionnel : des interventions sur mesure pour des équipes plus sereines et plus performantes.
-          </p>
-          <a class="text-link" href="/coach-entreprise">En savoir plus</a>
-        </article>
+  <!-- 2. Preuve sociale -->
+  <section class="logo-strip" aria-label="Ils me font confiance">
+    <div class="wrap">
+      <p>Ils me font confiance</p>
+      <ul class="logo-row">
+        {clientLogos.map((logo) => <li><img src={logo.src} alt={logo.alt} loading="lazy" /></li>)}
+      </ul>
+    </div>
+  </section>
+
+  <!-- 3. Accompagnements -->
+  <section class="section aura" id="accompagnements">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Accompagnements</p>
+        <h2>À chaque objectif son accompagnement</h2>
+        <p class="lead">Séances individuelles, ateliers collectifs ou interventions en entreprise, à Avignon, dans le Vaucluse et la Drôme, et partout en France.</p>
+      </div>
+      <div class="offers">
+        {offers.map((offer) => (
+          <a class="offer glass" href={offer.href}>
+            <div class="media"><img src={offer.image} alt={offer.alt} loading="lazy" /></div>
+            <div class="body">
+              <p class="eyebrow">{offer.eyebrow}</p>
+              <h3>{offer.title}</h3>
+              <p>{offer.text}</p>
+              <span class="text-link">En savoir plus</span>
+            </div>
+          </a>
+        ))}
       </div>
     </div>
   </section>
 
-  <section class="section">
-    <div class="wrap split">
-      <div class="stack">
-        <p class="eyebrow">Libère et développe ta performance</p>
-        <blockquote class="pull" style="margin: 0">
-          « Sabine a su me faire prendre conscience que les solutions étaient en moi. »
-          <cite>Boris</cite>
-        </blockquote>
+  <!-- 4. À propos -->
+  <section class="section section-tint">
+    <div class="wrap split even">
+      <div class="about-portrait">
+        <img src="/images/sabine-portrait.jpg" alt="Portrait de Sabine Djaouane" width="800" height="1200" loading="lazy" />
+        <div class="glass">
+          <strong>12 ans</strong>
+          à la tête d'une PME : je connais de l'intérieur les contraintes des dirigeants et de leurs équipes.
+        </div>
       </div>
       <div class="stack">
+        <p class="eyebrow">Votre coach</p>
+        <h2>Je suis Sabine Djaouane, préparatrice mentale et coach, basée à Avignon.</h2>
         <p class="lead">
-          Je suis Sabine Djaouane, préparatrice mentale et coach, basée à Avignon. Respect, intégrité, authenticité et bienveillance guident mon travail.
+          Respect, intégrité, authenticité et bienveillance guident mon travail. Vous avez déjà tout en vous pour réussir : je vous aide à vous en convaincre et à retrouver votre autonomie, émotionnelle et intellectuelle.
         </p>
-        <p>
-          Vous avez déjà tout en vous pour réussir : je vous aide à vous en convaincre et à retrouver votre autonomie, émotionnelle et intellectuelle.
-        </p>
-        <ul class="values" aria-label="Mes valeurs">
-          <li>Respect</li>
-          <li>Intégrité</li>
-          <li>Authenticité</li>
-          <li>Bienveillance</li>
+        <ul class="checks two">
+          <li>Diplômée universitaire de préparation mentale &amp; psychologie du sportif (université de Lille)</li>
+          <li>PNL, hypnose ériksonnienne, thérapies brèves</li>
+          <li>Relaxation et contrôle respiratoire</li>
+          <li>Approche neurocognitive et comportementale</li>
         </ul>
-        <p>
-          La préparation mentale vous apprend à faire baisser votre stress et à mieux le gérer, pour mobiliser vos ressources le jour où ça compte. Sportifs, étudiants, artistes ou dirigeants, je vous accompagne à Avignon, dans le Vaucluse et la Drôme, et partout en France, vers plus de confiance en vous et plus d'autonomie.
-        </p>
-        <p><a class="text-link" href="/a-propos">Mon parcours et mes outils</a></p>
+        <div class="btn-row" style="margin-top: 0.5rem">
+          <a class="btn btn-primary" href="/a-propos">Mon parcours</a>
+          <a class="text-link" href="/clients">Lire les témoignages</a>
+        </div>
       </div>
     </div>
   </section>
 
+  <!-- 5. Déroulement -->
+  <section class="section dark aura">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Comment ça se passe</p>
+        <h2>Trois étapes pour démarrer</h2>
+      </div>
+      <ol class="process">
+        <li class="glass-dark">
+          <h3>Un entretien de 30 minutes</h3>
+          <p>Nous voyons si je suis la bonne personne pour vous accompagner, en fonction de votre objectif et de notre feeling.</p>
+        </li>
+        <li class="glass-dark">
+          <h3>Le pack découverte</h3>
+          <p>Entretien semi-directif et tests, puis un bilan écrit personnalisé pour construire votre plan d'accompagnement.</p>
+        </li>
+        <li class="glass-dark">
+          <h3>Les séances</h3>
+          <p>De 30 minutes à 2 heures, toutes les 1 à 3 semaines, à mon bureau, à l'extérieur ou au club de sport.</p>
+        </li>
+      </ol>
+      <div class="btn-row" style="margin-top: 2.5rem">
+        <a class="btn btn-primary" href="/book-online">Réserver mon entretien</a>
+        <a class="btn btn-glass-dark" href="/preparation-mentale">Voir les tarifs</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. Témoignages -->
+  <section class="section aura">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Témoignages</p>
+        <h2>Ce qu'en disent les personnes accompagnées</h2>
+      </div>
+      <div class="quote-grid">
+        {quotes.map((q) => (
+          <blockquote class="quote-card glass">
+            <p>« {q.text} »</p>
+            <cite>{q.author}</cite>
+          </blockquote>
+        ))}
+      </div>
+      <p style="margin-top: 2rem"><a class="text-link" href="/clients">Tous les témoignages</a></p>
+    </div>
+  </section>
+
+  <!-- 7. Questions fréquentes -->
   <section class="section section-tint">
     <div class="wrap split">
       <div class="stack sticky">
-        <p class="eyebrow">Optimiser votre croissance</p>
-        <h2>Qu’est ce que la préparation mentale ?</h2>
-        <p><a class="text-link" href="/preparation-mentale">Séances, durée et tarifs</a></p>
+        <p class="eyebrow">Questions fréquentes</p>
+        <h2>Bien comprendre la préparation mentale et le coaching</h2>
+        <p>Une autre question ? Appelez-moi au <a href={site.phoneHref}>{site.phone}</a>.</p>
       </div>
-      <div class="prose">
-        <p>
-          En entreprise ou sur le terrain, elle permet de se libérer des barrières et blocages mentaux plus ou moins conscients que vous pouvez vous imposer. Un blocage qui peut vous empêcher d’exploiter pleinement votre potentiel physique et moral et qui met à mal vos émotions. Ce travail mental est donc un moyen de valoriser vos compétences et de vous mettre en condition avant une importante présentation professionnelle ou une compétition de haut niveau.
-        </p>
-        <p>
-          Pour cela, il est nécessaire de programmer votre cerveau pour trouver rapidement et sereinement cette attitude positive et cet équilibre et être plus performant. La recherche d’un état d’esprit qui passe par un contrôle respiratoire, des techniques de relaxation et un relâchement du corps et de l’esprit. Préparez votre corps à l’effort en projetant votre discours et les résultats que vous aimeriez obtenir. Par exemple, vous répéter quelques mots positifs peut vous conditionner à donner le meilleur de vous-même. Enfin, associez la compétition ou l’épreuve à venir à un souvenir positif ou un mot clé qui peut vous mettre dans de bonnes conditions. Une ancienne victoire par exemple.
-        </p>
-        <p>
-          Pour les sportifs, ce travail sur soi permet aussi de limiter les blessures. Plus de concentration permet d’être plus conscient de vos mouvements et donc d’éviter les accidents. Lors de compétitions, mettez en place un programme ou une routine qui vous aide à entrer dans cet état d’esprit.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="wrap split">
-      <div class="stack sticky">
-        <p class="eyebrow">Entreprises</p>
-        <h2>Pourquoi faire appel à un coach d'entreprise professionnel ?</h2>
-        <p><a class="text-link" href="/coach-entreprise">Le coaching en entreprise</a></p>
-      </div>
-      <div class="prose">
-        <p>
-          Dans le milieu professionnel particulièrement, cet accompagnement par un coach professionnel ou un coaching en entreprise à Avignon passe par deux étapes :
-        </p>
-        <p>
-          Le coaching individuel, qui permet de combattre le stress dû au travail, aux échéances de dossiers ou aux changements organisationnels, comme un changement de poste ou de direction par exemple. Pour mieux gérer ce poids mental, il est nécessaire de prendre de la distance avec les événements et de prendre conscience des outils et ressources à votre disposition pour avancer et régler les problèmes. De cette manière, vous êtes plus à même de relever les défis, atteindre vos objectifs ou gérer votre état de stress ou les conflits qui peuvent émerger de l’environnement de travail.
-        </p>
-        <p>
-          En équipe, lors de séance collective, il permet de faire la somme de plusieurs compétences et permet à plusieurs personnalités de se coordonner pour travailler ensemble. En développant et optimisant la communication entre les groupes, vous pouvez valoriser les atouts de chacun afin d’aller ensemble vers un même objectif. De même, l’art du langage est important à saisir lors d’une séance collective car il permet de comprendre les intentions d’un collaborateur sans pour autant entrer dans le conflit.
-        </p>
-        <p>
-          Les entretiens professionnels peuvent être un moyen de relâcher la pression. Un accompagnement lors d’une séance individuelle, en accord avec le manager, permet de travailler vos performances et de mieux gérer le stress. Lors d’une mutation ou d’un changement d’environnement, il peut faciliter la transition et vous aider à vous reconstruire une identité professionnelle.
-        </p>
-        <p>
-          Avec Epsilon, cette méthode peut également être appliquée aux études lors de formation en écoles post bac ou écoles d'ingénieur, pour optimiser vos chances lors des examens et concours. Mais aussi dans des domaines spécifiques comme le BTP, pour des entretiens professionnels dans le domaine du bâtiment par exemple, ou la croissance et l’optimisation de votre société.
-        </p>
+      <div class="faq">
+        <details class="glass" open>
+          <summary>Qu’est-ce que la préparation mentale ?</summary>
+          <div class="prose">
+            <p>En entreprise ou sur le terrain, elle permet de se libérer des barrières et blocages mentaux plus ou moins conscients que vous pouvez vous imposer. Un blocage qui peut vous empêcher d’exploiter pleinement votre potentiel physique et moral et qui met à mal vos émotions. Ce travail mental est donc un moyen de valoriser vos compétences et de vous mettre en condition avant une importante présentation professionnelle ou une compétition de haut niveau.</p>
+            <p>La recherche d’un état d’esprit qui passe par un contrôle respiratoire, des techniques de relaxation et un relâchement du corps et de l’esprit. Pour les sportifs, ce travail sur soi permet aussi de limiter les blessures : plus de concentration permet d’être plus conscient de vos mouvements et donc d’éviter les accidents.</p>
+          </div>
+        </details>
+        <details class="glass">
+          <summary>Pourquoi faire appel à un coach d'entreprise ?</summary>
+          <div class="prose">
+            <p>Le coaching individuel permet de combattre le stress dû au travail, aux échéances de dossiers ou aux changements organisationnels, comme un changement de poste ou de direction. Vous prenez de la distance avec les événements et prenez conscience des outils et ressources à votre disposition pour avancer.</p>
+            <p>En équipe, lors de séance collective, il permet de faire la somme de plusieurs compétences et permet à plusieurs personnalités de se coordonner pour travailler ensemble. En développant la communication entre les groupes, vous valorisez les atouts de chacun afin d’aller ensemble vers un même objectif.</p>
+          </div>
+        </details>
+        <details class="glass">
+          <summary>Combien de temps dure un accompagnement ?</summary>
+          <div class="prose">
+            <p>Cela peut-être ponctuel ou sur l'année, tout dépend de l'objectif fixé au début des séances. Pour un étudiant, c'est souvent 2 ou 3 mois avant les examens, entre 2 et 5 séances en moyenne. Pour un sportif, il y a souvent des besoins tout au long de la saison.</p>
+          </div>
+        </details>
+        <details class="glass">
+          <summary>Est-ce aussi utile pour les études ?</summary>
+          <div class="prose">
+            <p>Oui. Cette méthode s'applique aux études, en écoles post-bac ou écoles d'ingénieur, pour optimiser vos chances lors des examens et concours, mais aussi aux examens de toutes sortes : musique, danse, VAE, permis de conduire.</p>
+          </div>
+        </details>
+        <details class="glass">
+          <summary>Où se déroulent les séances ?</summary>
+          <div class="prose">
+            <p>À mon bureau chez Medikinos, 260 rue du Mourelet à Avignon, à l'extérieur ou au club de sport, suivant ce que nous allons travailler. En entreprise, je me déplace partout en France.</p>
+          </div>
+        </details>
       </div>
     </div>
   </section>
 
+  <!-- 8. Blog -->
   {posts.length > 0 && (
-    <section class="section section-tint">
-      <div class="wrap stack-lg">
-        <div class="stack">
+    <section class="section">
+      <div class="wrap">
+        <div class="section-head">
           <p class="eyebrow">Le blog Epsilon Coaching</p>
           <h2>Derniers articles</h2>
         </div>
         <div class="post-list three">
           {posts.map((post) => <PostCard post={post} />)}
         </div>
-        <p><a class="text-link" href="/blog">Tous les posts</a></p>
+        <p style="margin-top: 2rem"><a class="text-link" href="/blog">Tous les articles</a></p>
       </div>
     </section>
   )}

@@ -5,17 +5,21 @@ const path = Astro.url.pathname.replace(/\/$/, '') || '/';
 <header class="site-header">
   <div class="wrap">
     <a class="brand" href="/" aria-label="Epsilon, accueil">
-      <img src="/logo/epsilon-icon.svg" alt="" width="38" height="38" />
+      <img src="/logo/epsilon-icon.svg" alt="" width="36" height="36" />
       <span>Epsilon</span>
-      <small>{site.tagline}</small>
     </a>
     <nav class="nav-desktop" aria-label="Navigation principale">
       <ul>
         {nav.map((item) => (
           <li>
-            <a href={item.href} aria-current={path === item.href ? 'page' : undefined}>{item.label}</a>
+            <a href={item.href} aria-current={path === item.href ? 'page' : undefined}>
+              {item.label}
+              {item.children && (
+                <svg class="chev" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 4.5 6 8l3.5-3.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" /></svg>
+              )}
+            </a>
             {item.children && (
-              <ul class="submenu">
+              <ul class="submenu glass">
                 {item.children.map((child) => (
                   <li><a href={child.href} aria-current={path === child.href ? 'page' : undefined}>{child.label}</a></li>
                 ))}
@@ -25,23 +29,26 @@ const path = Astro.url.pathname.replace(/\/$/, '') || '/';
         ))}
       </ul>
     </nav>
-    <a class="btn btn-primary btn-small header-cta" href="/book-online">Réserver un entretien</a>
-    <details class="nav-mobile">
-      <summary>Menu</summary>
-      <nav class="panel" aria-label="Navigation mobile">
-        {nav.map((item) => (
-          <div>
-            {item.children ? <p class="group-title">{item.label}</p> : null}
-            <ul>
-              {(item.children ?? [item]).map((child) => (
-                <li><a href={child.href}>{child.label}</a></li>
-              ))}
-            </ul>
-          </div>
-        ))}
-        <a class="btn btn-primary" href="/book-online">Réserver un entretien</a>
-        <a class="btn btn-ghost" href={site.phoneHref}>{site.phone}</a>
-      </nav>
-    </details>
+    <div class="header-actions">
+      <a class="header-phone" href={site.phoneHref}>{site.phone}</a>
+      <a class="btn btn-primary btn-small header-cta" href="/book-online">Prendre rendez-vous</a>
+      <details class="nav-mobile">
+        <summary class="btn-glass">Menu</summary>
+        <nav class="panel glass" aria-label="Navigation mobile">
+          {nav.map((item) => (
+            <div>
+              {item.children ? <p class="group-title">{item.label}</p> : null}
+              <ul>
+                {(item.children ?? [item]).map((child) => (
+                  <li><a href={child.href}>{child.label}</a></li>
+                ))}
+              </ul>
+            </div>
+          ))}
+          <a class="btn btn-primary" href="/book-online">Prendre rendez-vous</a>
+          <a class="btn btn-glass" href={site.phoneHref}>Appeler le {site.phone}</a>
+        </nav>
+      </details>
+    </div>
   </div>
 </header>

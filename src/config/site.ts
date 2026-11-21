@@ -45,6 +45,7 @@ export const nav = [
       { label: 'Album photos', href: '/album-photo' },
     ],
   },
+  { label: 'Témoignages', href: '/clients' },
   { label: 'Blog', href: '/blog' },
 ];
 

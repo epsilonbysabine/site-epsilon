@@ -8,14 +8,14 @@ import { testimonials, clientLogos } from '../data/testimonials';
   description="Coaching84: ils nous ont fait confiance à travers l'héxagone - coaching, préparation mentale, formation en créativité et communication"
 >
   <PageHead eyebrow="Mes clients" title="Ils me font confiance" />
-  <section class="section" style="padding-top: 1rem">
+  <section class="section aura" style="padding-top: 1rem">
     <div class="wrap stack-lg">
       <ul class="logos">
         {clientLogos.map((logo) => <li><img src={logo.src} alt={logo.alt} loading="lazy" /></li>)}
       </ul>
       <div class="quotes">
         {testimonials.map((t) => (
-          <blockquote class="quote">
+          <blockquote class="quote glass">
             {t.paragraphs.map((p) => <p>{p}</p>)}
             <cite>{t.author}</cite>
           </blockquote>

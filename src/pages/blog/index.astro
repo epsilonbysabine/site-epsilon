@@ -6,7 +6,7 @@ import { getPosts } from '../../lib/wix';
 const posts = await getPosts();
 ---
 <Base title="Blog Epsilon Coaching | Coach en entreprise" description="Le blog Epsilon Coaching : préparation mentale, coaching en entreprise, gestion du stress.">
-  <PageHead eyebrow="Tous les posts" title="Le blog Epsilon Coaching" />
+  <PageHead cta={false} eyebrow="Tous les posts" title="Le blog Epsilon Coaching" />
   <section class="section" style="padding-top: 1rem">
     <div class="wrap post-list three">
       {posts.map((post) => <PostCard post={post} />)}

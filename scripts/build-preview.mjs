@@ -61,11 +61,11 @@ const views = pages
 
 const page = `<title>Epsilon by Sabine</title>
 <meta name="claude:viewport-fit-sides" content="cover">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Figtree:wght@300..900&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400..800&family=Figtree:wght@300..900&display=swap">
 <style>
 ${css}
 body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--paper); }
-.preview-flag { background: var(--lime); color: var(--night); font-size: 0.85rem; font-weight: 600; text-align: center; padding-block: 0.4rem; }
+.preview-flag { background: var(--night); color: var(--on-dark); font-size: 0.85rem; font-weight: 600; text-align: center; padding-block: 0.4rem; }
 </style>
 <p class="preview-flag"><span class="wrap" style="display:block">Aperçu du nouveau site Epsilon. La réservation et le blog seront reliés à Wix une fois le site en ligne.</span></p>
 ${header}

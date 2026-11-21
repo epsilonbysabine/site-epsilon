@@ -1,28 +1,27 @@
 ---
 import { site, contactForm } from '../config/site';
-import Bird from './Bird.astro';
 const formId = import.meta.env.PUBLIC_WIX_FORM_ID;
 const clientId = import.meta.env.PUBLIC_WIX_CLIENT_ID;
 const showForm = Boolean(formId && clientId);
 ---
-<section class="contact-band section" id="contact">
-  <Bird />
-  <div class="wrap contact-grid">
+<section class="contact-band section dark aura" id="contact">
+  <div class="wrap">
     <div class="stack">
-      <p class="eyebrow" style="color: var(--lime)">Contact</p>
+      <p class="eyebrow">Contact</p>
       <h2>Parlons de votre objectif</h2>
-      <p class="lead" style="color: var(--on-dark-soft)">
+      <p class="lead">
         Un échange de 30 minutes suffit pour voir si nous pouvons travailler ensemble. Appelez-moi ou réservez directement un créneau.
       </p>
-      <div class="hero-actions">
-        <a class="btn btn-lime" href="/book-online">Réserver un entretien de 30 minutes</a>
+      <div class="btn-row" style="margin-top: 0.5rem">
+        <a class="btn btn-primary" href="/book-online">Réserver un entretien de 30 min</a>
+        <a class="btn btn-glass-dark" href={site.phoneHref}>Appeler le {site.phone}</a>
       </div>
     </div>
-    <div class="stack">
-      <address class="contact-card">
+    <div class="contact-card glass-dark">
+      <address class="contact-lines">
         <a class="phone" href={site.phoneHref}>{site.phone}</a>
-        <strong>Votre coach : DJAOUANE Sabine</strong>
-        {site.address.map((line) => <span>{line}</span>)}
+        <strong>Votre coach : Sabine Djaouane</strong>
+        <span>{site.address.join(', ')}</span>
         <a href={`mailto:${site.email}`}>{site.email}</a>
       </address>
       {showForm && (
@@ -39,7 +38,7 @@ const showForm = Boolean(formId && clientId);
           <label for="contact-message">Votre message
             <textarea id="contact-message" name="message" rows="4" required></textarea>
           </label>
-          <button class="btn btn-on-dark" type="submit">Envoyer le message</button>
+          <button class="btn btn-primary" type="submit">Envoyer le message</button>
           <p class="form-status" role="status" aria-live="polite"></p>
         </form>
       )}
