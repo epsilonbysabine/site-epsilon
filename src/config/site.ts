@@ -5,7 +5,7 @@ export const site = {
   tagline: 'Libérez et développez votre performance',
   phone: '06.70.79.24.63',
   phoneHref: 'tel:0670792463',
-  email: 'sabine@coaching-epsilon.net',
+  email: 'epsilonbysabine@gmail.com',
   address: ['MEDIKINOS', '260 rue du Mourelet', '84000 AVIGNON'],
   social: [
     { label: 'LinkedIn', href: 'https://www.linkedin.com/in/sabine-djaouane-80287650/' },
