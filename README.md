@@ -34,6 +34,17 @@ Sans `PUBLIC_WIX_CLIENT_ID`, le site se construit quand même : il utilise la co
 Le site est statique : après la publication d'un article ou la modification d'une prestation dans Wix,
 relancer un build chez l'hébergeur pour mettre le site à jour.
 
+## Vérifier l'intégration Wix
+
+```bash
+npm run check      # vérification des types (SDK Wix compris)
+npm run test:wix   # construit le site contre un faux serveur Wix et vérifie blog, prestations et formulaire
+```
+
+`test:wix` ne demande aucun compte Wix : il simule les réponses de l'API. Le test réel se fait en
+renseignant `PUBLIC_WIX_CLIENT_ID` puis en lançant `npm run build` : le terminal affiche
+`[wix] … utilisation de la copie locale` si Wix ne répond pas ou refuse l'accès.
+
 ## Contenu
 
 - Textes des pages : `src/pages/*.astro`

@@ -30,11 +30,17 @@ const clientId = import.meta.env.PUBLIC_WIX_CLIENT_ID;
 
 export const wixEnabled = Boolean(clientId);
 
-function client() {
+// Un seul client pour tout le build : un seul jeton visiteur est demandé à Wix.
+let wixClient: ReturnType<typeof makeClient> | undefined;
+function makeClient() {
   return createClient({
     modules: { posts, services },
     auth: OAuthStrategy({ clientId: clientId! }),
   });
+}
+function client() {
+  wixClient ??= makeClient();
+  return wixClient;
 }
 
 function imageUrl(wixImage: string | undefined | null, width = 1200, height = 800): string | null {
