@@ -254,17 +254,17 @@ ul, ol { margin: 0; padding-left: 1.2em; }
 .logo-strip p { font-size: var(--step--1); color: var(--ink-soft); text-align: center; }
 .logo-row { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1.25rem 2rem; align-items: center; }
 @media (min-width: 52rem) { .logo-row { grid-template-columns: repeat(8, minmax(0, 1fr)); } }
-.logo-row img { max-height: 2.6rem; width: auto; margin-inline: auto; filter: grayscale(1) contrast(1.1); mix-blend-mode: multiply; opacity: 0.7; transition: opacity 0.2s, filter 0.2s; }
-.logo-row img:hover { opacity: 1; filter: none; }
+.logo-row img { max-height: 2.6rem; width: auto; margin-inline: auto; filter: grayscale(1) contrast(1.1); mix-blend-mode: multiply; opacity: 0.75; }
 
 /* Cartes d'offre */
 .offers { display: grid; gap: 1.25rem; }
 @media (min-width: 46rem) { .offers { grid-template-columns: 1fr 1fr; } }
-.offer { display: grid; grid-template-rows: auto 1fr; overflow: hidden; text-decoration: none; color: var(--ink); padding: 0.6rem; transition: transform 0.2s, box-shadow 0.2s; }
-.offer:hover { transform: translateY(-3px); color: var(--ink); }
+.offer { display: grid; grid-template-rows: auto 1fr; overflow: hidden; text-decoration: none; color: var(--ink); padding: 0.6rem; }
+.offer:hover { color: var(--ink); }
 .offer .media { aspect-ratio: 16 / 9; border-radius: calc(var(--radius) - 0.4rem); overflow: hidden; }
-.offer .media img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s; }
-.offer:hover .media img { transform: scale(1.04); }
+.offer .media img { width: 100%; height: 100%; object-fit: cover; }
+.offer .text-link::after { transition: none; }
+.offer:hover .text-link::after { transform: none; }
 .offer .body { display: grid; gap: 0.7rem; align-content: start; padding: 1.2rem 1rem 1rem; }
 .offer h3 { font-size: var(--step-1); letter-spacing: -0.015em; }
 .offer p { color: var(--ink-soft); }
@@ -368,11 +368,12 @@ ul, ol { margin: 0; padding-left: 1.2em; }
 .post-card { display: grid; gap: 0.75rem; align-content: start; text-decoration: none; color: var(--ink); min-width: 0; }
 .post-card:hover { color: var(--ink); }
 .post-card .cover { aspect-ratio: 3 / 2; border-radius: var(--radius-sm); overflow: hidden; background: radial-gradient(120% 90% at 85% 0%, var(--night-2), var(--night) 60%); display: grid; place-items: center; color: rgb(255 255 255 / 0.35); }
-.post-card .cover img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s; }
-.post-card:hover .cover img { transform: scale(1.03); }
+.post-card .cover img { width: 100%; height: 100%; object-fit: cover; transition: opacity 0.3s; }
+.post-card:hover .cover img { opacity: 0.92; }
 .post-card .cover .bird { width: 45%; }
 .post-card h3 { font-size: var(--step-1); letter-spacing: -0.015em; line-height: 1.25; }
-.post-card:hover h3 { color: var(--violet); }
+.post-card h3 { text-decoration: underline; text-decoration-color: transparent; text-decoration-thickness: 1px; text-underline-offset: 0.2em; transition: text-decoration-color 0.3s; }
+.post-card:hover h3 { text-decoration-color: rgb(23 18 43 / 0.35); }
 .meta { font-size: var(--step--1); color: var(--ink-soft); font-variant-numeric: tabular-nums; }
 .article { max-width: 44rem; }
 .article h1 { font-size: var(--step-3); font-weight: 700; letter-spacing: -0.03em; }
