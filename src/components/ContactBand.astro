@@ -10,7 +10,7 @@ const showForm = Boolean(formId && clientId);
       <p class="eyebrow">Contact</p>
       <h2>Parlons de votre objectif</h2>
       <p class="lead">
-        Un échange de 30 minutes suffit pour voir si nous pouvons travailler ensemble. Appelez-moi ou réservez directement un créneau.
+        Un échange de 30 minutes suffit pour voir si nous pouvons travailler ensemble. Appelez-nous ou réservez directement un créneau.
       </p>
       <div class="btn-row" style="margin-top: 0.5rem">
         <a class="btn btn-primary" href="/book-online">Réserver un entretien de 30 min</a>
@@ -68,10 +68,10 @@ const showForm = Boolean(formId && clientId);
         const wix = createClient({ modules: { submissions }, auth: OAuthStrategy({ clientId: form.dataset.clientId! }) });
         await wix.submissions.createSubmission({ formId: form.dataset.formId!, submissions: values });
         form.reset();
-        status.textContent = 'Message envoyé. Je vous réponds rapidement.';
+        status.textContent = 'Message envoyé. Nous vous répondons rapidement.';
       } catch (error) {
         console.error(error);
-        status.textContent = "Le message n'a pas pu être envoyé. Appelez-moi au 06.70.79.24.63 ou réessayez dans un instant.";
+        status.textContent = "Le message n'a pas pu être envoyé. Appelez-nous au 06.70.79.24.63 ou réessayez dans un instant.";
       } finally {
         button.disabled = false;
       }

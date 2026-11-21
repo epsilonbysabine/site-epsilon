@@ -2,7 +2,7 @@ export const site = {
   name: 'Epsilon',
   legalName: 'EPSILON by Sabine',
   coach: 'Sabine Djaouane',
-  tagline: 'Libère et développe ta performance',
+  tagline: 'Libérez et développez votre performance',
   phone: '06.70.79.24.63',
   phoneHref: 'tel:0670792463',
   email: 'sabine@coaching-epsilon.net',
@@ -14,39 +14,46 @@ export const site = {
   ],
 };
 
+// Menu principal : liens directs, sans sous-menus.
 export const nav = [
+  { label: 'Préparation mentale', href: '/preparation-mentale' },
+  { label: 'Entreprises', href: '/coach-entreprise' },
+  { label: 'Formations', href: '/formations' },
+  { label: 'À propos', href: '/a-propos' },
+  { label: 'Témoignages', href: '/clients' },
+  { label: 'Blog', href: '/blog' },
+];
+
+// Plan du site affiché dans le pied de page et le menu mobile.
+export const sitemap = [
   {
     label: 'Préparation mentale',
-    href: '/preparation-mentale',
     children: [
       { label: 'Préparation mentale', href: '/preparation-mentale' },
       { label: 'Ateliers pour sportifs', href: '/ateliers-preparation-mentale' },
       { label: 'Ateliers développement personnel', href: '/ateliers-developpement-personnel' },
-      { label: 'Mes partenaires', href: '/mespartenaires' },
+      { label: 'Nos partenaires', href: '/mespartenaires' },
     ],
   },
   {
     label: 'Entreprises',
-    href: '/coach-entreprise',
     children: [
-      { label: 'Coach entreprise', href: '/coach-entreprise' },
+      { label: 'Coaching en entreprise', href: '/coach-entreprise' },
       { label: 'Entretien professionnel', href: '/entretien-professionnel' },
       { label: 'Formations', href: '/formations' },
       { label: 'Créativité & innovation', href: '/creativite-innovation' },
     ],
   },
   {
-    label: 'À propos',
-    href: '/a-propos',
+    label: 'Epsilon',
     children: [
-      { label: 'Mes références', href: '/a-propos' },
-      { label: 'Mes prestations', href: '/services' },
-      { label: 'Mes clients', href: '/clients' },
+      { label: 'Sabine Djaouane', href: '/a-propos' },
+      { label: 'Nos prestations', href: '/services' },
+      { label: 'Témoignages', href: '/clients' },
       { label: 'Album photos', href: '/album-photo' },
+      { label: 'Blog', href: '/blog' },
     ],
   },
-  { label: 'Témoignages', href: '/clients' },
-  { label: 'Blog', href: '/blog' },
 ];
 
 // Formulaire de contact Wix Forms : associez chaque champ du site à la clé du champ
