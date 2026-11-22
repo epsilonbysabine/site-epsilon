@@ -14,6 +14,12 @@ export const site = {
   ],
 };
 
+// Pages que l'on peut masquer sans les supprimer : false = page invisible
+// (plus de liens vers elle, et son adresse renvoie vers la page Préparation mentale).
+export const visiblePages = {
+  partenaires: false,
+};
+
 // Menu principal : liens directs, sans sous-menus.
 export const nav = [
   { label: 'Préparation mentale', href: '/preparation-mentale' },
@@ -32,7 +38,7 @@ export const sitemap = [
       { label: 'Préparation mentale', href: '/preparation-mentale' },
       { label: 'Ateliers pour sportifs', href: '/ateliers-preparation-mentale' },
       { label: 'Ateliers développement personnel', href: '/ateliers-developpement-personnel' },
-      { label: 'Nos partenaires', href: '/mespartenaires' },
+      ...(visiblePages.partenaires ? [{ label: 'Nos partenaires', href: '/mespartenaires' }] : []),
     ],
   },
   {

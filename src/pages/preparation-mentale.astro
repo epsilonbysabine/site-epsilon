@@ -1,6 +1,7 @@
 ---
 import Base from '../layouts/Base.astro';
 import PageHead from '../components/PageHead.astro';
+import { visiblePages } from '../config/site';
 const themes = ['Performance', 'Confiance en soi', 'Estime de soi', 'Motivation', 'Adaptabilité', 'Combativité', 'Réactivité', 'Activation', 'Concentration', "Fixation d'objectif", "Cohésion d'équipe"];
 ---
 <Base
@@ -35,7 +36,7 @@ const themes = ['Performance', 'Confiance en soi', 'Estime de soi', 'Motivation'
         <p class="btn-row" style="gap: 0.5rem 1.5rem">
           <a class="text-link" href="/ateliers-preparation-mentale">Les ateliers pour sportifs</a>
           <a class="text-link" href="/ateliers-developpement-personnel">Les ateliers développement personnel</a>
-          <a class="text-link" href="/mespartenaires">Nos partenaires : préparation physique et nutrition</a>
+          {visiblePages.partenaires && <a class="text-link" href="/mespartenaires">Nos partenaires : préparation physique et nutrition</a>}
         </p>
       </div>
     </div>

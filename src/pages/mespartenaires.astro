@@ -1,6 +1,9 @@
 ---
 import Base from '../layouts/Base.astro';
 import PageHead from '../components/PageHead.astro';
+import { visiblePages } from '../config/site';
+// Page masquée tant que visiblePages.partenaires vaut false (src/config/site.ts).
+if (!visiblePages.partenaires) return Astro.redirect('/preparation-mentale');
 ---
 <Base
   title="Epsilon Coaching - Partenariats"

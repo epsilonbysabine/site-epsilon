@@ -49,6 +49,7 @@ renseignant `PUBLIC_WIX_CLIENT_ID` puis en lançant `npm run build` : le termina
 
 - Textes des pages : `src/pages/*.astro`
 - Coordonnées, menu : `src/config/site.ts`
+- Pages masquées : `visiblePages` dans `src/config/site.ts` (la page Partenaires est masquée ; passer `partenaires` à `true` pour la réafficher)
 - Témoignages et logos clients : `src/data/testimonials.ts`
 - Style (couleurs, typographies) : `src/styles/global.css`
 - Logo : fichiers d'origine dans `logo/`, versions utilisées par le site dans `public/logo/`
