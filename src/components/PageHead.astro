@@ -1,18 +1,27 @@
 ---
-// En-tête des pages intérieures. Par défaut, il propose la prise de rendez-vous et l'appel.
+// En-tête des pages intérieures : titre, accroche, et juste en dessous
+// le sommaire de ce que la page propose (liens directs).
 import { site } from '../config/site';
 interface Props {
   eyebrow?: string;
   title: string;
   lead?: string;
   cta?: boolean;
+  links?: { label: string; href: string }[];
 }
-const { eyebrow, title, lead, cta = true } = Astro.props;
+const { eyebrow, title, lead, cta = true, links = [] } = Astro.props;
 ---
 <header class="page-head aura">
   <div class="wrap">
     {eyebrow && <p class="eyebrow">{eyebrow}</p>}
     <h1>{title}</h1>
+    {links.length > 0 && (
+      <nav class="quick-links" aria-label="Dans cette rubrique">
+        <ul>
+          {links.map((l) => <li><a class="glass" href={l.href}>{l.label}</a></li>)}
+        </ul>
+      </nav>
+    )}
     {lead && <p class="lead">{lead}</p>}
     <slot />
     {cta && (

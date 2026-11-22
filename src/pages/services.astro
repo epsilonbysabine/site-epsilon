@@ -1,58 +1,16 @@
 ---
 import Base from '../layouts/Base.astro';
 import PageHead from '../components/PageHead.astro';
+import OfferDirectory from '../components/OfferDirectory.astro';
 ---
 <Base
-  title="Epsilon Coaching - Les services"
-  description="Découvrez tous nos services dans le domaine du coaching d'entreprise et de la preparation mentale pour les sportifs et au sein des entreprises."
+  title="Nos prestations | Epsilon"
+  description="Toutes les prestations d'Epsilon : préparation mentale, ateliers, coaching en entreprise, entretiens professionnels, formations."
 >
-  <PageHead eyebrow="Nos prestations" title="Les services d'Epsilon Coaching" />
-  <section class="section section-tint">
-    <div class="wrap grid-3">
-      <article class="panel-card">
-        <h2 style="font-size: var(--step-2)">Coaching en entreprise</h2>
-        <p>
-          Le coaching d'entreprise est un accompagnement professionnel personnalisé permettant d’obtenir des résultats concrets et mesurables dans la vie professionnelle et personnelle. Il est devenu un outil de développement du leadership qui a fait ses preuves.
-        </p>
-        <p>Le coach en entreprise apporte des résultats en augmentant l’efficacité et en donnant aux individus et aux équipes les moyens de réussir.</p>
-        <ul class="prose">
-          <li>Coaching individuel et d'équipe</li>
-          <li>Retour au travail après un burn-out</li>
-          <li>Réunions efficaces</li>
-          <li>Créativité et innovation</li>
-          <li>Entretiens de parcours professionnel</li>
-        </ul>
-        <a class="text-link" href="/coach-entreprise">Coach entreprise</a>
-      </article>
-      <article class="panel-card">
-        <h2 style="font-size: var(--step-2)">La préparation mentale</h2>
-        <p class="eyebrow">Pour chefs d'entreprise, sportifs, artistes et étudiants</p>
-        <p>Vous avez besoin:</p>
-        <ul class="prose">
-          <li>De vous organiser ?</li>
-          <li>De gérer vos émotions ?</li>
-          <li>De vous dépasser ?</li>
-          <li>De Performer ?</li>
-          <li>De réussir !</li>
-        </ul>
-        <p>Exprimez votre besoin et nous le travaillerons ensemble. Nous vous accompagnons et vous préparons pour toutes vos échéances.</p>
-        <p>Coaching et Préparation mentale : des outils performants pour vous faire progresser vers votre but.</p>
-        <p><strong>Votre objectif n’est peut-être qu’à quelques séances….</strong></p>
-        <a class="text-link" href="/preparation-mentale">Préparation mentale</a>
-      </article>
-      <article class="panel-card">
-        <h2 style="font-size: var(--step-2)">Les formations</h2>
-        <p>Suivant vos besoins, nous vous proposons des formations sur :</p>
-        <ul class="prose">
-          <li>la communication</li>
-          <li>la créativité</li>
-          <li>le management</li>
-          <li>la PNL</li>
-          <li>la préparation mentale</li>
-          <li>la gestion de stress</li>
-        </ul>
-        <a class="text-link" href="/formations">Formations</a>
-      </article>
+  <PageHead eyebrow="Nos prestations" title="Tout ce que nous proposons" />
+  <section class="section aura" style="padding-top: 1rem">
+    <div class="wrap">
+      <OfferDirectory />
     </div>
   </section>
 </Base>

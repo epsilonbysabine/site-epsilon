@@ -5,6 +5,12 @@ import CreativityQuotes from '../components/CreativityQuotes.astro';
 ---
 <Base title="Créativité & Innovation | Epsilon" description="Créativité et Innovation en entreprise et pour les écoles">
   <PageHead
+    links={[
+      { label: 'Pour les écoles', href: '#ecoles' },
+      { label: 'Pour les entreprises', href: '#entreprises' },
+      { label: 'Recommandations', href: '#avis' },
+      { label: 'Formations', href: '/formations' },
+    ]}
     eyebrow="Pour les Écoles et les Entreprises"
     title="Créativité et Innovation"
     lead="Bienvenue sur notre page dédiée à la créativité et à l'innovation. Chez EPSILON, nous croyons que ces compétences sont essentielles pour naviguer dans un monde en constante évolution. Que vous soyez une école cherchant à inspirer la prochaine génération de leaders ou une entreprise désireuse de rester compétitive, nous avons les solutions pour vous."
@@ -40,7 +46,7 @@ import CreativityQuotes from '../components/CreativityQuotes.astro';
       <h2>Nos Services</h2>
       <div class="grid-2">
         <div class="stack">
-          <h3>Pour les Écoles</h3>
+          <h3 id="ecoles">Pour les Écoles</h3>
           <ul class="price-list">
             <li><b>Workshops de Créativité</b><span>Ateliers interactifs pour encourager la pensée divergente et la résolution de problèmes créative.</span></li>
             <li><b>Formations en Créativité et Innovation</b><span>Programmes complets pour développer les compétences créatives des étudiants et du personnel éducatif.</span></li>
@@ -48,7 +54,7 @@ import CreativityQuotes from '../components/CreativityQuotes.astro';
           </ul>
         </div>
         <div class="stack">
-          <h3>Pour les Entreprises</h3>
+          <h3 id="entreprises">Pour les Entreprises</h3>
           <ul class="price-list">
             <li><b>Consulting en Processus Créatifs</b><span>Analyse et optimisation des processus internes pour maximiser la créativité.</span></li>
             <li><b>Sessions de Brainstorming</b><span>Ateliers guidés pour exploiter le potentiel créatif des équipes.</span></li>

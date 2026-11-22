@@ -7,6 +7,11 @@ import PageHead from '../components/PageHead.astro';
   description="Epsilon Coaching : externalisation de vos entretiens professionnels. Spécialisée dans le bâtiment, pour les PME - TPE. Nous nous déplaçons partout en France."
 >
   <PageHead
+    links={[
+      { label: 'Avantages pour vos salariés', href: '#avantages' },
+      { label: 'Les étapes', href: '#etapes' },
+      { label: 'Obligations légales', href: '#obligations' },
+    ]}
     eyebrow="Entreprises"
     title="L'entretien de parcours professionnel"
     lead="L'entretien professionnel est obligatoire et prend du temps aux dirigeants et aux DRH. Nous vous en libérons. Vos salariés s'expriment plus librement face à une personne extérieure à la hiérarchie, et vous y voyez plus clair sur leurs envies et leur évolution."
@@ -17,7 +22,7 @@ import PageHead from '../components/PageHead.astro';
   <section class="section section-tint">
     <div class="wrap grid-2">
       <div class="panel-card">
-        <h2 style="font-size: var(--step-2)">Quels avantages pour vos salariés ?</h2>
+        <h2 id="avantages" style="font-size: var(--step-2)">Quels avantages pour vos salariés ?</h2>
         <ul class="prose">
           <li>Un œil neuf et une neutralité bienveillante durant les entretiens</li>
           <li>Un besoin de se détacher des liens hiérarchiques pour leur permettre de s'exprimer plus librement</li>
@@ -25,7 +30,7 @@ import PageHead from '../components/PageHead.astro';
         </ul>
       </div>
       <div class="panel-card">
-        <h2 style="font-size: var(--step-2)">Les différentes étapes</h2>
+        <h2 id="etapes" style="font-size: var(--step-2)">Les différentes étapes</h2>
         <ol class="steps">
           <li><span>Analyse de pré-intervention : vos objectifs, vos valeurs, vos besoins, vos envies.</span></li>
           <li><span>Préparation de documents support pour aider et préparer vos collaborateurs.</span></li>
@@ -42,7 +47,7 @@ import PageHead from '../components/PageHead.astro';
         <p>
           <strong>Petit rappel de ce qu'est un entretien professionnel :</strong> Un entretien professionnel se positionne sur l'avenir individuel du salarié, de son employabilité.
         </p>
-        <h2>À propos des obligations légales</h2>
+        <h2 id="obligations">À propos des obligations légales</h2>
         <p>
           Depuis le 26 octobre 2025, l'entretien professionnel devient l'entretien de parcours professionnel : un premier entretien dans la première année d'embauche, puis un entretien tous les 4 ans (au lieu de 2), avec un bilan tous les 8 ans (au lieu de 6). Dans les entreprises d'au moins 50 salariés, un salarié qui n'a eu en 8 ans ni formation, ni certification, ni progression salariale ou professionnelle ouvre droit à un abondement de 3 000 € de son compte personnel de formation. En dessous de 50 salariés, il n'y a pas d'abondement automatique, mais l'employeur s'expose à une saisine des prud'hommes et à un contrôle de l'inspection du travail.
         </p>

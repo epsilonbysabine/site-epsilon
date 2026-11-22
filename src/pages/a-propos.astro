@@ -8,23 +8,34 @@ const outils = ['Techniques de coaching', 'PNL (Programmation Neuro-Linguistique
   description="Sabine Djaouane coach professionnelle et dirigeante d'Epsilon Coaching vous présente ses services et sa passion."
   image="/images/sabine-portrait-2.jpg"
 >
-  <PageHead eyebrow="Fondatrice d'Epsilon" title="Sabine Djaouane, coach et préparatrice mentale" />
+  <PageHead
+    eyebrow="Fondatrice d'Epsilon"
+    title="Sabine Djaouane, coach et préparatrice mentale"
+    cta={false}
+    links={[
+      { label: 'Son parcours', href: '#parcours' },
+      { label: 'Nos outils', href: '#outils' },
+      { label: 'Sa formation', href: '#formation' },
+      { label: 'Témoignages', href: '/clients' },
+      { label: 'Album photos', href: '/album-photo' },
+    ]}
+  />
   <section class="section" style="padding-top: 1rem">
     <div class="wrap split">
       <img class="portrait sticky" src="/images/sabine-portrait-2.jpg" alt="Portrait de Sabine Djaouane" width="800" height="1200" />
       <div class="prose">
-        <p class="pull">Avant tout, une passionnée.</p>
+        <p class="pull" id="parcours">Avant tout, une passionnée.</p>
         <p>
           Tout ce qui concerne les relations humaines, les stratégies mentales, les comportements et le sport passionne Sabine Djaouane. C'est donc naturellement qu'elle s'est dirigée vers la spécialité de <a href="/coach-entreprise">coach en entreprise</a> mais également de la <a href="/preparation-mentale">préparation mentale</a>, et qu'elle a fondé Epsilon.
         </p>
         <p>
           Coach professionnelle de dirigeants, de managers et de collaborateurs, préparatrice mentale pour sportifs, chefs d'entreprises, artistes et étudiants, formatrice en créativité &amp; communication, en management, en stratégie mentale, en PNL... Sabine a passé 12 ans à la tête d'une PME. Elle connaît donc de l'intérieur les contraintes des dirigeants et de leurs équipes, et c'est ce qui nourrit l'accompagnement d'Epsilon en entreprise.
         </p>
-        <h2>Nos outils</h2>
+        <h2 id="outils">Nos outils</h2>
         <ul class="tags">
           {outils.map((o) => <li>{o}</li>)}
         </ul>
-        <h2>Sa formation</h2>
+        <h2 id="formation">Sa formation</h2>
         <p>
           Sabine a été formée par des spécialistes mondialement reconnus dans la profession, tels que Shelle Rose Charvet (Canada), Christina Hall (USA), Tony Robbins (USA), Christian Flèche (France), Maggy Philipps (USA), Robert Dilts (USA), Guillaume Poupard (France), Yancy DUFOUR (France), Nathalie CREPIN (France), Florence DELERUE (France)...
         </p>

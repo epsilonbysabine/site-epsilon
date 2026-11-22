@@ -8,11 +8,17 @@ import CreativityQuotes from '../components/CreativityQuotes.astro';
   description={'Epsilon vous accompagne dans vos formations: Entreprise ou école post-bac, nous vous proposons une formation inédite "créativité et communication"'}
 >
   <PageHead
+    links={[
+      { label: 'Créativité & communication', href: '#creativite' },
+      { label: 'Recommandations', href: '#avis' },
+      { label: 'Autres formations', href: '#autres' },
+      { label: 'Créativité et innovation', href: '/creativite-innovation' },
+    ]}
     eyebrow="Formations"
     title="Formations créativité & communication"
     lead="La formation « Créativité et communication » proposée par Epsilon, est une formation aux résultats concrets et mesurables dans la vie professionnelle, pour un suivi au sein de la société."
   />
-  <section class="section section-tint">
+  <section class="section section-tint" id="creativite">
     <div class="wrap split">
       <div class="prose sticky">
         <p>
@@ -31,7 +37,7 @@ import CreativityQuotes from '../components/CreativityQuotes.astro';
     </div>
   </section>
   <CreativityQuotes />
-  <section class="section">
+  <section class="section" id="autres">
     <div class="wrap split">
       <div class="stack">
         <h2>Suivant vos besoins</h2>

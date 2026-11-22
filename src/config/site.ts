@@ -24,21 +24,21 @@ export const visiblePages = {
 export const nav = [
   { label: 'Préparation mentale', href: '/preparation-mentale' },
   { label: 'Entreprises', href: '/coach-entreprise' },
+  { label: 'Ateliers', href: '/ateliers' },
   { label: 'Formations', href: '/formations' },
   { label: 'À propos', href: '/a-propos' },
-  { label: 'Témoignages', href: '/clients' },
   { label: 'Blog', href: '/blog' },
 ];
 
 // Plan du site affiché dans le pied de page et le menu mobile.
 export const sitemap = [
   {
-    label: 'Préparation mentale',
+    label: 'Particuliers',
     children: [
       { label: 'Préparation mentale', href: '/preparation-mentale' },
+      { label: 'Ateliers chez vous', href: '/ateliers-chez-vous' },
       { label: 'Ateliers pour sportifs', href: '/ateliers-preparation-mentale' },
       { label: 'Ateliers développement personnel', href: '/ateliers-developpement-personnel' },
-      { label: 'Ateliers chez vous', href: '/ateliers-chez-vous' },
       ...(visiblePages.partenaires ? [{ label: 'Nos partenaires', href: '/mespartenaires' }] : []),
     ],
   },

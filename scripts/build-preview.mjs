@@ -38,7 +38,7 @@ const rewrite = (html) =>
   html
     .replace(/href="(\/[^"#]*)(#[^"]*)?"/g, (all, path, hash) => {
       const route = decodeURI(path).replace(/\/$/, '') || '/';
-      if (ids.has(route)) return `href="#${ids.get(route)}"`;
+      if (ids.has(route)) return `href="#${ids.get(route)}${hash ? '--' + hash.slice(1) : ''}"`;
       return all;
     })
     .replace(/(src|href)="\/(images|logo)\//g, '$1="$2/')
@@ -80,11 +80,19 @@ ${footer}
   var slot = document.getElementById('contact-slot');
   var current = null;
   function show() {
-    var name = decodeURIComponent(location.hash.slice(1)) || 'accueil';
-    var view = views.filter(function (v) { return v.dataset.view === name; })[0];
+    var raw = decodeURIComponent(location.hash.slice(1)) || 'accueil';
+    var parts = raw.split('--');
+    var name = parts[0];
+    var anchor = parts[1] || '';
+    var find = function (n) { return views.filter(function (v) { return v.dataset.view === n; })[0]; };
+    var view = find(name);
     if (!view) {
-      if (!current) { name = 'accueil'; view = views.filter(function (v) { return v.dataset.view === name; })[0]; }
-      else { var target = document.getElementById(name); if (target) target.scrollIntoView(); return; }
+      if (current) {
+        var inPage = current.querySelector('[id="' + raw + '"]');
+        if (inPage) { inPage.scrollIntoView(); return; }
+      }
+      view = find('accueil');
+      anchor = '';
     }
     views.forEach(function (v) { v.hidden = v !== view; });
     slot.hidden = view.dataset.contact !== 'true';
@@ -92,6 +100,10 @@ ${footer}
     current = view;
     var menu = document.querySelector('.nav-mobile'); if (menu) menu.open = false;
     if (document.activeElement && document.activeElement.blur) document.activeElement.blur();
+    if (anchor) {
+      var el = view.querySelector('[id="' + anchor + '"]');
+      if (el) { el.scrollIntoView(); return; }
+    }
     if (changed) window.scrollTo(0, 0);
   }
   window.addEventListener('hashchange', show);

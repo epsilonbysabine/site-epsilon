@@ -16,11 +16,16 @@ const themes = [
   description="Sept ateliers de préparation mentale à suivre au fil de la saison : objectifs, émotions, confiance, relaxation, concentration, motivation."
 >
   <PageHead
+    links={[
+      { label: 'Les 7 thèmes', href: '#themes' },
+      { label: 'Le premier atelier', href: '#premier' },
+      { label: 'Ateliers chez vous', href: '/ateliers-chez-vous' },
+    ]}
     eyebrow="Pour sportifs"
     title="Ateliers de préparation mentale"
     lead="Différents thèmes seront abordés tout le long de l'année sportive. Ces ateliers sont pour tous sportifs désireux de gagner en efficacité et en mieux-être (comme une meilleure gestion de son anxiété ou de son stress)."
   />
-  <section class="section section-tint">
+  <section class="section section-tint" id="themes">
     <div class="wrap split">
       <div class="prose">
         <p>
@@ -34,7 +39,7 @@ const themes = [
       </ol>
     </div>
   </section>
-  <section class="section">
+  <section class="section" id="premier">
     <div class="wrap split">
       <div class="stack">
         <p class="eyebrow">Premier atelier</p>
