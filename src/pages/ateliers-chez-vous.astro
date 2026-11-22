@@ -1,0 +1,94 @@
+---
+import Base from '../layouts/Base.astro';
+import { site } from '../config/site';
+const themes = [
+  'Confiance en soi',
+  'Gestion du stress',
+  'Gestion des émotions',
+  'Relaxation et respiration',
+  "Fixation d'objectifs",
+  'Motivation',
+  'Concentration',
+  'Préparer un examen ou un oral',
+];
+---
+<Base
+  title="Ateliers chez vous : préparation mentale à domicile | Epsilon"
+  description="Réunissez 6 à 10 personnes chez vous pour un atelier de préparation mentale d'1 h 30 animé par Sabine Djaouane. 25 € par personne, atelier offert à l'hôte. Vaucluse, Gard, Bouches-du-Rhône, Drôme, Ardèche."
+>
+  <header class="page-head aura">
+    <div class="wrap">
+      <p class="eyebrow">Ateliers chez vous</p>
+      <h1>Un atelier de préparation mentale, chez vous</h1>
+      <p class="lead">
+        Réunissez vos amis, votre famille ou vos coéquipiers à la maison. Sabine vient animer un atelier sur le thème de votre choix, et chacun repart avec des outils concrets à utiliser au quotidien.
+      </p>
+      <div class="btn-row">
+        <a class="btn btn-primary" href={site.phoneHref}>Organiser un atelier : {site.phone}</a>
+        <a class="btn btn-glass" href="#contact">Nous écrire</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="section section-tint">
+    <div class="wrap split">
+      <div class="stack sticky">
+        <p class="eyebrow">En bref</p>
+        <h2>L'essentiel</h2>
+      </div>
+      <div class="panel-card">
+        <ul class="price-list">
+          <li><span>Prix</span><b>25 € par personne</b></li>
+          <li><span>Groupe</span><b>De 6 à 10 personnes</b></li>
+          <li><span>Durée</span><b>1 h 30, de 19 h à 20 h 30</b></li>
+          <li><span>Où</span><b>Vaucluse, Gard, Bouches-du-Rhône, Drôme, Ardèche</b></li>
+          <li><span>Pour l'hôte</span><b>Atelier offert + 30 minutes de préparation mentale personnalisée</b></li>
+        </ul>
+        <p class="note">TVA non applicable.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap split">
+      <div class="stack sticky">
+        <p class="eyebrow">Comment ça marche</p>
+        <h2>Une soirée simple à organiser</h2>
+      </div>
+      <ol class="steps">
+        <li><span><strong>Vous choisissez une date et un thème</strong>, et vous réunissez de 6 à 10 personnes chez vous.</span></li>
+        <li><span><strong>Chacun apporte quelque chose à manger</strong> pour partager un moment convivial.</span></li>
+        <li><span><strong>Sabine anime l'atelier</strong> de 19 h à 20 h 30 : échanges, exercices pratiques et outils faciles à reprendre seul.</span></li>
+        <li><span><strong>Chacun repart avec ses outils</strong> pour gagner en efficacité et en sérénité au quotidien.</span></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="section section-tint">
+    <div class="wrap split">
+      <div class="stack sticky">
+        <p class="eyebrow">Les thèmes</p>
+        <h2>Le thème de votre choix</h2>
+        <p>Un thème par atelier, choisi ensemble selon les envies de votre groupe.</p>
+      </div>
+      <ul class="tags">
+        {themes.map((t) => <li>{t}</li>)}
+      </ul>
+    </div>
+  </section>
+
+  <section class="section aura">
+    <div class="wrap">
+      <div class="panel-card" style="max-width: 46rem">
+        <p class="eyebrow">Vous recevez ?</p>
+        <h2 style="font-size: var(--step-2)">L'atelier vous est offert</h2>
+        <p>
+          En tant qu'hôte, vous ne payez pas votre participation, et vous bénéficiez en plus de 30 minutes de préparation mentale personnalisée avec Sabine.
+        </p>
+        <div class="btn-row">
+          <a class="btn btn-primary" href={site.phoneHref}>Appeler le {site.phone}</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</Base>
