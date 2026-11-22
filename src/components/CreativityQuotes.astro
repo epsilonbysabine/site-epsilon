@@ -1,0 +1,23 @@
+---
+// Recommandations reçues sur les formations créativité (IMT Lille Douai).
+import { testimonials } from '../data/testimonials';
+const quotes = testimonials.filter((t) => t.author.includes('IMT Lille Douai'));
+---
+<section class="section aura">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Recommandations</p>
+      <h2>Ils ont suivi la formation créativité</h2>
+      <p class="lead">Deux jours de formation « communication et créativité » à l'IMT Lille Douai (Télécom Lille), école d'ingénieurs.</p>
+    </div>
+    <div class="grid-2">
+      {quotes.map((q) => (
+        <blockquote class="quote-card glass">
+          {q.paragraphs.map((p, i) => <p>{i === 0 ? '« ' : ''}{p}{i === q.paragraphs.length - 1 ? ' »' : ''}</p>)}
+          <cite>{q.author}</cite>
+        </blockquote>
+      ))}
+    </div>
+    <p style="margin-top: 2rem"><a class="text-link" href="/clients">Tous les témoignages</a></p>
+  </div>
+</section>
