@@ -346,6 +346,7 @@ ul, ol { margin: 0; padding-left: 1.2em; }
 .note { font-size: var(--step--1); color: var(--ink-soft); }
 .tags { list-style: none; padding: 0; display: grid; gap: 0.6rem; }
 @media (min-width: 36rem) { .tags { grid-template-columns: 1fr 1fr; } }
+.panel-card .tags { grid-template-columns: 1fr; }
 .tags li { display: grid; grid-template-columns: 1.25rem minmax(0, 1fr); gap: 0.6rem; align-items: start; }
 .tags li::before { content: ''; width: 1.25rem; height: 1.25rem; margin-top: 0.2rem; border-radius: 50%; background: rgb(103 83 189 / 0.12) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='none' stroke='%234a1a92' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5.5 10.5l3 3 6-7'/%3E%3C/svg%3E") center / 70% no-repeat; }
 .grid-2, .grid-3 { display: grid; gap: 1.25rem; }
