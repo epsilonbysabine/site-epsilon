@@ -1,17 +1,18 @@
 ---
 import Base from '../layouts/Base.astro';
 import { site } from '../config/site';
-const themes = [
-  'Confiance en soi',
-  'Gestion du stress',
-  'Gestion des émotions',
-  'Relaxation et respiration',
-  "Fixation d'objectifs",
-  'Motivation',
-  'Concentration',
-  'Préparer un examen ou un oral',
-  "La charge mentale, comment s'en alléger",
-  'La visualisation',
+// Un titre par atelier, avec le thème travaillé.
+const ateliers = [
+  { titre: 'Oser être soi', theme: 'Confiance en soi' },
+  { titre: 'Faire du stress un allié', theme: 'Gestion du stress' },
+  { titre: 'Apprivoiser ses émotions', theme: 'Gestion des émotions' },
+  { titre: 'Respirer pour mieux se détendre', theme: 'Relaxation et respiration' },
+  { titre: 'Fixer ses objectifs… et les atteindre', theme: "Fixation d'objectifs" },
+  { titre: 'Trouver et garder sa motivation', theme: 'Motivation' },
+  { titre: 'Rester concentré dans un monde qui distrait', theme: 'Concentration' },
+  { titre: 'Examens et oraux : se préparer sereinement', theme: 'Préparer un examen ou un oral' },
+  { titre: "La charge mentale, comment s'en alléger", theme: 'Charge mentale' },
+  { titre: 'Voir pour réussir', theme: 'La visualisation' },
 ];
 ---
 <Base
@@ -69,12 +70,17 @@ const themes = [
   <section class="section section-tint">
     <div class="wrap split">
       <div class="stack sticky">
-        <p class="eyebrow">Les thèmes</p>
-        <h2>Le thème de votre choix</h2>
-        <p>Un thème par atelier, choisi ensemble selon les envies de votre groupe.</p>
+        <p class="eyebrow">Au choix</p>
+        <h2>Les ateliers</h2>
+        <p>Un atelier par soirée, choisi ensemble selon les envies de votre groupe.</p>
       </div>
-      <ul class="tags">
-        {themes.map((t) => <li>{t}</li>)}
+      <ul class="atelier-list">
+        {ateliers.map((a) => (
+          <li class="glass">
+            <span class="eyebrow">{a.theme}</span>
+            <strong>{a.titre}</strong>
+          </li>
+        ))}
       </ul>
     </div>
   </section>
