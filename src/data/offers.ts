@@ -20,7 +20,7 @@ export const offerGroups: OfferGroup[] = [
     href: '/preparation-mentale',
     items: [
       { title: 'Séances de préparation mentale', text: 'Un accompagnement sur mesure pour développer vos ressources mentales et performer au quotidien.', href: '/preparation-mentale#seances' },
-      { title: 'Pack découverte', text: 'Entretien, tests et bilan mental écrit pour bien démarrer.', href: '/preparation-mentale#pack' },
+      { title: 'État des lieux mental', text: 'Entretien, tests et analyse pour faire le point et construire vos séances sur mesure.', href: '/preparation-mentale#etat-des-lieux' },
       { title: 'Ateliers pour sportifs', text: 'Sept thèmes à suivre au fil de la saison.', href: '/ateliers-preparation-mentale' },
       { title: 'Ateliers chez vous', text: '6 à 10 personnes à la maison, 25 € par personne.', href: '/ateliers-chez-vous' },
     ],
