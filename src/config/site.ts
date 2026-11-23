@@ -39,7 +39,7 @@ export const sitemap = [
       { label: 'Ateliers chez vous', href: '/ateliers-chez-vous' },
       { label: 'Ateliers pour sportifs', href: '/ateliers-preparation-mentale' },
       { label: 'Ateliers développement personnel', href: '/ateliers-developpement-personnel' },
-      ...(visiblePages.partenaires ? [{ label: 'Nos partenaires', href: '/mespartenaires' }] : []),
+      ...(visiblePages.partenaires ? [{ label: 'Mes partenaires', href: '/mespartenaires' }] : []),
     ],
   },
   {
@@ -55,7 +55,7 @@ export const sitemap = [
     label: 'Epsilon',
     children: [
       { label: 'Sabine Djaouane', href: '/a-propos' },
-      { label: 'Nos prestations', href: '/services' },
+      { label: 'Mes prestations', href: '/services' },
       { label: 'Témoignages', href: '/clients' },
       { label: 'Album photos', href: '/album-photo' },
       { label: 'Blog', href: '/blog' },

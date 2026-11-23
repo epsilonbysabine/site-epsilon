@@ -11,7 +11,7 @@ const clientId = import.meta.env.PUBLIC_WIX_CLIENT_ID;
     cta={false}
     eyebrow="Réservation en ligne"
     title="Réserver un créneau"
-    lead="Un premier échange de 30 minutes, offert, suffit pour voir si nous pouvons travailler ensemble. Appelez-nous ou réservez directement un créneau."
+    lead="Un premier échange de 30 minutes, offert, suffit pour voir si nous pouvons travailler ensemble. Appelez-moi ou réservez directement un créneau."
   />
   <section class="section section-tint">
     <div class="wrap stack-lg">
@@ -40,7 +40,7 @@ const clientId = import.meta.env.PUBLIC_WIX_CLIENT_ID;
       </div>
       <p class="form-status" id="booking-status" role="status" aria-live="polite" style="color: var(--violet)"></p>
       <p>
-        Vous préférez en parler de vive voix ? Appelez-nous au <a href={site.phoneHref}><strong>{site.phone}</strong></a>.
+        Vous préférez en parler de vive voix ? Appelez-moi au <a href={site.phoneHref}><strong>{site.phone}</strong></a>.
       </p>
     </div>
   </section>
@@ -53,7 +53,7 @@ const clientId = import.meta.env.PUBLIC_WIX_CLIENT_ID;
   import { redirects } from '@wix/redirects';
 
   const status = document.querySelector<HTMLElement>('#booking-status')!;
-  const phoneMessage = 'La réservation en ligne est momentanément indisponible. Appelez-nous au 06.70.79.24.63.';
+  const phoneMessage = 'La réservation en ligne est momentanément indisponible. Appelez-moi au 06.70.79.24.63.';
 
   document.querySelectorAll<HTMLButtonElement>('[data-book]').forEach((button) => {
     button.addEventListener('click', async () => {
