@@ -39,4 +39,20 @@ const groups = sitemap;
       </ul>
     </div>
   </div>
+  <button class="back-to-top" type="button" aria-label="Remonter en haut de la page" hidden>
+    <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 15V5M5 10l5-5 5 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" /></svg>
+  </button>
+  <script is:inline>
+    (function () {
+      var btn = document.querySelector('.back-to-top');
+      if (!btn) return;
+      var update = function () { btn.hidden = window.scrollY < 600; };
+      window.addEventListener('scroll', update, { passive: true });
+      update();
+      btn.addEventListener('click', function () {
+        var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        window.scrollTo({ top: 0, behavior: reduce ? 'auto' : 'smooth' });
+      });
+    })();
+  </script>
 </footer>
