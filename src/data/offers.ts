@@ -19,7 +19,7 @@ export const offerGroups: OfferGroup[] = [
     intro: 'Préparation mentale individuelle et ateliers',
     href: '/preparation-mentale',
     items: [
-      { title: 'Séances de préparation mentale', text: 'Stress, confiance, concentration : de 30 minutes à 2 heures.', href: '/preparation-mentale#seances' },
+      { title: 'Séances de préparation mentale', text: 'Un accompagnement sur mesure pour développer vos ressources mentales et performer au quotidien.', href: '/preparation-mentale#seances' },
       { title: 'Pack découverte', text: 'Entretien, tests et bilan mental écrit pour bien démarrer.', href: '/preparation-mentale#pack' },
       { title: 'Ateliers pour sportifs', text: 'Sept thèmes à suivre au fil de la saison.', href: '/ateliers-preparation-mentale' },
       { title: 'Ateliers chez vous', text: '6 à 10 personnes à la maison, 25 € par personne.', href: '/ateliers-chez-vous' },
