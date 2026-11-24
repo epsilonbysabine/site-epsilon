@@ -6,6 +6,7 @@ import { offerGroups } from '../data/offers';
   {offerGroups.map((group) => (
     <div class="directory-group">
       <div class="directory-head">
+        <img class="directory-photo" src={group.image} alt={group.imageAlt} loading="lazy" />
         <h3><a href={group.href}>{group.label}</a></h3>
         <p>{group.intro}</p>
       </div>

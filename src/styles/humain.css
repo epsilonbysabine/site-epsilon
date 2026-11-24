@@ -1,0 +1,109 @@
+/* Variante « humaine » : fond papier chaud, titres en serif doux, photos arrondies,
+   presque aucun cadre — la structure repose sur l'espace et de fins filets.
+   Tout est rangé sous .variant-humain, activé par PUBLIC_VARIANT=humain. */
+.variant-humain {
+  --ink: #2b2333;
+  --ink-soft: #6b6272;
+  --paper: #fbf8f4;
+  --mist: #f3ece5;
+  --line: #e4d9ce;
+  --violet: #4a1a92;
+  --violet-2: #6b4fc4;
+  --lavender: #cdbff2;
+  --night: #2b2333;
+  --night-2: #3a2f45;
+  --font-display: 'Source Serif 4 Variable', 'Source Serif 4', Georgia, 'Times New Roman', serif;
+  --radius: 1.75rem;
+  background: var(--paper);
+  color: var(--ink);
+}
+body:has(.variant-humain), .variant-humain body { background: #fbf8f4; }
+.variant-humain h1, .variant-humain h2, .variant-humain h3, .variant-humain h4 { font-weight: 600; letter-spacing: -0.012em; }
+
+/* Plus de verre ni de halos */
+.variant-humain .aura::before { display: none; }
+.variant-humain .glass,
+.variant-humain .glass-dark,
+.variant-humain .panel-card {
+  background: none; border: 0; box-shadow: none; border-radius: 0;
+  -webkit-backdrop-filter: none; backdrop-filter: none;
+}
+.variant-humain .panel-card { padding: 1.5rem 0 0; border-top: 1px solid var(--line); }
+.variant-humain .section-tint { background: var(--mist); }
+
+/* Sections sombres : redeviennent claires et chaleureuses */
+.variant-humain .dark { background: var(--paper); color: var(--ink); }
+.variant-humain .contact-band.dark { background: var(--mist); }
+.variant-humain .dark h1, .variant-humain .dark h2, .variant-humain .dark h3 { color: var(--ink); }
+.variant-humain .dark a:not(.btn) { color: var(--violet); }
+.variant-humain .dark .eyebrow { color: var(--violet-2); }
+.variant-humain .dark .lead, .variant-humain .hero .lead { color: var(--ink-soft); }
+
+/* En-tête clair */
+.variant-humain .site-header { background: rgb(251 248 244 / 0.94); border-bottom: 1px solid var(--line); color: var(--ink); }
+.variant-humain .site-header .brand { color: var(--ink); }
+.variant-humain .nav-desktop a { color: var(--ink-soft); }
+.variant-humain .nav-desktop a:hover, .variant-humain .nav-desktop a[aria-current='page'] { color: var(--ink); }
+.variant-humain .nav-desktop a::after { background: var(--violet); }
+.variant-humain .nav-mobile summary { color: var(--ink); background: none; border-color: var(--line); }
+.variant-humain .menu-sheet { background: var(--paper); border-top-color: var(--line); }
+.variant-humain .menu-main a { color: var(--ink); border-bottom-color: var(--line); font-family: var(--font-display); }
+.variant-humain .menu-more .group-title { color: var(--violet-2); }
+.variant-humain .menu-more a { color: var(--ink-soft); }
+
+/* Boutons arrondis, pleins ou soulignés */
+.variant-humain .btn { border-radius: 999px; }
+.variant-humain .btn-primary,
+.variant-humain .dark .btn-primary,
+.variant-humain .site-header .btn-primary { background: var(--violet); color: #fff; }
+.variant-humain .btn-primary:hover,
+.variant-humain .dark .btn-primary:hover,
+.variant-humain .site-header .btn-primary:hover { background: var(--violet-2); color: #fff; }
+.variant-humain .btn-glass, .variant-humain .btn-glass-dark { background: none; color: var(--ink) !important; border-color: rgb(43 35 51 / 0.3); }
+.variant-humain .btn-glass:hover, .variant-humain .btn-glass-dark:hover { border-color: var(--violet); color: var(--violet) !important; background: none; }
+
+/* Accueil : portrait en arche, légende sous la photo */
+.variant-humain .hero h1 .kicker { color: var(--violet-2); }
+.variant-humain .hero h1 .display { color: var(--ink); font-weight: 600; letter-spacing: -0.02em; }
+.variant-humain .proof { border-top-color: var(--line); color: var(--ink-soft); }
+.variant-humain .proof li::before { background: var(--violet-2); }
+.variant-humain .hero-portrait .frame { padding: 0; }
+.variant-humain .hero-portrait img { border-radius: 14rem 14rem 1.75rem 1.75rem; }
+.variant-humain .portrait-card { position: static; width: auto; margin: 1.1rem 0 0; padding: 0; background: none !important; }
+.variant-humain .portrait-card strong { color: var(--ink); font-size: 1.15rem; }
+.variant-humain .portrait-card span { color: var(--ink-soft); }
+.variant-humain .portrait-card q { color: var(--ink); font-family: var(--font-display); font-style: italic; font-size: 1.1rem; }
+
+/* Sommaire sous le titre : simples liens */
+.variant-humain .quick-links ul { gap: 0.4rem 1.6rem; }
+.variant-humain .quick-links a { padding: 0.2rem 0; color: var(--violet); }
+.variant-humain .quick-links a:hover { text-decoration: underline; text-underline-offset: 0.25em; }
+
+/* Liste des offres : une photo par public, des lignes au lieu de cartes */
+.variant-humain .directory { gap: 4rem; }
+.variant-humain .directory-photo { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: var(--radius); margin-bottom: 0.75rem; }
+.variant-humain .directory ul, .variant-humain .directory-list { grid-template-columns: 1fr; gap: 0; }
+.variant-humain .directory-item { padding: 1.15rem 0; border-bottom: 1px solid var(--line); border-radius: 0; }
+.variant-humain .directory li:first-child .directory-item, .variant-humain .directory-list li:first-child .directory-item { border-top: 1px solid var(--line); }
+.variant-humain .directory-item strong { font-size: 1.2rem; }
+
+/* Témoignages : des citations, pas des boîtes */
+.variant-humain .quote-card, .variant-humain .quote { padding: 0; }
+.variant-humain .quote-card p, .variant-humain .quote p { font-family: var(--font-display); font-style: italic; font-size: 1.15rem; line-height: 1.55; }
+.variant-humain .quote { padding-top: 1.25rem; border-top: 1px solid var(--line); }
+.variant-humain .quote-grid { gap: 2.5rem; }
+
+/* Divers */
+.variant-humain .atelier-list li { padding: 1rem 0; border-bottom: 1px solid var(--line); }
+.variant-humain .atelier-list { gap: 0 2rem; }
+.variant-humain .logos li { border: 0; background: none; }
+.variant-humain .logo-strip { border-bottom: 0; background: var(--mist); }
+.variant-humain .steps li::before { background: var(--lavender); border: 0; box-shadow: none; color: var(--ink); }
+.variant-humain .portrait, .variant-humain .figure img, .variant-humain .album img { border-radius: var(--radius); }
+.variant-humain .contact-card { padding: 0; }
+.variant-humain .contact-lines { color: var(--ink-soft); }
+.variant-humain .contact-lines strong { color: var(--ink); }
+.variant-humain .contact-card .phone { color: var(--violet) !important; font-family: var(--font-display); }
+.variant-humain .form label { color: var(--ink-soft); }
+.variant-humain .form input, .variant-humain .form textarea { color: var(--ink); background: #fff; border-color: var(--line); }
+.variant-humain .back-to-top { background: var(--violet); border-color: transparent; }

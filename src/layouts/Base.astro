@@ -1,7 +1,9 @@
 ---
 import '@fontsource-variable/manrope';
 import '@fontsource-variable/figtree';
+import '@fontsource-variable/source-serif-4';
 import '../styles/global.css';
+import '../styles/humain.css';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import ContactBand from '../components/ContactBand.astro';
@@ -15,6 +17,8 @@ interface Props {
 }
 const { title, description = '', contact = true, image = '/images/sabine-portrait.jpg' } = Astro.props;
 const canonical = new URL(Astro.url.pathname, Astro.site);
+// PUBLIC_VARIANT=humain active la version plus chaleureuse (src/styles/humain.css).
+const variant = import.meta.env.PUBLIC_VARIANT === 'humain' ? 'variant-humain' : undefined;
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'ProfessionalService',
@@ -28,7 +32,7 @@ const jsonLd = {
 };
 ---
 <!doctype html>
-<html lang="fr">
+<html lang="fr" class={variant}>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />

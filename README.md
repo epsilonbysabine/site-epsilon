@@ -56,8 +56,21 @@ renseignant `PUBLIC_WIX_CLIENT_ID` puis en lançant `npm run build` : le termina
 
 Les anciennes adresses `/general-8`, `/team-4` et `/ateliers-préparation-mentale` redirigent vers les nouvelles pages.
 
+## Deux habillages
+
+Le même contenu peut être construit avec deux habillages :
+
+```bash
+npm run build          # version d'origine (verre dépoli, sections sombres)
+npm run build:humain   # version chaleureuse (papier chaud, titres serif, presque sans cadres) dans dist-humain/
+```
+
+La version chaleureuse est entièrement décrite dans `src/styles/humain.css` et s'active avec
+la variable `PUBLIC_VARIANT=humain` (à définir aussi chez l'hébergeur pour la mettre en ligne).
+
 ## Aperçu en une page
 
 ```bash
-npm run build && npm run preview:single   # génère dist-preview/index.html
+npm run build && npm run preview:single          # génère dist-preview/index.html
+npm run build:humain && npm run preview:humain   # génère dist-preview-humain/index.html
 ```

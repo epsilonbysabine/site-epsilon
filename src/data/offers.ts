@@ -9,6 +9,8 @@ export interface OfferGroup {
   label: string;
   intro: string;
   href: string;
+  image: string;
+  imageAlt: string;
   items: Offer[];
 }
 
@@ -18,6 +20,8 @@ export const offerGroups: OfferGroup[] = [
     label: 'Sportifs, étudiants, artistes',
     intro: 'Préparation mentale individuelle et ateliers',
     href: '/preparation-mentale',
+    image: '/images/album-7.jpg',
+    imageAlt: 'Atelier de préparation mentale avec des sportifs',
     items: [
       { title: 'Séances de préparation mentale', text: 'Un accompagnement sur mesure pour développer vos ressources mentales et performer au quotidien.', href: '/preparation-mentale#seances' },
       { title: 'État des lieux mental', text: 'Entretien, tests et analyse pour faire le point et construire vos séances sur mesure.', href: '/preparation-mentale#etat-des-lieux' },
@@ -30,6 +34,8 @@ export const offerGroups: OfferGroup[] = [
     label: 'Entreprises',
     intro: 'Dirigeants, managers et équipes',
     href: '/coach-entreprise',
+    image: '/images/album-5.jpg',
+    imageAlt: "Sabine Djaouane avec l'équipe d'une entreprise cliente",
     items: [
       { title: 'Coaching individuel et d’équipe', text: 'Stress, cohésion, communication, accompagnement du changement.', href: '/coach-entreprise#coaching' },
       { title: 'Entretien de parcours professionnel', text: 'Externalisez vos entretiens obligatoires.', href: '/entretien-professionnel' },

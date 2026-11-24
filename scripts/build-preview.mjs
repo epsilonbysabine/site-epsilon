@@ -3,8 +3,9 @@
 import { readFileSync, writeFileSync, mkdirSync, readdirSync, cpSync, existsSync, rmSync } from 'node:fs';
 import { join } from 'node:path';
 
-const dist = 'dist';
-const out = 'dist-preview';
+// Usage : node scripts/build-preview.mjs [dossier construit] [dossier de sortie]
+const dist = process.argv[2] ?? 'dist';
+const out = process.argv[3] ?? 'dist-preview';
 const ascii = (s) => s.normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/[^a-zA-Z0-9-]/g, '-');
 
 const routes = [];
@@ -61,7 +62,7 @@ const views = pages
 
 const page = `<title>Epsilon by Sabine</title>
 <meta name="claude:viewport-fit-sides" content="cover">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400..800&family=Figtree:wght@300..900&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400..800&family=Figtree:wght@300..900&family=Source+Serif+4:ital,opsz,wght@0,8..60,300..800;1,8..60,300..800&display=swap">
 <style>
 ${css}
 body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--paper); }
@@ -118,12 +119,18 @@ ${footer}
 </script>
 `;
 
+// Variante : la classe posée sur <html> est reportée sur un conteneur dans l'aperçu.
+const variantClass = (home.match(/<html[^>]*class="([^"]+)"/) ?? [])[1];
+const finalPage = variantClass
+  ? page.replace('<p class="preview-flag">', `<div class="${variantClass}">\n<p class="preview-flag">`) + '\n</div>\n'
+  : page;
+
 if (existsSync(out)) rmSync(out, { recursive: true });
 mkdirSync(out, { recursive: true });
-writeFileSync(join(out, 'index.html'), page);
+writeFileSync(join(out, 'index.html'), finalPage);
 cpSync(join(dist, 'images'), join(out, 'images'), { recursive: true });
 cpSync(join(dist, 'logo'), join(out, 'logo'), { recursive: true });
 const files = {};
 for (const dir of ['images', 'logo']) for (const f of readdirSync(join(out, dir))) files[`${dir}/${f}`] = `${dir}/${f}`;
 writeFileSync(join(out, 'files.json'), JSON.stringify(files, null, 1));
-console.log(`Aperçu : ${pages.length} pages, ${(page.length / 1024).toFixed(0)} Ko, ${Object.keys(files).length} fichiers.`);
+console.log(`Aperçu${variantClass ? ' (' + variantClass + ')' : ''} : ${pages.length} pages, ${(finalPage.length / 1024).toFixed(0)} Ko, ${Object.keys(files).length} fichiers.`);

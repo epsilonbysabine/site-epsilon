@@ -9,12 +9,15 @@
     "preview": "astro preview",
     "preview:single": "node scripts/build-preview.mjs",
     "test:wix": "node scripts/wix-mock/test.mjs",
-    "check": "astro check"
+    "check": "astro check",
+    "build:humain": "PUBLIC_VARIANT=humain astro build --outDir dist-humain",
+    "preview:humain": "node scripts/build-preview.mjs dist-humain dist-preview-humain"
   },
   "dependencies": {
     "@fontsource-variable/bricolage-grotesque": "^5.3.0",
     "@fontsource-variable/figtree": "^5.3.0",
     "@fontsource-variable/manrope": "^5.3.0",
+    "@fontsource-variable/source-serif-4": "^5.3.1",
     "@wix/blog": "^1.0.724",
     "@wix/bookings": "^1.0.1792",
     "@wix/forms": "^1.0.545",
