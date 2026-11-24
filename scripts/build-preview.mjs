@@ -122,7 +122,7 @@ ${footer}
 // Variante : la classe posée sur <html> est reportée sur un conteneur dans l'aperçu.
 const variantClass = (home.match(/<html[^>]*class="([^"]+)"/) ?? [])[1];
 const finalPage = variantClass
-  ? page.replace('<p class="preview-flag">', `<div class="${variantClass}">\n<p class="preview-flag">`) + '\n</div>\n'
+  ? page.replace('<title>Epsilon by Sabine</title>', '<title>Epsilon, version chaleureuse</title>').replace('<p class="preview-flag">', `<div class="${variantClass}">\n<p class="preview-flag">`) + '\n</div>\n'
   : page;
 
 if (existsSync(out)) rmSync(out, { recursive: true });
