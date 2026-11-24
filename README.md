@@ -58,19 +58,22 @@ Les anciennes adresses `/general-8`, `/team-4` et `/ateliers-préparation-mental
 
 ## Deux habillages
 
-Le même contenu peut être construit avec deux habillages :
+Le même contenu peut être construit avec trois habillages :
 
 ```bash
-npm run build          # version d'origine (verre dépoli, sections sombres)
-npm run build:humain   # version chaleureuse (papier chaud, titres serif, presque sans cadres) dans dist-humain/
+npm run build              # version d'origine (verre dépoli, sections sombres)
+npm run build:humain       # version chaleureuse (papier chaud, titres serif) dans dist-humain/
+npm run build:authentique  # version épurée (fond blanc, coins droits, titres plus directs) dans dist-authentique/
 ```
 
-La version chaleureuse est entièrement décrite dans `src/styles/humain.css` et s'active avec
-la variable `PUBLIC_VARIANT=humain` (à définir aussi chez l'hébergeur pour la mettre en ligne).
+Chaque habillage est décrit dans `src/styles/humain.css` ou `src/styles/authentique.css` et s'active avec
+la variable `PUBLIC_VARIANT` (`humain` ou `authentique`), à définir aussi chez l'hébergeur pour la mettre en ligne.
+Les quelques titres propres à la version épurée passent par `pick()` dans `src/lib/variant.ts`.
 
 ## Aperçu en une page
 
 ```bash
 npm run build && npm run preview:single          # génère dist-preview/index.html
 npm run build:humain && npm run preview:humain   # génère dist-preview-humain/index.html
+npm run build:authentique && npm run preview:authentique   # génère dist-preview-authentique/index.html
 ```

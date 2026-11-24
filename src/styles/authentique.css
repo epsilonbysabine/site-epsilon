@@ -1,0 +1,157 @@
+/* Variante « authentique » : le site d'une praticienne indépendante, pas d'une agence.
+   Fond blanc, encre noire, coins droits, aucune ombre ni dégradé, pas de flèches décoratives.
+   Une seule couleur forte (le violet du logo), réservée au bloc contact et aux liens.
+   Tout est rangé sous .variant-authentique, activé par PUBLIC_VARIANT=authentique. */
+.variant-authentique {
+  --ink: #161616;
+  --ink-soft: #565656;
+  --paper: #ffffff;
+  --mist: #f4f3f0;
+  --line: #d9d8d3;
+  --violet: #4a1a92;
+  --violet-2: #4a1a92;
+  --lavender: #e3dbf7;
+  --night: #161616;
+  --night-2: #161616;
+  --font-display: 'Archivo Variable', 'Archivo', 'Helvetica Neue', Arial, sans-serif;
+  --font-body: 'Source Sans 3 Variable', 'Source Sans 3', 'Helvetica Neue', Arial, sans-serif;
+  --radius: 0;
+  --radius-sm: 0;
+  --step-0: 1.125rem;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-body);
+}
+body:has(.variant-authentique), .variant-authentique body { background: #fff; }
+.variant-authentique h1, .variant-authentique h2, .variant-authentique h3, .variant-authentique h4 {
+  font-weight: 700; letter-spacing: -0.03em; font-variation-settings: 'wdth' 88;
+}
+.variant-authentique h1 { line-height: 1.02; }
+
+/* Ni verre, ni halo, ni ombre */
+.variant-authentique .aura::before { display: none; }
+.variant-authentique .glass,
+.variant-authentique .glass-dark,
+.variant-authentique .panel-card {
+  background: none; border: 0; box-shadow: none; border-radius: 0;
+  -webkit-backdrop-filter: none; backdrop-filter: none;
+}
+.variant-authentique .panel-card { padding: 1.25rem 0 0; border-top: 2px solid var(--ink); }
+.variant-authentique .section-tint { background: var(--mist); }
+
+/* Intitulés : plus de petites capitales espacées ; ceux qui doublent le titre disparaissent */
+.variant-authentique .eyebrow { text-transform: none; letter-spacing: 0; font-weight: 600; font-size: 1rem; color: var(--ink-soft); }
+.variant-authentique .section-head .eyebrow,
+.variant-authentique .page-head .eyebrow { display: none; }
+
+/* Liens et boutons sans flèche */
+.variant-authentique .btn { border-radius: 0; font-weight: 600; letter-spacing: 0; }
+.variant-authentique .btn::after,
+.variant-authentique .text-link::after,
+.variant-authentique .quick-links a::after,
+.variant-authentique .directory-item strong::after { content: none; }
+.variant-authentique .btn-primary,
+.variant-authentique .dark .btn-primary,
+.variant-authentique .site-header .btn-primary { background: var(--ink); color: #fff; }
+.variant-authentique .btn-primary:hover,
+.variant-authentique .dark .btn-primary:hover,
+.variant-authentique .site-header .btn-primary:hover { background: var(--violet); color: #fff; }
+.variant-authentique .btn-glass, .variant-authentique .btn-glass-dark { background: none; color: var(--ink) !important; border: 1px solid var(--ink); }
+.variant-authentique .btn-glass:hover, .variant-authentique .btn-glass-dark:hover { background: var(--ink); color: #fff !important; }
+.variant-authentique .text-link { text-decoration: underline; text-underline-offset: 0.25em; text-decoration-thickness: 1px; }
+
+/* En-tête blanc */
+.variant-authentique .site-header { background: #fff; border-bottom: 1px solid var(--line); color: var(--ink); -webkit-backdrop-filter: none; backdrop-filter: none; }
+.variant-authentique .site-header .brand { color: var(--ink); }
+.variant-authentique .nav-desktop a { color: var(--ink); font-weight: 500; }
+.variant-authentique .nav-desktop a::after { background: var(--ink); bottom: 0.15rem; }
+.variant-authentique .nav-mobile summary { color: var(--ink); background: none; border: 1px solid var(--ink); border-radius: 0; }
+.variant-authentique .menu-sheet { background: #fff; border-top-color: var(--line); }
+.variant-authentique .menu-main a { color: var(--ink); border-bottom-color: var(--line); font-weight: 600; }
+.variant-authentique .menu-more .group-title { color: var(--ink-soft); text-transform: none; letter-spacing: 0; }
+.variant-authentique .menu-more a { color: var(--ink); }
+
+/* Sections sombres → blanches ; seul le contact garde une couleur, en aplat violet */
+.variant-authentique .dark { background: #fff; color: var(--ink); }
+.variant-authentique .dark h1, .variant-authentique .dark h2, .variant-authentique .dark h3 { color: var(--ink); }
+.variant-authentique .dark a:not(.btn) { color: var(--ink); }
+.variant-authentique .dark .lead, .variant-authentique .hero .lead { color: var(--ink-soft); }
+.variant-authentique .contact-band.dark { background: var(--violet); color: #fff; }
+.variant-authentique .contact-band.dark h2 { color: #fff; }
+.variant-authentique .contact-band .eyebrow { display: none; }
+.variant-authentique .contact-band .lead { color: rgb(255 255 255 / 0.85); }
+.variant-authentique .contact-band a:not(.btn) { color: #fff; }
+.variant-authentique .contact-band .btn-primary { background: #fff; color: var(--violet); }
+.variant-authentique .contact-band .btn-primary:hover { background: var(--lavender); color: var(--violet); }
+.variant-authentique .contact-band .btn-glass-dark { color: #fff !important; border-color: #fff; }
+.variant-authentique .contact-band .btn-glass-dark:hover { background: #fff; color: var(--violet) !important; }
+.variant-authentique .contact-card { padding: 0 0 0 1.5rem; border-left: 1px solid rgb(255 255 255 / 0.4); }
+.variant-authentique .contact-lines, .variant-authentique .contact-lines strong { color: #fff; }
+.variant-authentique .contact-card .phone { color: #fff !important; }
+.variant-authentique .form label { color: rgb(255 255 255 / 0.85); }
+.variant-authentique .form input, .variant-authentique .form textarea { border-radius: 0; background: #fff; color: var(--ink); }
+
+/* Accueil : la photo d'abord, le texte ensuite */
+.variant-authentique .hero { padding-block: clamp(2rem, 1.5rem + 3vw, 4rem); }
+.variant-authentique .hero h1 .kicker { text-transform: none; letter-spacing: 0; font-size: 1.05rem; font-weight: 500; color: var(--ink-soft); }
+.variant-authentique .hero h1 .display { color: var(--ink); font-weight: 700; letter-spacing: -0.035em; font-variation-settings: 'wdth' 86; }
+.variant-authentique .proof { border-top: 2px solid var(--ink); color: var(--ink); font-size: 1rem; }
+.variant-authentique .proof li::before { display: none; }
+.variant-authentique .hero-portrait .frame { padding: 0; }
+.variant-authentique .hero-portrait img { border-radius: 0; }
+.variant-authentique .portrait-card { position: static; width: auto; margin: 0.9rem 0 0; padding: 0; background: none !important; gap: 0.15rem; }
+.variant-authentique .portrait-card strong { color: var(--ink); font-family: var(--font-body); font-size: 1rem; }
+.variant-authentique .portrait-card span { color: var(--ink-soft); }
+.variant-authentique .portrait-card q { display: none; }
+@media (min-width: 56rem) {
+  .variant-authentique .hero-grid { grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: 4rem; }
+  .variant-authentique .hero-portrait { order: -1; justify-self: stretch; width: 100%; }
+}
+
+/* Sommaire sous le titre : liens soulignés */
+.variant-authentique .quick-links ul { gap: 0.5rem 1.75rem; }
+.variant-authentique .quick-links a { padding: 0; color: var(--ink); text-decoration: underline; text-underline-offset: 0.25em; text-decoration-thickness: 1px; }
+.variant-authentique .quick-links a:hover { color: var(--violet); }
+
+/* Liste des offres : photo, puis des lignes */
+.variant-authentique .directory { gap: 4.5rem; }
+.variant-authentique .directory-photo { display: block; width: 100%; aspect-ratio: 3 / 2; object-fit: cover; margin-bottom: 0.9rem; }
+.variant-authentique .directory-head h3 { font-size: var(--step-3); }
+.variant-authentique .directory ul, .variant-authentique .directory-list { grid-template-columns: 1fr; gap: 0; }
+.variant-authentique .directory-item { padding: 1.1rem 0; border-bottom: 1px solid var(--line); }
+.variant-authentique .directory li:first-child .directory-item,
+.variant-authentique .directory-list li:first-child .directory-item { border-top: 2px solid var(--ink); }
+.variant-authentique .directory-item strong { font-family: var(--font-body); font-size: 1.2rem; font-weight: 700; letter-spacing: -0.01em; }
+.variant-authentique .directory-item:hover strong { color: var(--violet); text-decoration: underline; text-underline-offset: 0.2em; }
+
+/* Témoignages : du texte, sans boîte ni italique */
+.variant-authentique .quote-card, .variant-authentique .quote { padding: 1.25rem 0 0; border-top: 2px solid var(--ink); }
+.variant-authentique .quote-card p, .variant-authentique .quote p { font-size: 1.15rem; line-height: 1.5; }
+.variant-authentique .quote-card cite, .variant-authentique .quote cite { color: var(--ink-soft); }
+.variant-authentique .quote-grid { gap: 2.5rem; }
+
+/* Divers */
+.variant-authentique .logo-strip { background: #fff; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.variant-authentique .logo-strip p { text-align: left; color: var(--ink); font-weight: 600; }
+.variant-authentique .logos li { border: 1px solid var(--line); border-radius: 0; }
+.variant-authentique .atelier-list li { padding: 0.9rem 0; border-bottom: 1px solid var(--line); }
+.variant-authentique .atelier-list { gap: 0 2rem; }
+.variant-authentique .atelier-list .eyebrow { font-size: 0.9rem; font-weight: 500; }
+.variant-authentique .atelier-list strong { font-family: var(--font-body); font-weight: 700; }
+.variant-authentique .steps li::before { border-radius: 0; background: var(--ink); color: #fff; border: 0; box-shadow: none; }
+.variant-authentique .price-list li { border-top-color: var(--line); }
+.variant-authentique .post-card .cover { background: var(--mist); color: var(--ink-soft); }
+.variant-authentique .post-card h3 { font-size: 1.3rem; }
+.variant-authentique .page-head { padding-block: clamp(2.5rem, 1.5rem + 3vw, 4.5rem) clamp(2rem, 1rem + 2vw, 3rem); border-bottom: 1px solid var(--line); }
+.variant-authentique .page-head h1 { font-size: clamp(2.3rem, 1.6rem + 3.2vw, 4rem); max-width: 22ch; }
+.variant-authentique .split > .sticky h2 { font-size: var(--step-3); }
+
+/* Pied de page clair */
+.variant-authentique .site-footer { background: #fff; color: var(--ink-soft); border-top: 2px solid var(--ink); }
+.variant-authentique .site-footer a { color: var(--ink); }
+.variant-authentique .site-footer a:hover { color: var(--violet); }
+.variant-authentique .site-footer .brand { color: var(--ink); }
+.variant-authentique .site-footer h2 { color: var(--ink); text-transform: none; letter-spacing: 0; font-size: 1rem; font-weight: 700; }
+.variant-authentique .footer-bottom { border-top-color: var(--line); }
+.variant-authentique .back-to-top { border-radius: 0; background: var(--ink); border: 0; box-shadow: none; -webkit-backdrop-filter: none; backdrop-filter: none; }
+.variant-authentique .back-to-top:hover { background: var(--violet); }

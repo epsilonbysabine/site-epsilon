@@ -1,5 +1,6 @@
 ---
 import { site, contactForm } from '../config/site';
+import { pick } from '../lib/variant';
 const formId = import.meta.env.PUBLIC_WIX_FORM_ID;
 const clientId = import.meta.env.PUBLIC_WIX_CLIENT_ID;
 const showForm = Boolean(formId && clientId);
@@ -8,7 +9,7 @@ const showForm = Boolean(formId && clientId);
   <div class="wrap">
     <div class="stack">
       <p class="eyebrow">Contact</p>
-      <h2>Parlons de votre objectif</h2>
+      <h2>{pick('Parlons de votre objectif', 'Me contacter')}</h2>
       <p class="lead">
         Un premier échange de 30 minutes, offert, suffit pour voir si nous pouvons travailler ensemble. Appelez-moi ou réservez directement un créneau.
       </p>

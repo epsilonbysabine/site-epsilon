@@ -1,5 +1,6 @@
 ---
 import Base from '../layouts/Base.astro';
+import { pick } from '../lib/variant';
 import OfferDirectory from '../components/OfferDirectory.astro';
 import { clientLogos } from '../data/testimonials';
 
@@ -59,7 +60,7 @@ const quotes = [
     <div class="wrap">
       <div class="section-head">
         <p class="eyebrow">Ce que je propose</p>
-        <h2>Trouvez l'accompagnement qui vous correspond</h2>
+        <h2>{pick("Trouvez l'accompagnement qui vous correspond", 'Ce que je propose')}</h2>
       </div>
       <OfferDirectory />
     </div>
@@ -80,7 +81,7 @@ const quotes = [
     <div class="wrap">
       <div class="section-head">
         <p class="eyebrow">Témoignages</p>
-        <h2>Ce qu'en disent les personnes accompagnées</h2>
+        <h2>{pick("Ce qu'en disent les personnes accompagnées", 'Ils en parlent')}</h2>
       </div>
       <div class="quote-grid">
         {quotes.map((q) => (

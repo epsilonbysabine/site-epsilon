@@ -1,5 +1,6 @@
 ---
 import Base from '../layouts/Base.astro';
+import { pick } from '../lib/variant';
 import { site } from '../config/site';
 // Un titre par atelier, avec le thème travaillé.
 const ateliers = [
@@ -45,7 +46,7 @@ const ateliers = [
     <div class="wrap split">
       <div class="stack sticky">
         <p class="eyebrow">En bref</p>
-        <h2>L'essentiel</h2>
+        <h2>{pick("L'essentiel", 'En pratique')}</h2>
       </div>
       <div class="panel-card">
         <ul class="price-list">
@@ -64,7 +65,7 @@ const ateliers = [
     <div class="wrap split">
       <div class="stack sticky">
         <p class="eyebrow">Comment ça marche</p>
-        <h2>Une soirée simple à organiser</h2>
+        <h2>{pick('Une soirée simple à organiser', 'Comment ça marche')}</h2>
       </div>
       <ol class="steps">
         <li><span><strong>Vous choisissez une date et un thème</strong>, et vous réunissez de 6 à 10 personnes chez vous.</span></li>
@@ -79,7 +80,7 @@ const ateliers = [
     <div class="wrap split">
       <div class="stack sticky">
         <p class="eyebrow">Au choix</p>
-        <h2>Les ateliers</h2>
+        <h2>{pick('Les ateliers', 'Les thèmes')}</h2>
         <p>Un atelier par soirée, choisi ensemble selon les envies de votre groupe.</p>
       </div>
       <ul class="atelier-list">

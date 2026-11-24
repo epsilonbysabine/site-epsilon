@@ -62,7 +62,7 @@ const views = pages
 
 const page = `<title>Epsilon by Sabine</title>
 <meta name="claude:viewport-fit-sides" content="cover">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400..800&family=Figtree:wght@300..900&family=Source+Serif+4:ital,opsz,wght@0,8..60,300..800;1,8..60,300..800&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400..800&family=Figtree:wght@300..900&family=Archivo:wdth,wght@62..125,100..900&family=Source+Sans+3:wght@200..900&family=Source+Serif+4:ital,opsz,wght@0,8..60,300..800;1,8..60,300..800&display=swap">
 <style>
 ${css}
 body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--paper); }
@@ -122,7 +122,7 @@ ${footer}
 // Variante : la classe posée sur <html> est reportée sur un conteneur dans l'aperçu.
 const variantClass = (home.match(/<html[^>]*class="([^"]+)"/) ?? [])[1];
 const finalPage = variantClass
-  ? page.replace('<title>Epsilon by Sabine</title>', '<title>Epsilon, version chaleureuse</title>').replace('<p class="preview-flag">', `<div class="${variantClass}">\n<p class="preview-flag">`) + '\n</div>\n'
+  ? page.replace('<title>Epsilon by Sabine</title>', `<title>${{ 'variant-humain': 'Epsilon, version chaleureuse', 'variant-authentique': 'Epsilon, version épurée' }[variantClass] ?? 'Epsilon by Sabine'}</title>`).replace('<p class="preview-flag">', `<div class="${variantClass}">\n<p class="preview-flag">`) + '\n</div>\n'
   : page;
 
 if (existsSync(out)) rmSync(out, { recursive: true });

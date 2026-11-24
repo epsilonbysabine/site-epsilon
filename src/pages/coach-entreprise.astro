@@ -1,5 +1,6 @@
 ---
 import Base from '../layouts/Base.astro';
+import { pick } from '../lib/variant';
 import PageHead from '../components/PageHead.astro';
 ---
 <Base
@@ -25,7 +26,7 @@ import PageHead from '../components/PageHead.astro';
     <div class="wrap">
       <div class="section-head">
         <p class="eyebrow">Coaching individuel et d’équipe</p>
-        <h2>Des collaborateurs engagés, des équipes soudées</h2>
+        <h2>{pick('Des collaborateurs engagés, des équipes soudées', 'Coaching individuel et d’équipe')}</h2>
       </div>
       <div class="grid-3">
         <article class="panel-card">
@@ -48,7 +49,7 @@ import PageHead from '../components/PageHead.astro';
     <div class="wrap">
       <div class="section-head">
         <p class="eyebrow">Accompagnements spécifiques</p>
-        <h2>Des réponses à des situations précises</h2>
+        <h2>{pick('Des réponses à des situations précises', 'Situations particulières')}</h2>
       </div>
       <div class="grid-2">
         <article class="panel-card" id="burn-out">
