@@ -13,7 +13,8 @@
   --night: #2b2333;
   --night-2: #3a2f45;
   --font-display: 'Source Serif 4 Variable', 'Source Serif 4', Georgia, 'Times New Roman', serif;
-  --radius: 1.75rem;
+  --radius: 0.75rem;
+  --radius-sm: 0.5rem;
   background: var(--paper);
   color: var(--ink);
 }
@@ -52,7 +53,7 @@ body:has(.variant-humain), .variant-humain body { background: #fbf8f4; }
 .variant-humain .menu-more a { color: var(--ink-soft); }
 
 /* Boutons arrondis, pleins ou soulignés */
-.variant-humain .btn { border-radius: 999px; }
+.variant-humain .btn { border-radius: 0.6rem; }
 .variant-humain .btn-primary,
 .variant-humain .dark .btn-primary,
 .variant-humain .site-header .btn-primary { background: var(--violet); color: #fff; }
@@ -68,7 +69,7 @@ body:has(.variant-humain), .variant-humain body { background: #fbf8f4; }
 .variant-humain .proof { border-top-color: var(--line); color: var(--ink-soft); }
 .variant-humain .proof li::before { background: var(--violet-2); }
 .variant-humain .hero-portrait .frame { padding: 0; }
-.variant-humain .hero-portrait img { border-radius: 14rem 14rem 1.75rem 1.75rem; }
+.variant-humain .hero-portrait img { border-radius: 5rem 5rem 0.75rem 0.75rem; }
 .variant-humain .portrait-card { position: static; width: auto; margin: 1.1rem 0 0; padding: 0; background: none !important; }
 .variant-humain .portrait-card strong { color: var(--ink); font-size: 1.15rem; }
 .variant-humain .portrait-card span { color: var(--ink-soft); }
