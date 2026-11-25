@@ -454,7 +454,7 @@ ul, ol { margin: 0; padding-left: 1.2em; }
   *, *::before, *::after { transition: none !important; animation: none !important; }
 }
 
-/* Atelier parents : trois thèmes détaillés */
+/* Atelier parents : thèmes détaillés */
 .atelier-list ul { margin: 0.4rem 0 0; padding-left: 1.1em; display: grid; gap: 0.35rem; color: var(--ink-soft); font-size: 0.98rem; line-height: 1.5; }
 .atelier-list ul li { padding: 0; display: list-item; background: none; border: 0; box-shadow: none; }
 @media (min-width: 64rem) { .atelier-list.trio { grid-template-columns: repeat(3, 1fr); } }

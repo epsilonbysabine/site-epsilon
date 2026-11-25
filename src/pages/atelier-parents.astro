@@ -11,6 +11,14 @@ const themes = [
     ],
   },
   {
+    titre: 'Durant la compétition : être présent sans peser',
+    points: [
+      'Trouver sa place au bord du terrain ou dans les tribunes',
+      'Encourager avec justesse : quoi dire, et quand se taire',
+      'Gérer ses propres émotions de parent face à l’enjeu',
+    ],
+  },
+  {
     titre: 'Après le match : victoire ou défaite, savoir quoi dire',
     points: [
       'Accueillir les émotions de son enfant : déception, colère, euphorie',
@@ -30,11 +38,11 @@ const themes = [
 ---
 <Base
   title="Atelier pour les parents de jeunes compétiteurs | Epsilon"
-  description="Un atelier d'1 h 30 pour les parents de jeunes sportifs : trois thèmes pour accompagner votre enfant avant et après la compétition, et trouver votre juste place. 6 à 10 personnes, 25 € par personne."
+  description="Un atelier d'1 h 30 pour les parents de jeunes sportifs : quatre thèmes pour accompagner votre enfant avant, pendant et après la compétition, et trouver votre juste place. 6 à 10 personnes, 25 € par personne."
 >
   <PageHead
     links={[
-      { label: 'Les 3 thèmes', href: '#themes' },
+      { label: 'Les 4 thèmes', href: '#themes' },
       { label: 'Infos pratiques', href: '#infos' },
       { label: 'Ateliers pour sportifs', href: '/ateliers-preparation-mentale' },
     ]}
@@ -45,10 +53,10 @@ const themes = [
   <section class="section section-tint" id="themes">
     <div class="wrap">
       <div class="section-head">
-        <h2>Trois thèmes au choix</h2>
+        <h2>Quatre thèmes au choix</h2>
         <p class="lead">Un thème par atelier, à choisir selon ce que vivent votre enfant et votre famille.</p>
       </div>
-      <ul class="atelier-list trio">
+      <ul class="atelier-list">
         {themes.map((t, i) => (
           <li class="glass">
             <span class="eyebrow">Thème {i + 1}</span>
