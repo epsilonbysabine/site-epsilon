@@ -38,7 +38,7 @@ Résumé des échanges avec Claude (novembre 2026) pour reprendre le travail plu
 - Facultatif : formulaire Wix Forms pour le contact (identifiant du formulaire).
 - Dans Wix Bookings : mettre l'entretien de 30 min à 0 €, renommer « Pack découverte » en « Bilan de vos ressources ».
 - Pages entreprises (coaching, entretien de parcours, formations, créativité) : pas d'entretien offert, bouton « Demander un devis » (e-mail) à la place.
-- Atelier pour les parents de jeunes compétiteurs : 2 h 30, 6 à 10 personnes, en groupe ou en club, 35 € par personne. Confirmer les 3 points du contenu ; créer la prestation dans Wix Bookings.
+- Atelier pour les parents de jeunes compétiteurs : 1 h 30, 6 à 10 personnes, en groupe ou en club, 25 € par personne. Confirmer les 3 points du contenu ; créer la prestation dans Wix Bookings.
 - Dans le blog Wix : corriger les liens vers coaching-epsilon.net et « événement » → « évènement ».
 - À confirmer : liste des thèmes des ateliers chez vous ; « 6 à 10 personnes » hôte compris ou non ; ajouter « DROM-COM » aux autres mentions de zone ; nombre exact de salariés accompagnés après un burn-out (le site dit « des salariés »).
 - Mettre le site en ligne (hébergeur) et fusionner la branche dans la branche principale.
