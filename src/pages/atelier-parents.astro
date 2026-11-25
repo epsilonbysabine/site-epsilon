@@ -1,14 +1,40 @@
 ---
 import Base from '../layouts/Base.astro';
 import PageHead from '../components/PageHead.astro';
+const themes = [
+  {
+    titre: "Avant le match : l'aider à aborder la compétition sereinement",
+    points: [
+      "Comprendre le stress d'avant compétition et ce qu'il révèle",
+      'Les mots et attitudes qui rassurent, et ceux qui ajoutent de la pression',
+      'Une petite routine à mettre en place en famille la veille et le jour J',
+    ],
+  },
+  {
+    titre: 'Après le match : victoire ou défaite, savoir quoi dire',
+    points: [
+      'Accueillir les émotions de son enfant : déception, colère, euphorie',
+      'Parler de la performance sans juger le résultat',
+      "L'aider à tirer des leçons et à garder confiance",
+    ],
+  },
+  {
+    titre: 'Parent, coach, supporter : trouver sa juste place',
+    points: [
+      "Les rôles de chacun : l'enfant, l'entraîneur, le parent",
+      'Nourrir sa motivation sans projeter nos propres attentes',
+      'Concilier sport, école et vie de famille sans épuisement',
+    ],
+  },
+];
 ---
 <Base
   title="Atelier pour les parents de jeunes compétiteurs | Epsilon"
-  description="Un atelier d'1 h 30 pour les parents de jeunes sportifs : comprendre ce que vit votre enfant en compétition et l'accompagner sans ajouter de pression. 6 à 10 personnes, 25 € par personne."
+  description="Un atelier d'1 h 30 pour les parents de jeunes sportifs : trois thèmes pour accompagner votre enfant avant et après la compétition, et trouver votre juste place. 6 à 10 personnes, 25 € par personne."
 >
   <PageHead
     links={[
-      { label: 'Le contenu', href: '#contenu-atelier' },
+      { label: 'Les 3 thèmes', href: '#themes' },
       { label: 'Infos pratiques', href: '#infos' },
       { label: 'Ateliers pour sportifs', href: '/ateliers-preparation-mentale' },
     ]}
@@ -16,18 +42,31 @@ import PageHead from '../components/PageHead.astro';
     title="Atelier pour les parents de jeunes compétiteurs"
     lead="Vous êtes le premier soutien de votre enfant, avant, pendant et après la compétition. Cet atelier vous aide à mieux comprendre ce qu'il vit et à trouver la juste place pour l'accompagner."
   />
-  <section class="section section-tint" id="contenu-atelier">
+  <section class="section section-tint" id="themes">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Trois thèmes au choix</h2>
+        <p class="lead">Un thème par atelier, à choisir selon ce que vivent votre enfant et votre famille.</p>
+      </div>
+      <ul class="atelier-list trio">
+        {themes.map((t, i) => (
+          <li class="glass">
+            <span class="eyebrow">Thème {i + 1}</span>
+            <strong>{t.titre}</strong>
+            <ul>{t.points.map((pt) => <li>{pt}</li>)}</ul>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
+  <section class="section" id="infos">
     <div class="wrap split">
       <div class="prose">
-        <h2>Ce que nous travaillons</h2>
-        <ul>
-          <li>Comprendre ce que traverse un jeune compétiteur : stress, émotions, motivation</li>
-          <li>Trouver les mots justes avant une compétition et après, qu'elle soit réussie ou non</li>
-          <li>Encourager sans ajouter de pression</li>
-        </ul>
+        <h2>Infos pratiques</h2>
+        <p>L'atelier se déroule en groupe, dans votre club ou dans un lieu que nous choisissons ensemble.</p>
         <p><a class="btn btn-primary" href="/book-online">Réserver un atelier</a></p>
       </div>
-      <div class="panel-card" id="infos">
+      <div class="panel-card">
         <ul class="price-list">
           <li><span>Prix</span><b>25 € par personne</b></li>
           <li><span>Groupe</span><b>De 6 à 10 personnes</b></li>

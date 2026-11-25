@@ -134,7 +134,7 @@ body:has(.variant-authentique), .variant-authentique body { background: #fff; }
 .variant-authentique .logo-strip { background: #fff; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
 .variant-authentique .logo-strip p { text-align: left; color: var(--ink); font-weight: 600; }
 .variant-authentique .logos li { border: 1px solid var(--line); border-radius: 0; }
-.variant-authentique .atelier-list li { padding: 0.9rem 0; border-bottom: 1px solid var(--line); }
+.variant-authentique .atelier-list > li { padding: 0.9rem 0; border-bottom: 1px solid var(--line); }
 .variant-authentique .atelier-list { gap: 0 2rem; }
 .variant-authentique .atelier-list .eyebrow { font-size: 0.9rem; font-weight: 500; }
 .variant-authentique .atelier-list strong { font-family: var(--font-body); font-weight: 700; }

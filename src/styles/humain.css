@@ -95,7 +95,7 @@ body:has(.variant-humain), .variant-humain body { background: #fbf8f4; }
 .variant-humain .quote-grid { gap: 2.5rem; }
 
 /* Divers */
-.variant-humain .atelier-list li { padding: 1rem 0; border-bottom: 1px solid var(--line); }
+.variant-humain .atelier-list > li { padding: 1rem 0; border-bottom: 1px solid var(--line); }
 .variant-humain .atelier-list { gap: 0 2rem; }
 .variant-humain .logos li { border: 0; background: none; }
 .variant-humain .logo-strip { border-bottom: 0; background: var(--mist); }
