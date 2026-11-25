@@ -38,6 +38,7 @@ export const sitemap = [
       { label: 'Préparation mentale', href: '/preparation-mentale' },
       { label: 'Ateliers chez vous', href: '/ateliers-chez-vous' },
       { label: 'Ateliers pour sportifs', href: '/ateliers-preparation-mentale' },
+      { label: 'Atelier pour les parents', href: '/atelier-parents' },
       { label: 'Ateliers développement personnel', href: '/ateliers-developpement-personnel' },
       ...(visiblePages.partenaires ? [{ label: 'Mes partenaires', href: '/mespartenaires' }] : []),
     ],

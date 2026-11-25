@@ -1,0 +1,41 @@
+---
+import Base from '../layouts/Base.astro';
+import PageHead from '../components/PageHead.astro';
+---
+<Base
+  title="Atelier pour les parents de jeunes compétiteurs | Epsilon"
+  description="Un atelier de 2 h 30 pour les parents de jeunes sportifs : comprendre ce que vit votre enfant en compétition et l'accompagner sans ajouter de pression. 6 à 10 personnes, 35 € par personne."
+>
+  <PageHead
+    links={[
+      { label: 'Le contenu', href: '#contenu-atelier' },
+      { label: 'Infos pratiques', href: '#infos' },
+      { label: 'Ateliers pour sportifs', href: '/ateliers-preparation-mentale' },
+    ]}
+    eyebrow="Pour les parents"
+    title="Atelier pour les parents de jeunes compétiteurs"
+    lead="Vous êtes le premier soutien de votre enfant, avant, pendant et après la compétition. Cet atelier vous aide à mieux comprendre ce qu'il vit et à trouver la juste place pour l'accompagner."
+  />
+  <section class="section section-tint" id="contenu-atelier">
+    <div class="wrap split">
+      <div class="prose">
+        <h2>Ce que nous travaillons</h2>
+        <ul>
+          <li>Comprendre ce que traverse un jeune compétiteur : stress, émotions, motivation</li>
+          <li>Trouver les mots justes avant une compétition et après, qu'elle soit réussie ou non</li>
+          <li>Encourager sans ajouter de pression</li>
+        </ul>
+        <p><a class="btn btn-primary" href="/book-online">Réserver un atelier</a></p>
+      </div>
+      <div class="panel-card" id="infos">
+        <ul class="price-list">
+          <li><span>Prix</span><b>35 € par personne</b></li>
+          <li><span>Groupe</span><b>De 6 à 10 personnes</b></li>
+          <li><span>Durée</span><b>2 h 30</b></li>
+          <li><span>Format</span><b>En groupe ou dans votre club</b></li>
+        </ul>
+        <p class="note">TVA non applicable.</p>
+      </div>
+    </div>
+  </section>
+</Base>
