@@ -4,17 +4,25 @@ import { pick } from '../lib/variant';
 const formId = import.meta.env.PUBLIC_WIX_FORM_ID;
 const clientId = import.meta.env.PUBLIC_WIX_CLIENT_ID;
 const showForm = Boolean(formId && clientId);
+interface Props { audience?: 'particuliers' | 'entreprises' }
+const { audience = 'particuliers' } = Astro.props;
+const pro = audience === 'entreprises';
+const devisHref = `mailto:${site.email}?subject=${encodeURIComponent('Demande de devis')}`;
 ---
 <section class="contact-band section dark aura" id="contact">
   <div class="wrap">
     <div class="stack">
       <p class="eyebrow">Contact</p>
-      <h2>{pick('Parlons de votre objectif', 'Me contacter')}</h2>
+      <h2>{pro ? pick('Parlons de votre projet', 'Me contacter') : pick('Parlons de votre objectif', 'Me contacter')}</h2>
       <p class="lead">
-        Un premier échange de 30 minutes, offert, suffit pour voir si nous pouvons travailler ensemble. Appelez-moi ou réservez directement un créneau.
+        {pro
+          ? "Chaque intervention fait l'objet d'un devis, construit selon les besoins de votre entreprise. Appelez-moi ou écrivez-moi pour en parler."
+          : 'Un premier échange de 30 minutes, offert, suffit pour voir si nous pouvons travailler ensemble. Appelez-moi ou réservez directement un créneau.'}
       </p>
       <div class="btn-row" style="margin-top: 0.5rem">
-        <a class="btn btn-primary" href="/book-online">Réserver mon entretien offert de 30&nbsp;min</a>
+        {pro
+          ? <a class="btn btn-primary" href={devisHref}>Demander un devis</a>
+          : <a class="btn btn-primary" href="/book-online">Réserver mon entretien offert de 30&nbsp;min</a>}
         <a class="btn btn-glass-dark" href={site.phoneHref}>Appeler le {site.phone}</a>
       </div>
     </div>

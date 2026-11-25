@@ -3,11 +3,11 @@ import Base from '../layouts/Base.astro';
 import PageHead from '../components/PageHead.astro';
 import CreativityQuotes from '../components/CreativityQuotes.astro';
 ---
-<Base
+<Base audience="entreprises"
   title="Epsilon Coaching - Formation en Créativité et Communication"
   description={'Je vous accompagne dans vos formations : entreprise ou école post-bac, je vous propose une formation inédite "créativité et communication"'}
 >
-  <PageHead
+  <PageHead audience="entreprises"
     links={[
       { label: 'Créativité & communication', href: '#creativite' },
       { label: 'Recommandations', href: '#avis' },

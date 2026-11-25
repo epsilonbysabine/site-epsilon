@@ -7,9 +7,12 @@ interface Props {
   title: string;
   lead?: string;
   cta?: boolean;
+  /** « entreprises » : pas d'entretien offert, on propose un devis. */
+  audience?: 'particuliers' | 'entreprises';
   links?: { label: string; href: string }[];
 }
-const { eyebrow, title, lead, cta = true, links = [] } = Astro.props;
+const { eyebrow, title, lead, cta = true, links = [], audience = 'particuliers' } = Astro.props;
+const devisHref = `mailto:${site.email}?subject=${encodeURIComponent('Demande de devis')}`;
 ---
 <header class="page-head aura">
   <div class="wrap">
@@ -26,7 +29,9 @@ const { eyebrow, title, lead, cta = true, links = [] } = Astro.props;
     <slot />
     {cta && (
       <div class="btn-row">
-        <a class="btn btn-primary" href="/book-online">Réserver mon entretien offert de 30&nbsp;min</a>
+        {audience === 'entreprises'
+          ? <a class="btn btn-primary" href={devisHref}>Demander un devis</a>
+          : <a class="btn btn-primary" href="/book-online">Réserver mon entretien offert de 30&nbsp;min</a>}
         <a class="btn btn-glass" href={site.phoneHref}>Appeler le {site.phone}</a>
       </div>
     )}

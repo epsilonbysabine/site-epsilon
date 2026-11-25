@@ -16,9 +16,10 @@ interface Props {
   title: string;
   description?: string;
   contact?: boolean;
+  audience?: 'particuliers' | 'entreprises';
   image?: string;
 }
-const { title, description = '', contact = true, image = '/images/sabine-portrait.jpg' } = Astro.props;
+const { title, description = '', contact = true, audience = 'particuliers', image = '/images/sabine-portrait.jpg' } = Astro.props;
 const canonical = new URL(Astro.url.pathname, Astro.site);
 // PUBLIC_VARIANT=humain ou authentique active un autre habillage (src/styles/humain.css, authentique.css).
 const variantName = import.meta.env.PUBLIC_VARIANT;
@@ -60,7 +61,7 @@ const jsonLd = {
     <main id="contenu">
       <slot />
     </main>
-    {contact && <ContactBand />}
+    {contact && <ContactBand audience={audience} />}
     <Footer />
   </body>
 </html>

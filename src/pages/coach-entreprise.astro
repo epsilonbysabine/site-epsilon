@@ -3,11 +3,11 @@ import Base from '../layouts/Base.astro';
 import { pick } from '../lib/variant';
 import PageHead from '../components/PageHead.astro';
 ---
-<Base
+<Base audience="entreprises"
   title="Coaching d'entreprise et formations, Avignon | Epsilon"
   description="Epsilon Coaching, coach d'entreprise, vous accompagne que vous soyez dirigeant ou salariés afin de vous aider à vous accomplir personnellement et professionnellement."
 >
-  <PageHead
+  <PageHead audience="entreprises"
     eyebrow="Entreprises"
     title="Coaching, formations et entretiens professionnels pour votre entreprise"
     links={[

@@ -48,14 +48,19 @@ const rewrite = (html) =>
 const pick = (html, re) => (html.match(re) ?? [''])[0];
 const home = pages.find((p) => p.id === 'accueil').html;
 const header = rewrite(pick(home, /<header class="site-header[\s\S]*?<\/header>/));
-const contact = rewrite(pick(home, /<section class="contact-band[\s\S]*?<\/section>/));
+const contactRe = /<section class="contact-band[\s\S]*?<\/section>/;
+const contact = rewrite(pick(home, contactRe));
+// Les pages entreprises ont leur propre bloc contact (devis au lieu de l'entretien offert).
+const proPage = pages.find((p) => p.id === 'coach-entreprise');
+const contactPro = proPage ? rewrite(pick(proPage.html, contactRe)) : contact;
+const isPro = (html) => html.includes('Demander un devis');
 const footer = rewrite(pick(home, /<footer[\s\S]*?<\/footer>/));
 
 const views = pages
   .map((p) => {
     const main = pick(p.html, /<main[^>]*>[\s\S]*<\/main>/).replace(/^<main[^>]*>/, '').replace(/<\/main>$/, '');
     const title = pick(p.html, /<title>[\s\S]*?<\/title>/).replace(/<\/?title>/g, '');
-    const hasContact = p.html.includes('class="contact-band');
+    const hasContact = p.html.includes('class="contact-band') ? (isPro(pick(p.html, contactRe)) ? 'pro' : 'true') : 'false';
     return `<div class="view" data-view="${p.id}" data-title="${title.replace(/"/g, '&quot;')}" data-contact="${hasContact}" hidden>${rewrite(main)}</div>`;
   })
   .join('\n');
@@ -74,11 +79,13 @@ ${header}
 ${views}
 </main>
 <div id="contact-slot">${contact}</div>
+<div id="contact-slot-pro" hidden>${contactPro.replace('id="contact"', 'id="contact-pro"')}</div>
 ${footer}
 <script>
 (function () {
   var views = Array.prototype.slice.call(document.querySelectorAll('.view'));
   var slot = document.getElementById('contact-slot');
+  var slotPro = document.getElementById('contact-slot-pro');
   var current = null;
   function show() {
     var raw = decodeURIComponent(location.hash.slice(1)) || 'accueil';
@@ -97,6 +104,7 @@ ${footer}
     }
     views.forEach(function (v) { v.hidden = v !== view; });
     slot.hidden = view.dataset.contact !== 'true';
+    slotPro.hidden = view.dataset.contact !== 'pro';
     var changed = current !== null && current !== view;
     current = view;
     var menu = document.querySelector('.nav-mobile'); if (menu) menu.open = false;
