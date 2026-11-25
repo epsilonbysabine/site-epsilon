@@ -52,7 +52,7 @@ const ateliers = [
         <ul class="price-list">
           <li><span>Prix</span><b>25 € par personne</b></li>
           <li><span>Groupe</span><b>De 6 à 10 personnes</b></li>
-          <li><span>Durée</span><b>1 h 30, de 19 h à 20 h 30</b></li>
+          <li><span>Durée</span><b>1 h 30, à l'horaire de votre choix</b></li>
           <li><span>Où</span><b>Vaucluse, Gard, Bouches-du-Rhône, Drôme, Ardèche</b></li>
           <li><span>Pour l'hôte</span><b>Atelier offert + 30 minutes de préparation mentale personnalisée</b></li>
         </ul>
@@ -65,12 +65,12 @@ const ateliers = [
     <div class="wrap split">
       <div class="stack sticky">
         <p class="eyebrow">Comment ça marche</p>
-        <h2>{pick('Une soirée simple à organiser', 'Comment ça marche')}</h2>
+        <h2>{pick('Un moment simple à organiser', 'Comment ça marche')}</h2>
       </div>
       <ol class="steps">
         <li><span><strong>Vous choisissez une date et un thème</strong>, et vous réunissez de 6 à 10 personnes chez vous.</span></li>
         <li><span><strong>Chacun apporte quelque chose à manger</strong> pour partager un moment convivial.</span></li>
-        <li><span><strong>J'anime l'atelier</strong> de 19 h à 20 h 30 : échanges, exercices pratiques et outils faciles à reprendre seul.</span></li>
+        <li><span><strong>J'anime l'atelier</strong> pendant 1 h 30 : échanges, exercices pratiques et outils faciles à reprendre seul.</span></li>
         <li><span><strong>Chacun repart avec ses outils</strong> pour gagner en efficacité et en sérénité au quotidien.</span></li>
       </ol>
     </div>
@@ -81,7 +81,7 @@ const ateliers = [
       <div class="stack sticky">
         <p class="eyebrow">Au choix</p>
         <h2>{pick('Les ateliers', 'Les thèmes')}</h2>
-        <p>Un atelier par soirée, choisi ensemble selon les envies de votre groupe.</p>
+        <p>Un atelier par rencontre, choisi ensemble selon les envies de votre groupe.</p>
       </div>
       <ul class="atelier-list">
         {ateliers.map((a) => (

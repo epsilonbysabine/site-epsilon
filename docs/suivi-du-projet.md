@@ -25,7 +25,7 @@ Résumé des échanges avec Claude (novembre 2026) pour reprendre le travail plu
 - Menu : Préparation mentale, Entreprises, Ateliers, Formations, À propos, Blog.
 - Entreprises : coaching individuel et d'équipe, entretien de parcours professionnel, retour au travail après un burn-out, réunions efficaces, créativité et innovation, formations.
 - Préparation mentale (thèmes) : Performance, Confiance en soi, Estime de soi, Motivation, Adaptabilité, Combativité, Réactivité, Activation, Concentration, Fixation d'objectif, Cohésion d'équipe.
-- Ateliers chez vous : 6 à 10 personnes, 1 h 30 (19 h – 20 h 30), 25 € par personne, repas partagé, atelier offert à l'hôte + 30 min de préparation mentale personnalisée ; Vaucluse, Gard, Bouches-du-Rhône, Drôme, Ardèche ; dix ateliers titrés (dont « La charge mentale, comment s'en alléger » et « Prévoir, apprendre, réussir : l'art de la visualisation »).
+- Ateliers chez vous : 6 à 10 personnes, 1 h 30 (horaire libre, à convenir avec l'hôte), 25 € par personne, repas partagé, atelier offert à l'hôte + 30 min de préparation mentale personnalisée ; Vaucluse, Gard, Bouches-du-Rhône, Drôme, Ardèche ; dix ateliers titrés (dont « La charge mentale, comment s'en alléger » et « Prévoir, apprendre, réussir : l'art de la visualisation »).
 - Créativité & innovation et Formations : recommandations des étudiants de l'IMT Lille Douai.
 - Page Partenaires : masquée (`visiblePages.partenaires` dans `src/config/site.ts`), à réafficher ou supprimer plus tard.
 - Ateliers développement personnel : dates de 2023 retirées.
