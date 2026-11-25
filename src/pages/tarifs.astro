@@ -1,0 +1,87 @@
+---
+// Récapitulatif de tous les tarifs. Les montants reprennent ceux des pages détaillées :
+// toute modification de prix doit être faite ici ET sur la page concernée.
+import Base from '../layouts/Base.astro';
+import PageHead from '../components/PageHead.astro';
+
+interface Ligne { label: string; detail?: string; prix: string; href: string }
+interface Groupe { id: string; titre: string; intro?: string; lignes: Ligne[]; note?: string }
+
+const groupes: Groupe[] = [
+  {
+    id: 'particuliers',
+    titre: 'Préparation mentale individuelle',
+    intro: 'Sportifs, étudiants, artistes et salariés.',
+    lignes: [
+      { label: 'Premier entretien', detail: '30 minutes pour faire connaissance et voir si nous pouvons travailler ensemble', prix: 'Offert', href: '/book-online' },
+      { label: 'Séance : étudiant, sportif d’un club partenaire', prix: '40 € les 30 min · 75 € l’heure', href: '/preparation-mentale#tarifs' },
+      { label: 'Séance : salarié', prix: '50 € les 30 min · 95 € l’heure', href: '/preparation-mentale#tarifs' },
+      { label: 'Bilan de vos ressources', detail: 'Entretien, tests, analyse et compte rendu écrit. La restitution est facturée au tarif d’une séance.', prix: '250 € étudiant ou sportif d’un club partenaire · 300 € autres', href: '/preparation-mentale#bilan' },
+    ],
+    note: 'Tarifs des séances applicables à partir du 1er janvier 2027.',
+  },
+  {
+    id: 'ateliers',
+    titre: 'Ateliers',
+    intro: 'En petit groupe, pour repartir avec des outils concrets.',
+    lignes: [
+      { label: 'Ateliers chez vous', detail: 'De 6 à 10 personnes, 1 h 30. Atelier offert à l’hôte, avec 30 minutes de coaching personnalisé.', prix: '25 € par personne', href: '/ateliers-chez-vous' },
+      { label: 'Atelier pour les parents de jeunes compétiteurs', detail: 'De 6 à 10 personnes, 1 h 30, trois thèmes au choix.', prix: '25 € par personne', href: '/atelier-parents' },
+      { label: 'Ateliers de développement personnel', detail: 'Trois ateliers le samedi matin, de 6 à 12 personnes.', prix: '135 € les 3 ateliers', href: '/ateliers-developpement-personnel' },
+      { label: 'Ateliers de préparation mentale pour sportifs', detail: 'Sept thèmes au fil de la saison, pour les clubs et les groupes.', prix: 'Me contacter', href: '/ateliers-preparation-mentale' },
+    ],
+  },
+  {
+    id: 'entreprises',
+    titre: 'Entreprises',
+    intro: 'Chaque intervention fait l’objet d’un devis adapté à vos besoins.',
+    lignes: [
+      { label: 'Coaching individuel', prix: 'À partir de 200 € l’heure', href: '/coach-entreprise#coaching' },
+      { label: 'Accompagnement d’équipe', prix: 'À partir de 1 100 € la demi-journée · 2 000 € la journée', href: '/coach-entreprise#coaching' },
+      { label: 'Entretiens de parcours professionnel externalisés', prix: 'Sur devis', href: '/entretien-professionnel' },
+      { label: 'Formations de plusieurs jours', prix: 'Sur devis', href: '/formations' },
+      { label: 'Créativité et innovation', detail: 'Workshops, brainstorming, formations', prix: 'Sur devis', href: '/creativite-innovation' },
+    ],
+    note: 'Tarifs applicables à partir du 1er janvier 2027. Les frais de déplacement hors Vaucluse et Drôme s’ajoutent.',
+  },
+];
+---
+<Base
+  title="Tarifs | Epsilon"
+  description="Tous les tarifs d'Epsilon : séances de préparation mentale, bilan de vos ressources, ateliers et interventions en entreprise. Premier entretien de 30 minutes offert."
+>
+  <PageHead
+    eyebrow="Tarifs"
+    title="Tous mes tarifs en un coup d’œil"
+    lead="TVA non applicable : les prix affichés sont les prix à payer."
+    cta={false}
+    links={groupes.map((g) => ({ label: g.titre, href: `#${g.id}` }))}
+  />
+  {groupes.map((g, i) => (
+    <section class={`section${i % 2 === 0 ? ' section-tint' : ''}`} id={g.id}>
+      <div class="wrap split">
+        <div class="stack sticky">
+          <h2>{g.titre}</h2>
+          {g.intro && <p>{g.intro}</p>}
+        </div>
+        <div class="stack">
+          <ul class="price-list tarifs">
+            {g.lignes.map((l) => (
+              <li>
+                <span class="tarif-label"><a href={l.href}>{l.label}</a></span>
+                {l.detail && <span class="tarif-detail">{l.detail}</span>}
+                <b>{l.prix}</b>
+              </li>
+            ))}
+          </ul>
+          {g.note && <p class="note">{g.note}</p>}
+          {g.id === 'entreprises'
+            ? <p><a class="btn btn-primary" href="mailto:epsilonbysabine@gmail.com?subject=Demande%20de%20devis">Demander un devis</a></p>
+            : g.id === 'particuliers'
+              ? <p><a class="btn btn-primary" href="/book-online">Réserver mon entretien offert de 30&nbsp;min</a></p>
+              : null}
+        </div>
+      </div>
+    </section>
+  ))}
+</Base>

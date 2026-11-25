@@ -458,3 +458,9 @@ ul, ol { margin: 0; padding-left: 1.2em; }
 .atelier-list ul { margin: 0.4rem 0 0; padding-left: 1.1em; display: grid; gap: 0.35rem; color: var(--ink-soft); font-size: 0.98rem; line-height: 1.5; }
 .atelier-list ul li { padding: 0; display: list-item; background: none; border: 0; box-shadow: none; }
 @media (min-width: 64rem) { .atelier-list.trio { grid-template-columns: repeat(3, 1fr); } }
+
+/* Page Tarifs */
+.price-list.tarifs .tarif-label a { color: var(--ink); font-weight: 600; text-decoration: underline; text-decoration-color: var(--line); text-underline-offset: 0.2em; }
+.price-list.tarifs .tarif-label a:hover { text-decoration-color: currentColor; }
+.price-list.tarifs .tarif-detail { color: var(--ink-soft); font-size: 0.95rem; }
+.price-list.tarifs b { margin-top: 0.2rem; }

@@ -26,6 +26,7 @@ export const nav = [
   { label: 'Entreprises', href: '/coach-entreprise' },
   { label: 'Ateliers', href: '/ateliers' },
   { label: 'Formations', href: '/formations' },
+  { label: 'Tarifs', href: '/tarifs' },
   { label: 'À propos', href: '/a-propos' },
   { label: 'Blog', href: '/blog' },
 ];
@@ -57,6 +58,7 @@ export const sitemap = [
     children: [
       { label: 'Sabine Djaouane', href: '/a-propos' },
       { label: 'Mes prestations', href: '/services' },
+      { label: 'Tarifs', href: '/tarifs' },
       { label: 'Témoignages', href: '/clients' },
       { label: 'Album photos', href: '/album-photo' },
       { label: 'Blog', href: '/blog' },
