@@ -464,3 +464,9 @@ ul, ol { margin: 0; padding-left: 1.2em; }
 .price-list.tarifs .tarif-label a:hover { text-decoration-color: currentColor; }
 .price-list.tarifs .tarif-detail { color: var(--ink-soft); font-size: 0.95rem; }
 .price-list.tarifs b { margin-top: 0.2rem; }
+
+/* À propos : diplôme mis en avant */
+.diploma { display: grid; gap: 0.35rem; margin-block: 0.5rem 1.5rem; border-left: 4px solid var(--violet); }
+.diploma p { margin: 0; }
+.diploma-title { font-family: var(--font-display); font-size: var(--step-2); font-weight: 700; line-height: 1.15; letter-spacing: -0.02em; color: var(--ink); }
+.diploma-school { color: var(--ink-soft); font-weight: 600; }
