@@ -470,3 +470,7 @@ ul, ol { margin: 0; padding-left: 1.2em; }
 .diploma p { margin: 0; }
 .diploma-title { font-family: var(--font-display); font-size: var(--step-2); font-weight: 700; line-height: 1.15; letter-spacing: -0.02em; color: var(--ink); }
 .diploma-school { color: var(--ink-soft); font-weight: 600; }
+.certifs { list-style: none; padding: 0; margin: 0 0 1.5rem; display: grid; gap: 0; }
+.certifs li { padding: 0.7rem 0 0.7rem 1.6rem; border-bottom: 1px solid var(--line); font-weight: 600; color: var(--ink); position: relative; }
+.certifs li:first-child { border-top: 1px solid var(--line); }
+.certifs li::before { content: "✓"; position: absolute; left: 0.1rem; color: var(--violet); font-weight: 700; }
