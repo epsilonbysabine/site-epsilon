@@ -2,6 +2,9 @@
 import Base from '../layouts/Base.astro';
 import PageHead from '../components/PageHead.astro';
 const programme = ['Relooking', 'Nutrition', 'Maquillage', 'Pilate', 'Shooting photo', 'Coiffure', 'Massage', 'Confiance en Soi'];
+import { visiblePages } from '../config/site';
+// Page en sommeil tant que visiblePages.ateliersDevPerso vaut false (src/config/site.ts).
+if (!visiblePages.ateliersDevPerso) return Astro.redirect('/ateliers');
 ---
 <Base title="Ateliers Développement Personnel | Epsilon" description="Des ateliers spécifiques femmes : confiance en soi, nutrition, pilate, relooking, maquillage.">
   <PageHead eyebrow="Ateliers développement personnel" title="Embrassez ce qui vous rend unique !" />

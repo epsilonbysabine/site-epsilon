@@ -18,6 +18,8 @@ export const site = {
 // (plus de liens vers elle, et son adresse renvoie vers la page Préparation mentale).
 export const visiblePages = {
   partenaires: false,
+  // Ateliers de développement personnel (pack de 3 ateliers le samedi) : en sommeil pour l'instant.
+  ateliersDevPerso: false,
 };
 
 // Menu principal : liens directs, sans sous-menus.
@@ -40,7 +42,7 @@ export const sitemap = [
       { label: 'Ateliers chez vous', href: '/ateliers-chez-vous' },
       { label: 'Ateliers pour sportifs', href: '/ateliers-preparation-mentale' },
       { label: 'Atelier pour les parents', href: '/atelier-parents' },
-      { label: 'Ateliers développement personnel', href: '/ateliers-developpement-personnel' },
+      ...(visiblePages.ateliersDevPerso ? [{ label: 'Ateliers développement personnel', href: '/ateliers-developpement-personnel' }] : []),
       ...(visiblePages.partenaires ? [{ label: 'Mes partenaires', href: '/mespartenaires' }] : []),
     ],
   },
