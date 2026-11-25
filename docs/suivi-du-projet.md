@@ -17,7 +17,7 @@ Résumé des échanges avec Claude (novembre 2026) pour reprendre le travail plu
 - Baseline : « Libérez et développez votre performance. »
 - Accroche de l'accueil : « Plus qu'une préparation ponctuelle, un apprentissage de tous les jours : mieux vous analyser, maîtriser vos outils, gagner en efficacité et performer, dans votre métier comme dans votre discipline. »
 - Premier entretien de 30 minutes : **offert**.
-- « Pack découverte » renommé **« État des lieux mental »** (analyse avant les séances).
+- « Pack découverte » renommé « État des lieux mental », puis **« Bilan de vos ressources »** (analyse avant les séances).
 - Encart « Séances de préparation mentale » : « Un accompagnement sur mesure pour développer vos ressources mentales et performer au quotidien. »
 - E-mail : epsilonbysabine@gmail.com
 - Zone : Avignon, partout en France métropolitaine et dans les DROM-COM.
@@ -36,7 +36,7 @@ Résumé des échanges avec Claude (novembre 2026) pour reprendre le travail plu
 - Choisir l'habillage (origine, chaleureux ou épuré), ou un mélange des deux.
 - Créer l'application OAuth dans Wix (Paramètres > Paramètres Headless) et fournir l'**identifiant client** ; autoriser le domaine du site dans cette application.
 - Facultatif : formulaire Wix Forms pour le contact (identifiant du formulaire).
-- Dans Wix Bookings : mettre l'entretien de 30 min à 0 €, renommer « Pack découverte » en « État des lieux mental ».
+- Dans Wix Bookings : mettre l'entretien de 30 min à 0 €, renommer « Pack découverte » en « Bilan de vos ressources ».
 - Dans le blog Wix : corriger les liens vers coaching-epsilon.net et « événement » → « évènement ».
 - À confirmer : liste des thèmes des ateliers chez vous ; « 6 à 10 personnes » hôte compris ou non ; ajouter « DROM-COM » aux autres mentions de zone ; nombre exact de salariés accompagnés après un burn-out (le site dit « des salariés »).
 - Mettre le site en ligne (hébergeur) et fusionner la branche dans la branche principale.
