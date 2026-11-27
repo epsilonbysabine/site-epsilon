@@ -64,6 +64,16 @@ export const testimonials: Testimonial[] = [
     ],
   },
   {
+    author: "Étudiant de l'IMT Lille Douai, promotion 2021",
+    paragraphs: ['Très intéressant, permet de lier des liens entre tous les participants. Appliquée aux entreprises, cette méthode doit être fédératrice !'],
+  },
+  {
+    author: "Étudiant de l'IMT Lille Douai, promotion 2022",
+    paragraphs: [
+      "Il est dommageable de penser que certains sont réfractaires à ce genre de sessions. Il faut au moins s'y prêter pour en tirer l'intérêt complet de la créativité. Certes l'ingénieur est scientifique, mais l'ingénieur créatif + scientifique s'avèrera meilleur.",
+    ],
+  },
+  {
     author: 'Sully, sportif en Jiu Jitsu Brésilien',
     paragraphs: [
       'Très très bonne formation pour la préparation mentale, donne confiance en soi, donne des techniques de respiration pour gérer le stress dont je me sers aussi bien pour le sport que pour mon baccalauréat pour mes épreuves écrites et orales ! Super travail sérieux rien à dire👌🏼😉',

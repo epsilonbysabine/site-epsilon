@@ -2,6 +2,13 @@
 import Base from '../layouts/Base.astro';
 import PageHead from '../components/PageHead.astro';
 import CreativityQuotes from '../components/CreativityQuotes.astro';
+import { site } from '../config/site';
+const devisHref = `mailto:${site.email}?subject=${encodeURIComponent('Formation créativité et communication')}`;
+const modules = [
+  { titre: 'Ateliers de créativité', points: ['Brainstorming, mind mapping, les six chapeaux de De Bono, pensée divergente', 'Trouver des solutions innovantes à des problèmes complexes'] },
+  { titre: 'Communication', points: ['Prise de parole et présentation', 'Communication interpersonnelle', 'Gagner en impact et en clarté, y compris sur des sujets techniques'] },
+  { titre: 'Projets pratiques', points: ['Mise en application sur des cas concrets', 'Travail en équipe, comme en entreprise'] },
+];
 ---
 <Base audience="entreprises"
   title="Epsilon Coaching - Formation en Créativité et Communication"
@@ -10,13 +17,14 @@ import CreativityQuotes from '../components/CreativityQuotes.astro';
   <PageHead audience="entreprises"
     links={[
       { label: 'Créativité & communication', href: '#creativite' },
+      { label: 'Écoles post-bac', href: '#ecoles' },
       { label: 'Recommandations', href: '#avis' },
       { label: 'Autres formations', href: '#autres' },
       { label: 'Créativité et innovation', href: '/creativite-innovation' },
     ]}
     eyebrow="Formations"
     title="Formations créativité & communication"
-    lead="La formation « Créativité et communication » proposée par Epsilon, est une formation aux résultats concrets et mesurables dans la vie professionnelle, pour un suivi au sein de la société."
+    lead="La formation « Créativité et communication » donne des résultats concrets et mesurables dans la vie professionnelle. Je la propose aux entreprises et aux écoles post-bac."
   />
   <section class="section section-tint" id="creativite">
     <div class="wrap split">
@@ -34,6 +42,25 @@ import CreativityQuotes from '../components/CreativityQuotes.astro';
         <li>Vision positive des idées des autres et des siennes (ouverture d’esprit)</li>
         <li>Proposition de cas pratiques avec mise en situation par les stagiaires tout au long de la formation</li>
       </ul>
+    </div>
+  </section>
+  <section class="section" id="ecoles">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Écoles post-bac</p>
+        <h2>Créativité et communication pour vos étudiants</h2>
+        <p class="lead">Depuis 10 ans, j'enseigne la créativité et la communication à l'IMT Lille Douai (aujourd'hui IMT Nord Europe), école d'ingénieurs. Des centaines d'étudiants ont suivi cette formation, avec plus de 90&nbsp;% de satisfaction globale.</p>
+      </div>
+      <ul class="atelier-list trio">
+        {modules.map((m) => (
+          <li class="glass">
+            <strong>{m.titre}</strong>
+            <ul>{m.points.map((pt) => <li>{pt}</li>)}</ul>
+          </li>
+        ))}
+      </ul>
+      <p style="margin-top: 1.5rem; max-width: 46rem">Le contenu et la durée s'adaptent à votre école et à votre programme. Chaque session se termine par une évaluation, pour mesurer ce que les étudiants en retirent.</p>
+      <p style="margin-top: 1rem"><a class="btn btn-primary" href={devisHref}>Demander un devis</a></p>
     </div>
   </section>
   <CreativityQuotes />

@@ -43,7 +43,7 @@ export const offerGroups: OfferGroup[] = [
       { title: 'Retour au travail après un burn-out', text: 'Accompagner la reprise, en lien avec le manager.', href: '/coach-entreprise#burn-out' },
       { title: 'Réunions efficaces', text: 'En finir avec la réunionite qui désengage.', href: '/coach-entreprise#reunions' },
       { title: 'Créativité et innovation', text: 'Ateliers, brainstorming et formations pour vos équipes.', href: '/creativite-innovation' },
-      { title: 'Formations', text: 'Communication, créativité, management, PNL, gestion du stress.', href: '/formations' },
+      { title: 'Formations', text: 'Communication, créativité, management, PNL, gestion du stress. Pour les entreprises et les écoles post-bac.', href: '/formations' },
     ],
   },
 ];
