@@ -2,6 +2,8 @@
 import Base from '../layouts/Base.astro';
 import { pick } from '../lib/variant';
 import PageHead from '../components/PageHead.astro';
+import { site } from '../config/site';
+const devisEntretiens = `mailto:${site.email}?subject=${encodeURIComponent('Entretiens de parcours professionnel')}`;
 ---
 <Base audience="entreprises"
   title="Coaching d'entreprise et formations, Avignon | Epsilon"
@@ -11,8 +13,8 @@ import PageHead from '../components/PageHead.astro';
     eyebrow="Entreprises"
     title="Coaching, formations et entretiens professionnels pour votre entreprise"
     links={[
+      { label: 'Entretiens de parcours professionnel', href: '#entretiens' },
       { label: 'Coaching individuel et d’équipe', href: '#coaching' },
-      { label: 'Entretien de parcours professionnel', href: '/entretien-professionnel' },
       { label: 'Retour au travail après un burn-out', href: '#burn-out' },
       { label: 'Réunions efficaces', href: '#reunions' },
       { label: 'Créativité et innovation', href: '/creativite-innovation' },
@@ -22,7 +24,41 @@ import PageHead from '../components/PageHead.astro';
     lead="Vos équipes sont votre première ressource. J'interviens dans votre entreprise, partout en France métropolitaine et dans les DROM-COM, pour réduire le stress, améliorer la communication et révéler le potentiel de chacun. Les résultats sont concrets et mesurables."
   />
 
-  <section class="section section-tint" id="coaching">
+  <section class="section section-tint" id="entretiens">
+    <div class="wrap split">
+      <div class="stack sticky">
+        <p class="eyebrow">Entretiens de parcours professionnel</p>
+        <h2>Externalisez vos entretiens obligatoires</h2>
+        <p class="lead">L’entretien de parcours professionnel est obligatoire et prend du temps aux dirigeants et aux DRH. Je les mène pour vous, en toute neutralité : vos salariés s’expriment plus librement face à une personne extérieure à la hiérarchie.</p>
+        <div class="btn-row">
+          <a class="btn btn-primary" href={devisEntretiens}>Demander un devis</a>
+          <a class="btn btn-glass" href="/entretien-professionnel">Tout savoir sur l’entretien</a>
+        </div>
+      </div>
+      <div class="stack">
+        <div class="panel-card">
+          <h3>Ce que vous y gagnez</h3>
+          <ul class="prose">
+            <li>Du temps libéré pour vos priorités</li>
+            <li>Des salariés qui parlent plus librement de leurs envies et de leur évolution</li>
+            <li>Une synthèse claire pour décider des formations et des évolutions</li>
+            <li>Des obligations légales respectées</li>
+          </ul>
+        </div>
+        <div class="panel-card">
+          <h3>Ce que dit la loi depuis le 26 octobre 2025</h3>
+          <ul class="prose">
+            <li>Un premier entretien dans l’année qui suit l’embauche</li>
+            <li>Puis un entretien tous les 4 ans, et un bilan tous les 8 ans</li>
+            <li>Dans les entreprises d’au moins 50 salariés, un abondement de 3&nbsp;000&nbsp;€ au compte personnel de formation si les obligations ne sont pas remplies</li>
+          </ul>
+          <a class="text-link" href="/entretien-professionnel#obligations">En savoir plus sur les obligations</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="coaching">
     <div class="wrap">
       <div class="section-head">
         <p class="eyebrow">Coaching individuel et d’équipe</p>
@@ -45,7 +81,7 @@ import PageHead from '../components/PageHead.astro';
     </div>
   </section>
 
-  <section class="section aura">
+  <section class="section section-tint">
     <div class="wrap">
       <div class="section-head">
         <p class="eyebrow">Accompagnements spécifiques</p>
@@ -76,7 +112,6 @@ import PageHead from '../components/PageHead.astro';
         </article>
       </div>
       <ul class="directory-list" style="margin-top: 1.25rem">
-        <li><a class="directory-item glass" href="/entretien-professionnel"><strong>Entretien de parcours professionnel</strong><span>Externalisez vos entretiens obligatoires : vos salariés s’expriment plus librement.</span></a></li>
         <li><a class="directory-item glass" href="/creativite-innovation"><strong>Créativité et innovation</strong><span>Techniques de créativité, brainstorming guidé, formations pour vos équipes.</span></a></li>
       </ul>
     </div>

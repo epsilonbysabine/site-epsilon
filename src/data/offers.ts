@@ -38,8 +38,8 @@ export const offerGroups: OfferGroup[] = [
     image: '/images/album-5.jpg',
     imageAlt: "Sabine Djaouane avec l'équipe d'une entreprise cliente",
     items: [
-      { title: 'Coaching individuel et d’équipe', text: 'Stress, cohésion, communication, accompagnement du changement.', href: '/coach-entreprise#coaching' },
       { title: 'Entretien de parcours professionnel', text: 'Externalisez vos entretiens obligatoires.', href: '/entretien-professionnel' },
+      { title: 'Coaching individuel et d’équipe', text: 'Stress, cohésion, communication, accompagnement du changement.', href: '/coach-entreprise#coaching' },
       { title: 'Retour au travail après un burn-out', text: 'Accompagner la reprise, en lien avec le manager.', href: '/coach-entreprise#burn-out' },
       { title: 'Réunions efficaces', text: 'En finir avec la réunionite qui désengage.', href: '/coach-entreprise#reunions' },
       { title: 'Créativité et innovation', text: 'Ateliers, brainstorming et formations pour vos équipes.', href: '/creativite-innovation' },
