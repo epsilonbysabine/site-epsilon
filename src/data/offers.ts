@@ -23,8 +23,7 @@ export const offerGroups: OfferGroup[] = [
     image: '/images/album-7.jpg',
     imageAlt: 'Atelier de préparation mentale avec des sportifs',
     items: [
-      { title: 'Séances de préparation mentale', text: 'Un accompagnement sur mesure pour développer vos ressources mentales et performer au quotidien.', href: '/preparation-mentale#seances' },
-      { title: 'Bilan de vos ressources', text: 'La première étape de tout accompagnement : entretien, tests et analyse pour construire vos séances sur mesure.', href: '/preparation-mentale#bilan' },
+      { title: 'Séances de préparation mentale', text: 'Un accompagnement sur mesure, qui commence par le Bilan de vos ressources, pour développer votre mental et performer au quotidien.', href: '/preparation-mentale#seances' },
       { title: 'Audios de préparation mentale', text: '12 thèmes en 3 niveaux, avec ou sans suivi. Disponibles courant janvier 2027.', href: '/audios' },
       { title: 'Ateliers pour sportifs', text: 'Sept thèmes à suivre au fil de la saison.', href: '/ateliers-preparation-mentale' },
       { title: 'Atelier pour les parents', text: 'Accompagner un jeune compétiteur sans ajouter de pression.', href: '/atelier-parents' },
