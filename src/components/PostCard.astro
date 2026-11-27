@@ -1,13 +1,13 @@
 ---
 import Bird from './Bird.astro';
-import { formatDate, postHref } from '../lib/wix';
+import { postMeta, postHref } from '../lib/wix';
 const { post } = Astro.props;
 ---
 <a class="post-card" href={postHref(post.slug)}>
   <div class="cover">
     {post.cover ? <img src={post.cover} alt="" loading="lazy" /> : <Bird />}
   </div>
-  <p class="meta">{formatDate(post.date)}{post.minutesToRead ? ` · ${post.minutesToRead} min de lecture` : ''}</p>
+  <p class="meta">{postMeta(post)}</p>
   <h3>{post.title}</h3>
   <p>{post.excerpt}</p>
 </a>

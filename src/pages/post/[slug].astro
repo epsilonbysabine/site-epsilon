@@ -1,7 +1,7 @@
 ---
 import Base from '../../layouts/Base.astro';
 import PostCard from '../../components/PostCard.astro';
-import { getPosts, formatDate } from '../../lib/wix';
+import { getPosts, postMeta } from '../../lib/wix';
 
 export async function getStaticPaths() {
   const posts = await getPosts();
@@ -17,7 +17,7 @@ const others = (await getPosts()).filter((p) => p.slug !== post.slug).slice(0, 3
         <p class="crumb"><a href="/blog">Tous les posts</a></p>
         <h1>{post.title}</h1>
         <p class="meta" style="margin-top: 1rem">
-          Sabine Djaouane · {formatDate(post.date)}{post.minutesToRead ? ` · ${post.minutesToRead} min de lecture` : ''}
+          Sabine Djaouane · {postMeta(post)}
         </p>
         {post.cover && <img class="cover" src={post.cover} alt="" />}
         <div class="prose" style={post.cover ? undefined : 'margin-top: 2rem'} set:html={post.html} />
