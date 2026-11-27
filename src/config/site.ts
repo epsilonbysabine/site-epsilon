@@ -39,6 +39,7 @@ export const sitemap = [
     label: 'Particuliers',
     children: [
       { label: 'Préparation mentale', href: '/preparation-mentale' },
+      { label: 'Audios de préparation mentale', href: '/audios' },
       { label: 'Ateliers chez vous', href: '/ateliers-chez-vous' },
       { label: 'Ateliers pour sportifs', href: '/ateliers-preparation-mentale' },
       { label: 'Atelier pour les parents', href: '/atelier-parents' },

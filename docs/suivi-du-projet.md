@@ -54,18 +54,14 @@ Résumé des échanges avec Claude (novembre 2026) pour reprendre le travail plu
 - Page Atelier parents : le bouton du haut est « Réserver mon entretien offert » ; le remplacer par « Réserver un atelier » ?
 - Bouton « Prendre rendez-vous » du menu : identique sur les pages entreprises, à changer ?
 
-## Prochain chantier : les audios (en pause)
+## Audios de préparation mentale (page `/audios`, en ligne sur le site)
 
-Sabine enregistre elle-même des audios de préparation mentale (Claude ne rédige pas les scripts). Ils seront vendus sur le site, à l'unité et en packs.
+Disponibles **courant janvier 2027**. Sabine enregistre elle-même les audios.
 
-- Six thèmes, environ 1 heure chacun, comme une séance : Objectifs, Respiration, Dialogue interne, Imagerie mentale, Posture, Routine de performance.
-- Organisation proposée (à valider) : audio à l'unité ; **Pack Fondations** (Objectifs, Respiration, Dialogue interne) ; **Pack Performance** (Imagerie mentale, Posture, Routine de performance) ; **Pack complet** (les six, prix avantageux).
-- Sur le site : une page « Audios » dans Particuliers (principe, six thèmes, packs, prix), une carte sur l'accueil, une partie « Audios » dans la page Tarifs. En attendant : « Bientôt disponible » + bouton de contact.
-- Questions en attente :
-  1. L'organisation en packs convient-elle ?
-  2. Prix : à l'unité, pack de 3, pack complet ?
-  3. Vente : achat en ligne avec téléchargement (Wix), remise avec les séances, ou les deux ?
-  4. Public : uniquement les sportifs, ou aussi étudiants et artistes ?
-- Dans le blog Wix : corriger les liens vers coaching-epsilon.net et « événement » → « évènement ».
-- À confirmer : liste des thèmes des ateliers chez vous ; « 6 à 10 personnes » hôte compris ou non ; ajouter « DROM-COM » aux autres mentions de zone ; nombre exact de salariés accompagnés après un burn-out (le site dit « des salariés »).
-- Mettre le site en ligne (hébergeur) et fusionner la branche dans la branche principale.
+- 12 thèmes, environ 1 heure chacun, chacun en 3 niveaux (débutant, intermédiaire, confirmé) : Objectifs, Respiration et cohérence cardiaque, Dialogue interne, Imagerie mentale, Posture, Routine de performance, Confiance en soi et estime de soi, Motivation, Gestion des émotions, Concentration et attention, Relaxation, Méditation.
+- Formule **Audios** : test fait seul, pas de séance incluse (sauf besoin) ; peut déboucher sur un accompagnement.
+- Formule **Audios + suivi** (4 mois) : séance d'1 h 30 par téléphone (tests), audios choisis selon les résultats, point de 30 min à 2 mois, séance de clôture de 30 min. Prix = audios + 225 € (étudiant, sportif club partenaire : 3 h à 75 €) ou + 285 € (salarié : 3 h à 95 €), 30 min d'analyse comprises.
+- Bonus audio avec petits outils (ex. routine respiratoire du soir, ~10 min, carré magique + cohérence cardiaque).
+- Extrait gratuit : e-mail demandé (pour l'instant via un e-mail pré-rempli).
+- Audios personnels, non transmissibles.
+- **À fournir** : prix des audios (à l'unité, par pack ?) ; outil de vente sécurisé (Wix : programme en ligne réservé aux membres, ou abonnement) ; formulaire d'inscription pour l'extrait gratuit.

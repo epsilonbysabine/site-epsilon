@@ -1,0 +1,157 @@
+---
+// Audios de préparation mentale : page de présentation (sortie annoncée courant janvier 2027).
+// Les prix des audios ne sont pas encore fixés : voir docs/suivi-du-projet.md.
+import Base from '../layouts/Base.astro';
+import PageHead from '../components/PageHead.astro';
+import { site } from '../config/site';
+
+const extraitHref = `mailto:${site.email}?subject=${encodeURIComponent('Extrait gratuit des audios de préparation mentale')}&body=${encodeURIComponent("Bonjour Sabine,\n\nJe souhaite recevoir l'extrait gratuit des audios de préparation mentale à cette adresse e-mail.\n\nMon sport ou mon activité : \n")}`;
+const infoHref = `mailto:${site.email}?subject=${encodeURIComponent('Audios de préparation mentale')}`;
+
+const themes = [
+  { titre: 'Objectifs', texte: 'Fixer des objectifs clairs et motivants, et les découper en étapes.' },
+  { titre: 'Respiration et cohérence cardiaque', texte: 'Calmer le stress, retrouver de l’énergie, mieux récupérer.' },
+  { titre: 'Dialogue interne', texte: 'Transformer la petite voix qui freine en voix qui soutient.' },
+  { titre: 'Imagerie mentale', texte: 'Se voir réussir pour prévoir, apprendre et performer.' },
+  { titre: 'Posture', texte: 'Utiliser le corps pour installer confiance et présence.' },
+  { titre: 'Routine de performance', texte: 'Construire sa routine d’avant compétition, et s’y tenir.' },
+  { titre: 'Confiance en soi et estime de soi', texte: 'S’appuyer sur ses réussites et ses ressources.' },
+  { titre: 'Motivation', texte: 'Retrouver l’envie et la garder sur toute la saison.' },
+  { titre: 'Gestion des émotions', texte: 'Reconnaître ses émotions et s’en servir plutôt que les subir.' },
+  { titre: 'Concentration et attention', texte: 'Rester dans l’instant et ignorer ce qui distrait.' },
+  { titre: 'Relaxation', texte: 'Relâcher les tensions du corps et de l’esprit.' },
+  { titre: 'Méditation', texte: 'Apprendre à revenir au présent, simplement.' },
+];
+
+const niveaux = [
+  { titre: 'Débutant', texte: 'Vous découvrez l’outil : je vous explique, nous pratiquons pas à pas.' },
+  { titre: 'Intermédiaire', texte: 'Vous connaissez les bases : nous allons plus loin, avec des situations proches de votre sport.' },
+  { titre: 'Confirmé', texte: 'Vous pratiquez déjà : nous affinons, pour l’utiliser au moment où ça compte.' },
+];
+---
+<Base
+  title="Audios de préparation mentale | Epsilon"
+  description="Des audios d'environ 1 heure, comme une vraie séance de préparation mentale : 12 thèmes, 3 niveaux, avec ou sans suivi. Disponibles courant janvier 2027."
+>
+  <PageHead
+    eyebrow="Audios"
+    title="Audios de préparation mentale"
+    lead="Des séances d’environ 1 heure à écouter chez vous, comme une vraie séance avec moi : des explications, des exemples concrets et des exercices pour travailler par vous-même. Disponibles courant janvier 2027."
+    cta={false}
+    links={[
+      { label: 'Comment ça marche', href: '#principe' },
+      { label: 'Les 12 thèmes', href: '#themes' },
+      { label: 'Trois niveaux', href: '#niveaux' },
+      { label: 'Les formules', href: '#formules' },
+      { label: 'Extrait gratuit', href: '#extrait' },
+    ]}
+  >
+    <div class="btn-row">
+      <a class="btn btn-primary" href={extraitHref}>Recevoir l’extrait gratuit</a>
+      <a class="btn btn-glass" href="#formules">Voir les formules</a>
+    </div>
+  </PageHead>
+
+  <section class="section section-tint" id="principe">
+    <div class="wrap split">
+      <div class="stack sticky">
+        <h2>Comment ça marche</h2>
+        <p>Chaque audio est une séance complète. Prévoyez un endroit calme, un carnet et un stylo.</p>
+      </div>
+      <ol class="steps">
+        <li><span><strong>Faites le test</strong> : il vous aide à voir où vous en êtes et quels thèmes travailler en priorité.</span></li>
+        <li><span><strong>Choisissez vos audios</strong> et votre niveau : débutant, intermédiaire ou confirmé.</span></li>
+        <li><span><strong>Écoutez et pratiquez</strong> : chaque séance alterne explications, exemples et temps de travail personnel.</span></li>
+        <li><span><strong>Reprenez les exercices</strong> à l’entraînement et en compétition, jusqu’à ce qu’ils deviennent des réflexes.</span></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="section" id="themes">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Les 12 thèmes</h2>
+        <p class="lead">Chaque thème est un audio d’environ 1 heure, décliné en trois niveaux.</p>
+      </div>
+      <ul class="atelier-list trio">
+        {themes.map((t) => (
+          <li class="glass">
+            <strong>{t.titre}</strong>
+            <span class="atelier-text">{t.texte}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
+
+  <section class="section section-tint" id="niveaux">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Trois niveaux pour chaque thème</h2>
+        <p class="lead">Vous avancez à votre rythme, du premier pas jusqu’à la maîtrise de l’outil.</p>
+      </div>
+      <ul class="atelier-list trio">
+        {niveaux.map((n, i) => (
+          <li class="glass">
+            <span class="eyebrow">Niveau {i + 1}</span>
+            <strong>{n.titre}</strong>
+            <span class="atelier-text">{n.texte}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
+
+  <section class="section" id="formules">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Deux formules</h2>
+        <p class="lead">Avec ou sans moi à vos côtés.</p>
+      </div>
+      <div class="grid-2">
+        <div class="panel-card stack">
+          <h3>Audios</h3>
+          <p>Vous faites le test seul, puis vous choisissez vos audios. Aucune séance n’est incluse, sauf si vous en ressentez le besoin. Les audios peuvent aussi être le point de départ d’un accompagnement plus approfondi.</p>
+          <ul class="price-list">
+            <li><span>Prix</span><b>Tarifs communiqués courant janvier 2027</b></li>
+          </ul>
+        </div>
+        <div class="panel-card stack">
+          <h3>Audios + suivi</h3>
+          <p>Un accompagnement de 4 mois, avec moi :</p>
+          <ol class="steps">
+            <li><span><strong>Séance d’1 h 30 par téléphone</strong> pour faire les tests ensemble.</span></li>
+            <li><span><strong>Vos audios</strong>, choisis selon les résultats.</span></li>
+            <li><span><strong>Point téléphonique de 30 minutes</strong> au bout de 2 mois.</span></li>
+            <li><span><strong>Séance de clôture de 30 minutes</strong> à la fin des 4 mois.</span></li>
+          </ol>
+          <ul class="price-list">
+            <li><span>Étudiant, sportif d’un club partenaire</span><b>Prix des audios + 225 €</b></li>
+            <li><span>Salarié et autres</span><b>Prix des audios + 285 €</b></li>
+          </ul>
+          <p class="note">Le suivi représente 3 heures de mon temps (séances et analyse de vos tests), au tarif horaire de 75 € ou 95 €. TVA non applicable.</p>
+        </div>
+      </div>
+      <p class="note" style="margin-top: 1.25rem">Vos audios sont personnels : l’accès est réservé à la personne qui les a achetés et ne peut pas être transmis.</p>
+    </div>
+  </section>
+
+  <section class="section section-tint" id="extrait">
+    <div class="wrap grid-2">
+      <div class="panel-card stack">
+        <p class="eyebrow">Bonus</p>
+        <h2 style="font-size: var(--step-2)">Des bonus audio et leurs petits outils</h2>
+        <p>Des audios courts, accompagnés d’un petit outil à garder sous la main. Par exemple, une <strong>routine respiratoire du soir</strong> d’environ 10 minutes, avec le carré magique et la cohérence cardiaque, pour mieux dormir.</p>
+      </div>
+      <div class="panel-card stack">
+        <p class="eyebrow">Extrait gratuit</p>
+        <h2 style="font-size: var(--step-2)">Écoutez un extrait avant de choisir</h2>
+        <p>Laissez-moi votre adresse e-mail : je vous envoie un extrait gratuit dès la sortie des audios, courant janvier 2027.</p>
+        <div class="btn-row">
+          <a class="btn btn-primary" href={extraitHref}>Recevoir l’extrait gratuit</a>
+          <a class="btn btn-glass" href={infoHref}>Poser une question</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</Base>
