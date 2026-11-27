@@ -63,5 +63,6 @@ Disponibles **courant janvier 2027**. Sabine enregistre elle-même les audios.
 - Formule **Audios + suivi** (4 mois) : séance d'1 h 30 par téléphone (tests), audios choisis selon les résultats, point de 30 min à 2 mois, séance de clôture de 30 min. Prix = audios + 225 € (étudiant, sportif club partenaire : 3 h à 75 €) ou + 285 € (salarié : 3 h à 95 €), 30 min d'analyse comprises.
 - Bonus audio avec petits outils (ex. routine respiratoire du soir, ~10 min, carré magique + cohérence cardiaque).
 - Extrait gratuit : e-mail demandé (pour l'instant via un e-mail pré-rempli).
+- Test en ligne sur la page (brouillon rédigé par Claude, à valider) : 24 affirmations, 2 par thème, réponses de 1 à 5 ; résultat = les 3 thèmes au score le plus bas, avec un niveau (2–5 débutant, 6–8 intermédiaire, 9–10 confirmé). Rien n'est enregistré ni envoyé.
 - Audios personnels, non transmissibles.
 - **À fournir** : prix des audios (à l'unité, par pack ?) ; outil de vente sécurisé (Wix : programme en ligne réservé aux membres, ou abonnement) ; formulaire d'inscription pour l'extrait gratuit.

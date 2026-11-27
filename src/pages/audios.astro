@@ -9,18 +9,18 @@ const extraitHref = `mailto:${site.email}?subject=${encodeURIComponent('Extrait 
 const infoHref = `mailto:${site.email}?subject=${encodeURIComponent('Audios de préparation mentale')}`;
 
 const themes = [
-  { titre: 'Objectifs', texte: 'Fixer des objectifs clairs et motivants, et les découper en étapes.' },
-  { titre: 'Respiration et cohérence cardiaque', texte: 'Calmer le stress, retrouver de l’énergie, mieux récupérer.' },
-  { titre: 'Dialogue interne', texte: 'Transformer la petite voix qui freine en voix qui soutient.' },
-  { titre: 'Imagerie mentale', texte: 'Se voir réussir pour prévoir, apprendre et performer.' },
-  { titre: 'Posture', texte: 'Utiliser le corps pour installer confiance et présence.' },
-  { titre: 'Routine de performance', texte: 'Construire sa routine d’avant compétition, et s’y tenir.' },
-  { titre: 'Confiance en soi et estime de soi', texte: 'S’appuyer sur ses réussites et ses ressources.' },
-  { titre: 'Motivation', texte: 'Retrouver l’envie et la garder sur toute la saison.' },
-  { titre: 'Gestion des émotions', texte: 'Reconnaître ses émotions et s’en servir plutôt que les subir.' },
-  { titre: 'Concentration et attention', texte: 'Rester dans l’instant et ignorer ce qui distrait.' },
-  { titre: 'Relaxation', texte: 'Relâcher les tensions du corps et de l’esprit.' },
-  { titre: 'Méditation', texte: 'Apprendre à revenir au présent, simplement.' },
+  { titre: 'Objectifs', texte: 'Fixer des objectifs clairs et motivants, et les découper en étapes.', questions: ["Je sais précisément ce que je veux atteindre cette saison.", "Je découpe mes objectifs en étapes que je peux suivre."] },
+  { titre: 'Respiration et cohérence cardiaque', texte: 'Calmer le stress, retrouver de l’énergie, mieux récupérer.', questions: ["Je sais utiliser ma respiration pour me calmer avant une épreuve.", "Je récupère facilement après un effort ou un moment de stress."] },
+  { titre: 'Dialogue interne', texte: 'Transformer la petite voix qui freine en voix qui soutient.', questions: ["Quand je fais une erreur, ma petite voix intérieure m’encourage plutôt qu’elle ne me critique.", "Je sais remplacer une pensée négative par une phrase qui m’aide."] },
+  { titre: 'Imagerie mentale', texte: 'Se voir réussir pour prévoir, apprendre et performer.', questions: ["Je me vois réussir avant une compétition ou une épreuve.", "J’utilise la visualisation pour apprendre ou corriger un geste."] },
+  { titre: 'Posture', texte: 'Utiliser le corps pour installer confiance et présence.', questions: ["Ma posture montre de l’assurance, même quand je doute.", "Je sais utiliser mon corps pour retrouver de l’énergie ou du calme."] },
+  { titre: 'Routine de performance', texte: 'Construire sa routine d’avant compétition, et s’y tenir.', questions: ["J’ai une routine précise avant chaque compétition.", "Je garde cette routine même quand les conditions changent."] },
+  { titre: 'Confiance en soi et estime de soi', texte: 'S’appuyer sur ses réussites et ses ressources.', questions: ["Je crois en mes capacités à réussir ce qui compte pour moi.", "Je reconnais mes réussites, même petites."] },
+  { titre: 'Motivation', texte: 'Retrouver l’envie et la garder sur toute la saison.', questions: ["J’ai envie de m’entraîner, même quand les résultats tardent.", "Je garde ma motivation tout au long de la saison."] },
+  { titre: 'Gestion des émotions', texte: 'Reconnaître ses émotions et s’en servir plutôt que les subir.', questions: ["Je reste maître de mes émotions dans les moments importants.", "Après une déception, je rebondis rapidement."] },
+  { titre: 'Concentration et attention', texte: 'Rester dans l’instant et ignorer ce qui distrait.', questions: ["Je reste concentré sur ce que je fais, sans me laisser distraire.", "Après une erreur, je me reconcentre tout de suite sur la suite."] },
+  { titre: 'Relaxation', texte: 'Relâcher les tensions du corps et de l’esprit.', questions: ["Je sais relâcher les tensions de mon corps.", "Je m’endors facilement la veille d’une échéance importante."] },
+  { titre: 'Méditation', texte: 'Apprendre à revenir au présent, simplement.', questions: ["Je sais revenir au moment présent quand mon esprit s’emballe.", "Je prends régulièrement un moment calme pour moi."] },
 ];
 
 const niveaux = [
@@ -40,6 +40,7 @@ const niveaux = [
     cta={false}
     links={[
       { label: 'Comment ça marche', href: '#principe' },
+      { label: 'Le test', href: '#test' },
       { label: 'Les 12 thèmes', href: '#themes' },
       { label: 'Trois niveaux', href: '#niveaux' },
       { label: 'Les formules', href: '#formules' },
@@ -59,7 +60,7 @@ const niveaux = [
         <p>Chaque audio est une séance complète. Prévoyez un endroit calme, un carnet et un stylo.</p>
       </div>
       <ol class="steps">
-        <li><span><strong>Faites le test</strong> : il vous aide à voir où vous en êtes et quels thèmes travailler en priorité.</span></li>
+        <li><span><strong><a href="#test">Faites le test</a></strong> : il vous aide à voir où vous en êtes et quels thèmes travailler en priorité.</span></li>
         <li><span><strong>Choisissez vos audios</strong> et votre niveau : débutant, intermédiaire ou confirmé.</span></li>
         <li><span><strong>Écoutez et pratiquez</strong> : chaque séance alterne explications, exemples et temps de travail personnel.</span></li>
         <li><span><strong>Reprenez les exercices</strong> à l’entraînement et en compétition, jusqu’à ce qu’ils deviennent des réflexes.</span></li>
@@ -67,7 +68,95 @@ const niveaux = [
     </div>
   </section>
 
-  <section class="section" id="themes">
+  <section class="section" id="test">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Le test : par où commencer ?</h2>
+        <p class="lead">24 affirmations, environ 5 minutes. Pour chacune, indiquez si elle vous ressemble, de 1 (pas du tout) à 5 (tout à fait). Le résultat vous indique les thèmes et le niveau à travailler en priorité.</p>
+      </div>
+      <form class="quiz" id="quiz" novalidate>
+        {themes.map((t, ti) => t.questions.map((q, qi) => {
+          const name = `q${ti}-${qi}`;
+          return (
+            <fieldset class="quiz-item" data-theme={ti}>
+              <legend><span class="quiz-num">{ti * 2 + qi + 1}.</span> {q}</legend>
+              <div class="quiz-scale">
+                <span class="quiz-end" aria-hidden="true">Pas du tout</span>
+                {[1, 2, 3, 4, 5].map((v) => (
+                  <label><input type="radio" name={name} value={v} aria-label={`${v} sur 5`} /><span>{v}</span></label>
+                ))}
+                <span class="quiz-end" aria-hidden="true">Tout à fait</span>
+              </div>
+            </fieldset>
+          );
+        }))}
+        <p class="quiz-error" id="quiz-error" role="alert" hidden></p>
+        <p><button class="btn btn-primary" type="submit">Voir mon résultat</button></p>
+      </form>
+      <div class="quiz-result panel-card" id="quiz-result" tabindex="-1" hidden>
+        <p class="eyebrow">Votre résultat</p>
+        <h3>Vos 3 thèmes prioritaires</h3>
+        <ol class="steps" id="quiz-list"></ol>
+        <p>Ce test est une première orientation : il ne remplace pas le Bilan de vos ressources. Avec la formule « Audios + suivi », nous faisons les tests ensemble par téléphone.</p>
+        <div class="btn-row">
+          <a class="btn btn-primary" href="#formules">Voir les formules</a>
+          <button class="btn btn-glass" type="button" id="quiz-reset">Refaire le test</button>
+        </div>
+      </div>
+      <script is:inline define:vars={{ titres: themes.map((t) => t.titre) }}>
+        (function () {
+          var form = document.getElementById('quiz');
+          var result = document.getElementById('quiz-result');
+          var list = document.getElementById('quiz-list');
+          var error = document.getElementById('quiz-error');
+          if (!form) return;
+          function niveau(score) { return score <= 5 ? 'débutant' : score <= 8 ? 'intermédiaire' : 'confirmé'; }
+          form.addEventListener('submit', function (e) {
+            e.preventDefault();
+            var scores = titres.map(function () { return 0; });
+            var missing = [];
+            form.querySelectorAll('.quiz-item').forEach(function (fs, i) {
+              var checked = fs.querySelector('input:checked');
+              fs.classList.toggle('is-missing', !checked);
+              if (!checked) missing.push(i + 1); else scores[+fs.dataset.theme] += +checked.value;
+            });
+            if (missing.length) {
+              error.textContent = 'Il reste ' + missing.length + (missing.length > 1 ? ' affirmations' : ' affirmation') + ' sans réponse' + (missing.length <= 5 ? ' (n° ' + missing.join(', ') + ').' : '.');
+              error.hidden = false;
+              form.querySelector('.is-missing input').focus();
+              return;
+            }
+            error.hidden = true;
+            var order = scores.map(function (s, i) { return [s, i]; }).sort(function (a, b) { return a[0] - b[0] || a[1] - b[1]; }).slice(0, 3);
+            list.innerHTML = '';
+            order.forEach(function (o) {
+              var li = document.createElement('li');
+              var span = document.createElement('span');
+              var strong = document.createElement('strong');
+              strong.textContent = titres[o[1]];
+              span.appendChild(strong);
+              span.appendChild(document.createTextNode(' : niveau ' + niveau(o[0])));
+              li.appendChild(span);
+              list.appendChild(li);
+            });
+            result.hidden = false;
+            result.focus();
+          });
+          form.addEventListener('change', function (e) {
+            var fs = e.target.closest('.quiz-item');
+            if (fs) fs.classList.remove('is-missing');
+          });
+          document.getElementById('quiz-reset').addEventListener('click', function () {
+            form.reset();
+            result.hidden = true;
+            form.querySelector('input').focus();
+          });
+        })();
+      </script>
+    </div>
+  </section>
+
+  <section class="section section-tint" id="themes">
     <div class="wrap">
       <div class="section-head">
         <h2>Les 12 thèmes</h2>
@@ -84,7 +173,7 @@ const niveaux = [
     </div>
   </section>
 
-  <section class="section section-tint" id="niveaux">
+  <section class="section" id="niveaux">
     <div class="wrap">
       <div class="section-head">
         <h2>Trois niveaux pour chaque thème</h2>
@@ -102,7 +191,7 @@ const niveaux = [
     </div>
   </section>
 
-  <section class="section" id="formules">
+  <section class="section section-tint" id="formules">
     <div class="wrap">
       <div class="section-head">
         <h2>Deux formules</h2>
@@ -136,7 +225,7 @@ const niveaux = [
     </div>
   </section>
 
-  <section class="section section-tint" id="extrait">
+  <section class="section" id="extrait">
     <div class="wrap grid-2">
       <div class="panel-card stack">
         <p class="eyebrow">Bonus</p>
