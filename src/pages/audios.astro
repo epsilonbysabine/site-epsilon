@@ -40,7 +40,7 @@ const niveaux = [
     cta={false}
     links={[
       { label: 'Comment ça marche', href: '#principe' },
-      { label: 'Le test', href: '#test' },
+      { label: 'L’autotest', href: '#test' },
       { label: 'Les 12 thèmes', href: '#themes' },
       { label: 'Trois niveaux', href: '#niveaux' },
       { label: 'Les formules', href: '#formules' },
@@ -60,7 +60,7 @@ const niveaux = [
         <p>Chaque audio est une séance complète. Prévoyez un endroit calme, un carnet et un stylo.</p>
       </div>
       <ol class="steps">
-        <li><span><strong><a href="#test">Faites le test</a></strong> : il vous aide à voir où vous en êtes et quels thèmes travailler en priorité.</span></li>
+        <li><span><strong><a href="#test">Faites l’autotest</a></strong> : il vous aide à voir où vous en êtes et quels thèmes travailler en priorité.</span></li>
         <li><span><strong>Choisissez vos audios</strong> et votre niveau : débutant, intermédiaire ou confirmé.</span></li>
         <li><span><strong>Écoutez et pratiquez</strong> : chaque séance alterne explications, exemples et temps de travail personnel.</span></li>
         <li><span><strong>Reprenez les exercices</strong> à l’entraînement et en compétition, jusqu’à ce qu’ils deviennent des réflexes.</span></li>
@@ -71,7 +71,7 @@ const niveaux = [
   <section class="section" id="test">
     <div class="wrap">
       <div class="section-head">
-        <h2>Le test : par où commencer ?</h2>
+        <h2>L’autotest : par où commencer ?</h2>
         <p class="lead">24 affirmations, environ 5 minutes. Pour chacune, indiquez si elle vous ressemble, de 1 (pas du tout) à 5 (tout à fait). Le résultat vous indique les thèmes et le niveau à travailler en priorité.</p>
       </div>
       <form class="quiz" id="quiz" novalidate>
@@ -97,10 +97,10 @@ const niveaux = [
         <p class="eyebrow">Votre résultat</p>
         <h3>Vos 3 thèmes prioritaires</h3>
         <ol class="steps" id="quiz-list"></ol>
-        <p>Ce test est une première orientation : il ne remplace pas le Bilan de vos ressources. Avec la formule « Audios + suivi », nous faisons les tests ensemble par téléphone.</p>
+        <p>Cet autotest vous donne une première orientation pour choisir vos audios. Pour une analyse beaucoup plus précise, je vous conseille le <a href="/preparation-mentale#bilan">Bilan de vos ressources</a> : entretien, tests approfondis et compte rendu personnalisé.</p>
         <div class="btn-row">
           <a class="btn btn-primary" href="#formules">Voir les formules</a>
-          <button class="btn btn-glass" type="button" id="quiz-reset">Refaire le test</button>
+          <button class="btn btn-glass" type="button" id="quiz-reset">Refaire l’autotest</button>
         </div>
       </div>
       <script is:inline define:vars={{ titres: themes.map((t) => t.titre) }}>
