@@ -22,7 +22,7 @@ Résumé des échanges avec Claude (novembre 2026) pour reprendre le travail plu
 - E-mail : epsilonbysabine@gmail.com
 - Zone : Avignon, partout en France métropolitaine et dans les DROM-COM.
 - Accueil allégé : accroche, liste de toutes les offres, logos clients, trois témoignages, contact. Sous le titre de chaque page, des liens directs vers ce qu'elle propose.
-- Menu : Préparation mentale, Entreprises, Ateliers, Formations, Tarifs, À propos, Blog.
+- Menu : Préparation mentale, Audios, Entreprises, Ateliers, Formations, Tarifs, À propos, Blog (menu complet à partir de 1 152 px de large, menu « burger » en dessous).
 - Entreprises : coaching individuel et d'équipe, entretien de parcours professionnel, retour au travail après un burn-out, réunions efficaces, créativité et innovation, formations.
 - Préparation mentale (thèmes) : Performance, Confiance en soi, Estime de soi, Motivation, Adaptabilité, Combativité, Réactivité, Activation, Concentration, Fixation d'objectif, Cohésion d'équipe.
 - Ateliers chez vous : 6 à 10 personnes, 1 h 30 (horaire libre, à convenir avec l'hôte), 25 € par personne, repas partagé, atelier offert à l'hôte + 30 min de coaching personnalisé ; Vaucluse, Gard, Bouches-du-Rhône, Drôme, Ardèche ; dix ateliers titrés (dont « La charge mentale, comment s'en alléger » et « Prévoir, apprendre, réussir : l'art de la visualisation »).

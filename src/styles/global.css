@@ -166,7 +166,7 @@ ul, ol { margin: 0; padding-left: 1.2em; }
 .menu-more .group-title { font-size: var(--step--1); text-transform: uppercase; letter-spacing: 0.1em; color: var(--lavender); font-weight: 500; margin-bottom: 0.4rem; }
 .menu-more ul { list-style: none; padding: 0; display: grid; }
 .menu-more a { display: block; padding-block: 0.35rem; color: var(--on-dark-soft); text-decoration: none; }
-@media (min-width: 66rem) {
+@media (min-width: 72rem) {
   .nav-desktop { display: block; }
   .site-header .header-cta { display: inline-flex; }
   .nav-mobile { display: none; }
@@ -475,3 +475,6 @@ ul, ol { margin: 0; padding-left: 1.2em; }
 .certifs li:first-child { border-top: 1px solid var(--line); }
 .certifs li::before { content: "✓"; position: absolute; left: 0.1rem; color: var(--violet); font-weight: 700; }
 .atelier-list .atelier-text { color: var(--ink-soft); font-size: 0.98rem; line-height: 1.5; }
+
+/* Menu : jamais de retour à la ligne dans un intitulé */
+.nav-desktop a, .site-header .header-cta { white-space: nowrap; }

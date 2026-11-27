@@ -25,6 +25,7 @@ export const visiblePages = {
 // Menu principal : liens directs, sans sous-menus.
 export const nav = [
   { label: 'Préparation mentale', href: '/preparation-mentale' },
+  { label: 'Audios', href: '/audios' },
   { label: 'Entreprises', href: '/coach-entreprise' },
   { label: 'Ateliers', href: '/ateliers' },
   { label: 'Formations', href: '/formations' },
