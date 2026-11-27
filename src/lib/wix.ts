@@ -107,15 +107,9 @@ export function escapeHtml(text: string): string {
   return text.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 }
 
-// Articles dont la date de publication n'est pas affichée (article intemporel).
-const hideDateFor = new Set(['votre-titre-quels-sont-vos-conseils-ou-astuces']);
-
-/** Ligne d'infos d'un article : date (sauf articles intemporels) et durée de lecture. */
-export function postMeta(post: { slug: string; date: string; minutesToRead?: number | string | null }): string {
-  const parts = [];
-  if (!hideDateFor.has(post.slug)) parts.push(formatDate(post.date));
-  if (post.minutesToRead) parts.push(`${post.minutesToRead} min de lecture`);
-  return parts.filter(Boolean).join(' · ');
+/** Ligne d'infos d'un article : la durée de lecture. Les dates ne sont pas affichées (choix éditorial). */
+export function postMeta(post: { minutesToRead?: number | string | null }): string {
+  return post.minutesToRead ? `${post.minutesToRead} min de lecture` : '';
 }
 
 export function formatDate(iso: string): string {

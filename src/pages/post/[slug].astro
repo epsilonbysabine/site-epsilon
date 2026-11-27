@@ -17,7 +17,7 @@ const others = (await getPosts()).filter((p) => p.slug !== post.slug).slice(0, 3
         <p class="crumb"><a href="/blog">Tous les posts</a></p>
         <h1>{post.title}</h1>
         <p class="meta" style="margin-top: 1rem">
-          Sabine Djaouane · {postMeta(post)}
+          {['Sabine Djaouane', postMeta(post)].filter(Boolean).join(' · ')}
         </p>
         {post.cover && <img class="cover" src={post.cover} alt="" />}
         <div class="prose" style={post.cover ? undefined : 'margin-top: 2rem'} set:html={post.html} />
