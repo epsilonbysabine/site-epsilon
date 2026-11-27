@@ -18,7 +18,7 @@ Résumé des échanges avec Claude (novembre 2026) pour reprendre le travail plu
 - Accroche de l'accueil : « Plus qu'une préparation ponctuelle, un apprentissage de tous les jours : mieux vous analyser, maîtriser vos outils, gagner en efficacité et performer, dans votre métier comme dans votre discipline. »
 - Premier entretien de 30 minutes : **offert**.
 - « Pack découverte » renommé « État des lieux mental », puis **« Bilan de vos ressources »** (analyse avant les séances).
-- Encart « Séances de préparation mentale » : « Un accompagnement sur mesure pour développer vos ressources mentales et performer au quotidien. »
+- Encart « Séances de préparation mentale » : « Un accompagnement sur mesure, qui commence par le Bilan de vos ressources, pour développer votre mental et performer au quotidien. » (plus de carte « Bilan » à part sur l'accueil).
 - E-mail : epsilonbysabine@gmail.com
 - Zone : Avignon, partout en France métropolitaine et dans les DROM-COM.
 - Accueil allégé : accroche, liste de toutes les offres, logos clients, trois témoignages, contact. Sous le titre de chaque page, des liens directs vers ce qu'elle propose.
@@ -41,6 +41,12 @@ Résumé des échanges avec Claude (novembre 2026) pour reprendre le travail plu
 - Séances de préparation mentale : essentiellement en extérieur (« aérer ses neurones ») ; selon ce que nous travaillons, au bureau ou au club.
 - À propos : « Epsilon est né de ces deux passions. »
 - Entretien professionnel : dessin des entretiens annuels retiré.
+- Bilan de vos ressources : **partie intégrante des séances**, première étape de tout accompagnement. Déroulé : entretien offert de 30 min, puis le bilan, puis le nombre de séances fixé par contrat.
+- Préparation mentale, « Pour qui ? » : sportifs (individuel ou équipe), étudiants et candidats aux concours, artistes, salariés et dirigeants d'entreprises, toute personne qui prépare un examen.
+- À propos : ceinture noire de judo, ancienne gardienne de hockey sur glace ; diplôme universitaire de préparation mentale et psychologie du sportif (Université de Lille) mis en avant ; partie « Diplôme et certifications » : PNL (maître praticienne), hypnose ériksonnienne (praticienne), thérapies brèves (niveau maître praticien), formation de formateur.
+- Formations : partie « Écoles post-bac » (10 ans à l'IMT Lille Douai, aujourd'hui IMT Nord Europe ; plus de 90 % de satisfaction ; ateliers de créativité, communication, projets pratiques) et deux nouvelles recommandations d'étudiants (promotions 2021 et 2022). Les anciennes coordonnées (coaching-epsilon.net, ancien SIRET) ne sont pas utilisées.
+- Contrat d'accompagnement en préparation mentale : document en ligne (https://claude.ai/artifact/MJYY3GU7J6t8gxMWH2pH7D), et en Word + PDF dans Google Drive, dossier « Epsilon by Sabine ». SIRET 521 832 972 00033 ; annulation 48 h ; paiement à la fin de chaque séance (espèces, carte, virement, pas de chèque) ; données conservées 3 ans ; bilan obligatoire ; pas de tableau. À déposer aussi dans OneDrive › Documents › Epsilon › Préparation mentale › Contrat (pas d'accès OneDrive depuis Claude).
+- Blog : la date de l'article « C'est bientôt l'heure du bilan... » est masquée (article intemporel, liste `hideDateFor` dans `src/lib/wix.ts`). Article « Partiels de janvier » : l'entretien offert est cité avant le bilan ; les audios sont annoncés pour les prochains examens, pas pour ceux de janvier.
 
 ## Reste à faire
 
