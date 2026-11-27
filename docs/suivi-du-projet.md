@@ -41,6 +41,8 @@ Résumé des échanges avec Claude (novembre 2026) pour reprendre le travail plu
 - Séances de préparation mentale : essentiellement en extérieur (« aérer ses neurones ») ; selon ce que nous travaillons, au bureau ou au club.
 - À propos : « Epsilon est né de ces deux passions. »
 - Entretien professionnel : dessin des entretiens annuels retiré.
+- Entreprises : les **entretiens de parcours professionnel** ouvrent la page (grand bloc : accroche, « Ce que vous y gagnez », « Ce que dit la loi depuis le 26 octobre 2025 », boutons devis et page détaillée). Créativité et innovation : encadré au même niveau que « Réunions efficaces » et « Retour au travail après un burn-out ».
+- Bilan de vos ressources (page Préparation mentale) : restitution sans mention « comprise dans le tarif » ; prix sur deux lignes (250 € / 300 €).
 - Bilan de vos ressources : **partie intégrante des séances**, première étape de tout accompagnement. Déroulé : entretien offert de 30 min, puis le bilan, puis le nombre de séances fixé par contrat.
 - Préparation mentale, « Pour qui ? » : sportifs (individuel ou équipe), étudiants et candidats aux concours, artistes, salariés et dirigeants d'entreprises, toute personne qui prépare un examen.
 - À propos : chargée de projets RH (déploiement d'un SIRH dans un groupe de plus de 1 000 salariés) ; ceinture noire de judo, ancienne gardienne de hockey sur glace ; diplôme universitaire de préparation mentale et psychologie du sportif (Université de Lille) mis en avant ; partie « Diplôme et certifications » : PNL (maître praticienne), hypnose ériksonnienne (praticienne), thérapies brèves (niveau maître praticien), formation de formateur.
@@ -60,6 +62,11 @@ Résumé des échanges avec Claude (novembre 2026) pour reprendre le travail plu
 - Page Atelier parents : le bouton du haut est « Réserver mon entretien offert » ; le remplacer par « Réserver un atelier » ?
 - Bouton « Prendre rendez-vous » du menu : identique sur les pages entreprises, à changer ?
 - Blog : nouvel article « Partiels de janvier : 5 outils de préparation mentale pour arriver serein le jour J » (27/11/2026), ajouté à la copie locale du blog. Une fois le site relié à Wix, le publier aussi dans Wix Blog (sinon il n'apparaîtra pas), avec une image de couverture. Corriger aussi dans Wix les anciens liens vers coaching-epsilon.net, et retirer « 2022 » du titre « C'est bientôt l'heure du bilan… ».
+- Entretien de parcours professionnel : ajouter le texte de loi exact avec son lien officiel (Légifrance, article L6315-1 du Code du travail, ou Service-Public). Légifrance bloque les accès automatiques : Sabine doit fournir le lien (et l'extrait à citer).
+- Article « Partiels de janvier » : choisir une photo libre de droits (Unsplash ou Pexels) et l'envoyer ; la recherche automatique sur Unsplash a été refusée.
+- **Dépôt GitHub public** : le passer en privé (Settings › General › Danger Zone › Change visibility). L'historique contient l'ancienne version de l'autotest.
+- Page Tarifs : la ligne du Bilan indique encore « séance de restitution compris » ; à retirer et mettre le prix sur deux lignes ?
+- Environnement Claude : Unsplash, Légifrance et Service-Public ont été ajoutés aux adresses autorisées ; à retirer si inutiles.
 
 ## Audios de préparation mentale (page `/audios`, en ligne sur le site)
 
