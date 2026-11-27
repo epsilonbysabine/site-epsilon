@@ -53,6 +53,7 @@ Résumé des échanges avec Claude (novembre 2026) pour reprendre le travail plu
 - Atelier parents : valider les points rédigés par Claude pour chaque thème.
 - Page Atelier parents : le bouton du haut est « Réserver mon entretien offert » ; le remplacer par « Réserver un atelier » ?
 - Bouton « Prendre rendez-vous » du menu : identique sur les pages entreprises, à changer ?
+- Blog : nouvel article « Partiels de janvier : 5 outils de préparation mentale pour arriver serein le jour J » (27/11/2026), ajouté à la copie locale du blog. Une fois le site relié à Wix, le publier aussi dans Wix Blog (sinon il n'apparaîtra pas), avec une image de couverture. Corriger aussi dans Wix les anciens liens vers coaching-epsilon.net.
 
 ## Audios de préparation mentale (page `/audios`, en ligne sur le site)
 
