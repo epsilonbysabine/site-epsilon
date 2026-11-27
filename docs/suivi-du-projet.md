@@ -70,6 +70,7 @@ Disponibles **courant janvier 2027**. Sabine enregistre elle-même les audios.
 - Formule **Audios + suivi** (4 mois) : séance d'1 h 30 par téléphone (tests), audios choisis selon les résultats, point de 30 min à 2 mois, séance de clôture de 30 min. Prix = audios + 225 € (étudiant, sportif club partenaire : 3 h à 75 €) ou + 285 € (salarié : 3 h à 95 €), 30 min d'analyse comprises.
 - Bonus audio avec petits outils (ex. routine respiratoire du soir, ~10 min, carré magique + cohérence cardiaque).
 - Extrait gratuit : e-mail demandé (pour l'instant via un e-mail pré-rempli).
-- Test en ligne sur la page (brouillon rédigé par Claude, à valider) : 24 affirmations, 2 par thème, réponses de 1 à 5 ; résultat = les 3 thèmes au score le plus bas, avec un niveau (2–5 débutant, 6–8 intermédiaire, 9–10 confirmé). Rien n'est enregistré ni envoyé.
+- Autotest : **plus publié sur le site** (risque de copie). Il est envoyé par e-mail à qui le demande (bouton « Recevoir l'autotest par e-mail »). Le texte complet est dans un document privé Google Drive « Autotest – Audios de préparation mentale (réservé) », dossier « Epsilon by Sabine ». À terme : formulaire Wix + e-mail automatique.
+- Thèmes présentés par des questions, en 3 familles (Se préparer, Se maîtriser, Performer), sans détail de méthode. Mention « protégés par le droit d'auteur » en bas de la page.
 - Audios personnels, non transmissibles.
 - **À fournir** : prix des audios (à l'unité, par pack ?) ; outil de vente sécurisé (Wix : programme en ligne réservé aux membres, ou abonnement) ; formulaire d'inscription pour l'extrait gratuit.

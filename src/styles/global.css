@@ -495,3 +495,7 @@ ul, ol { margin: 0; padding-left: 1.2em; }
 .quiz-error { color: #b3261e; font-weight: 600; margin: 0; }
 .quiz-result { margin-top: 1.5rem; max-width: 52rem; display: grid; gap: 0.75rem; }
 @media (max-width: 30rem) { .quiz-end { display: none; } }
+.family-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 0.9rem; }
+.family-list li { display: grid; gap: 0.15rem; }
+.family-list strong { color: var(--ink); }
+.family-list span { color: var(--ink-soft); font-style: italic; line-height: 1.45; }

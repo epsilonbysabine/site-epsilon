@@ -6,21 +6,39 @@ import PageHead from '../components/PageHead.astro';
 import { site } from '../config/site';
 
 const extraitHref = `mailto:${site.email}?subject=${encodeURIComponent('Extrait gratuit des audios de préparation mentale')}&body=${encodeURIComponent("Bonjour Sabine,\n\nJe souhaite recevoir l'extrait gratuit des audios de préparation mentale à cette adresse e-mail.\n\nMon sport ou mon activité : \n")}`;
+const autotestHref = `mailto:${site.email}?subject=${encodeURIComponent('Autotest des audios de préparation mentale')}&body=${encodeURIComponent("Bonjour Sabine,\n\nJe souhaite recevoir l'autotest des audios de préparation mentale à cette adresse e-mail.\n\nMon sport ou mon activité : \n")}`;
 const infoHref = `mailto:${site.email}?subject=${encodeURIComponent('Audios de préparation mentale')}`;
 
-const themes = [
-  { titre: 'Objectifs', texte: 'Fixer des objectifs clairs et motivants, et les découper en étapes.', questions: ["Je sais précisément ce que je veux atteindre cette saison.", "Je découpe mes objectifs en étapes que je peux suivre."] },
-  { titre: 'Respiration et cohérence cardiaque', texte: 'Calmer le stress, retrouver de l’énergie, mieux récupérer.', questions: ["Je sais utiliser ma respiration pour me calmer avant une épreuve.", "Je récupère facilement après un effort ou un moment de stress."] },
-  { titre: 'Dialogue interne', texte: 'Transformer la petite voix qui freine en voix qui soutient.', questions: ["Quand je fais une erreur, ma petite voix intérieure m’encourage plutôt qu’elle ne me critique.", "Je sais remplacer une pensée négative par une phrase qui m’aide."] },
-  { titre: 'Imagerie mentale', texte: 'Se voir réussir pour prévoir, apprendre et performer.', questions: ["Je me vois réussir avant une compétition ou une épreuve.", "J’utilise la visualisation pour apprendre ou corriger un geste."] },
-  { titre: 'Posture', texte: 'Utiliser le corps pour installer confiance et présence.', questions: ["Ma posture montre de l’assurance, même quand je doute.", "Je sais utiliser mon corps pour retrouver de l’énergie ou du calme."] },
-  { titre: 'Routine de performance', texte: 'Construire sa routine d’avant compétition, et s’y tenir.', questions: ["J’ai une routine précise avant chaque compétition.", "Je garde cette routine même quand les conditions changent."] },
-  { titre: 'Confiance en soi et estime de soi', texte: 'S’appuyer sur ses réussites et ses ressources.', questions: ["Je crois en mes capacités à réussir ce qui compte pour moi.", "Je reconnais mes réussites, même petites."] },
-  { titre: 'Motivation', texte: 'Retrouver l’envie et la garder sur toute la saison.', questions: ["J’ai envie de m’entraîner, même quand les résultats tardent.", "Je garde ma motivation tout au long de la saison."] },
-  { titre: 'Gestion des émotions', texte: 'Reconnaître ses émotions et s’en servir plutôt que les subir.', questions: ["Je reste maître de mes émotions dans les moments importants.", "Après une déception, je rebondis rapidement."] },
-  { titre: 'Concentration et attention', texte: 'Rester dans l’instant et ignorer ce qui distrait.', questions: ["Je reste concentré sur ce que je fais, sans me laisser distraire.", "Après une erreur, je me reconcentre tout de suite sur la suite."] },
-  { titre: 'Relaxation', texte: 'Relâcher les tensions du corps et de l’esprit.', questions: ["Je sais relâcher les tensions de mon corps.", "Je m’endors facilement la veille d’une échéance importante."] },
-  { titre: 'Méditation', texte: 'Apprendre à revenir au présent, simplement.', questions: ["Je sais revenir au moment présent quand mon esprit s’emballe.", "Je prends régulièrement un moment calme pour moi."] },
+// Les thèmes sont présentés par des questions, sans détailler la méthode (protection du contenu).
+// L'autotest complet n'est pas publié : il est envoyé par e-mail (document privé dans Google Drive).
+const familles = [
+  {
+    titre: 'Se préparer',
+    themes: [
+      { titre: 'Objectifs', question: 'Savez-vous vraiment où vous allez cette saison ?' },
+      { titre: 'Routine de performance', question: 'Arrivez-vous prêt, à chaque fois ?' },
+      { titre: 'Imagerie mentale', question: 'Et si vous pouviez vivre votre réussite avant de la vivre ?' },
+      { titre: 'Motivation', question: 'L’envie est-elle toujours là quand les résultats tardent ?' },
+    ],
+  },
+  {
+    titre: 'Se maîtriser',
+    themes: [
+      { titre: 'Respiration et cohérence cardiaque', question: 'Votre souffle s’emballe-t-il avant l’épreuve ?' },
+      { titre: 'Gestion des émotions', question: 'Perdez-vous vos moyens au moment où ça compte ?' },
+      { titre: 'Relaxation', question: 'Arrivez-vous à relâcher la pression ?' },
+      { titre: 'Méditation', question: 'Votre esprit s’agite-t-il quand il faudrait rester calme ?' },
+    ],
+  },
+  {
+    titre: 'Performer',
+    themes: [
+      { titre: 'Dialogue interne', question: 'Votre petite voix intérieure vous pousse-t-elle ou vous freine-t-elle ?' },
+      { titre: 'Confiance en soi et estime de soi', question: 'Croyez-vous vraiment en vos capacités ?' },
+      { titre: 'Concentration et attention', question: 'Restez-vous dans votre bulle quand tout s’agite autour de vous ?' },
+      { titre: 'Posture', question: 'Votre corps dit-il la même chose que vos ambitions ?' },
+    ],
+  },
 ];
 
 const niveaux = [
@@ -69,90 +87,16 @@ const niveaux = [
   </section>
 
   <section class="section" id="test">
-    <div class="wrap">
-      <div class="section-head">
+    <div class="wrap split">
+      <div class="stack sticky">
         <h2>L’autotest : par où commencer ?</h2>
-        <p class="lead">24 affirmations, environ 5 minutes. Pour chacune, indiquez si elle vous ressemble, de 1 (pas du tout) à 5 (tout à fait). Le résultat vous indique les thèmes et le niveau à travailler en priorité.</p>
       </div>
-      <form class="quiz" id="quiz" novalidate>
-        {themes.map((t, ti) => t.questions.map((q, qi) => {
-          const name = `q${ti}-${qi}`;
-          return (
-            <fieldset class="quiz-item" data-theme={ti}>
-              <legend><span class="quiz-num">{ti * 2 + qi + 1}.</span> {q}</legend>
-              <div class="quiz-scale">
-                <span class="quiz-end" aria-hidden="true">Pas du tout</span>
-                {[1, 2, 3, 4, 5].map((v) => (
-                  <label><input type="radio" name={name} value={v} aria-label={`${v} sur 5`} /><span>{v}</span></label>
-                ))}
-                <span class="quiz-end" aria-hidden="true">Tout à fait</span>
-              </div>
-            </fieldset>
-          );
-        }))}
-        <p class="quiz-error" id="quiz-error" role="alert" hidden></p>
-        <p><button class="btn btn-primary" type="submit">Voir mon résultat</button></p>
-      </form>
-      <div class="quiz-result panel-card" id="quiz-result" tabindex="-1" hidden>
-        <p class="eyebrow">Votre résultat</p>
-        <h3>Vos 3 thèmes prioritaires</h3>
-        <ol class="steps" id="quiz-list"></ol>
-        <p>Cet autotest vous donne une première orientation pour choisir vos audios. Pour une analyse beaucoup plus précise, je vous conseille le <a href="/preparation-mentale#bilan">Bilan de vos ressources</a> : entretien, tests approfondis et compte rendu personnalisé.</p>
-        <div class="btn-row">
-          <a class="btn btn-primary" href="#formules">Voir les formules</a>
-          <button class="btn btn-glass" type="button" id="quiz-reset">Refaire l’autotest</button>
-        </div>
+      <div class="panel-card stack">
+        <p>Quelques minutes pour faire le point : l’autotest vous indique les thèmes à travailler en priorité et le niveau qui vous correspond.</p>
+        <p>Laissez-moi votre adresse e-mail, je vous l’envoie.</p>
+        <p><a class="btn btn-primary" href={autotestHref}>Recevoir l’autotest par e-mail</a></p>
+        <p class="note">L’autotest donne une première orientation pour choisir vos audios. Pour une analyse beaucoup plus précise, le <a href="/preparation-mentale#bilan">Bilan de vos ressources</a> est à préférer.</p>
       </div>
-      <script is:inline define:vars={{ titres: themes.map((t) => t.titre) }}>
-        (function () {
-          var form = document.getElementById('quiz');
-          var result = document.getElementById('quiz-result');
-          var list = document.getElementById('quiz-list');
-          var error = document.getElementById('quiz-error');
-          if (!form) return;
-          function niveau(score) { return score <= 5 ? 'débutant' : score <= 8 ? 'intermédiaire' : 'confirmé'; }
-          form.addEventListener('submit', function (e) {
-            e.preventDefault();
-            var scores = titres.map(function () { return 0; });
-            var missing = [];
-            form.querySelectorAll('.quiz-item').forEach(function (fs, i) {
-              var checked = fs.querySelector('input:checked');
-              fs.classList.toggle('is-missing', !checked);
-              if (!checked) missing.push(i + 1); else scores[+fs.dataset.theme] += +checked.value;
-            });
-            if (missing.length) {
-              error.textContent = 'Il reste ' + missing.length + (missing.length > 1 ? ' affirmations' : ' affirmation') + ' sans réponse' + (missing.length <= 5 ? ' (n° ' + missing.join(', ') + ').' : '.');
-              error.hidden = false;
-              form.querySelector('.is-missing input').focus();
-              return;
-            }
-            error.hidden = true;
-            var order = scores.map(function (s, i) { return [s, i]; }).sort(function (a, b) { return a[0] - b[0] || a[1] - b[1]; }).slice(0, 3);
-            list.innerHTML = '';
-            order.forEach(function (o) {
-              var li = document.createElement('li');
-              var span = document.createElement('span');
-              var strong = document.createElement('strong');
-              strong.textContent = titres[o[1]];
-              span.appendChild(strong);
-              span.appendChild(document.createTextNode(' : niveau ' + niveau(o[0])));
-              li.appendChild(span);
-              list.appendChild(li);
-            });
-            result.hidden = false;
-            result.focus();
-          });
-          form.addEventListener('change', function (e) {
-            var fs = e.target.closest('.quiz-item');
-            if (fs) fs.classList.remove('is-missing');
-          });
-          document.getElementById('quiz-reset').addEventListener('click', function () {
-            form.reset();
-            result.hidden = true;
-            form.querySelector('input').focus();
-          });
-        })();
-      </script>
     </div>
   </section>
 
@@ -160,16 +104,20 @@ const niveaux = [
     <div class="wrap">
       <div class="section-head">
         <h2>Les 12 thèmes</h2>
-        <p class="lead">Chaque thème est un audio d’environ 1 heure, décliné en trois niveaux.</p>
+        <p class="lead">Trois familles, douze audios d’environ 1 heure, chacun en trois niveaux. Vous vous reconnaissez dans une de ces questions ?</p>
       </div>
-      <ul class="atelier-list trio">
-        {themes.map((t) => (
-          <li class="glass">
-            <strong>{t.titre}</strong>
-            <span class="atelier-text">{t.texte}</span>
-          </li>
+      <div class="grid-3">
+        {familles.map((f) => (
+          <div class="panel-card stack">
+            <h3>{f.titre}</h3>
+            <ul class="family-list">
+              {f.themes.map((t) => (
+                <li><strong>{t.titre}</strong><span>{t.question}</span></li>
+              ))}
+            </ul>
+          </div>
         ))}
-      </ul>
+      </div>
     </div>
   </section>
 
@@ -241,6 +189,9 @@ const niveaux = [
           <a class="btn btn-glass" href={infoHref}>Poser une question</a>
         </div>
       </div>
+    </div>
+    <div class="wrap">
+      <p class="note" style="margin-top: 1.5rem">Les audios, l’autotest et leurs contenus sont protégés par le droit d’auteur. Toute reproduction, même partielle, est interdite.</p>
     </div>
   </section>
 </Base>
