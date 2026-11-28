@@ -1,7 +1,17 @@
 ---
 import Base from '../layouts/Base.astro';
 import PageHead from '../components/PageHead.astro';
-const outils = ['Techniques de coaching', 'PNL (Programmation Neuro-Linguistique)', 'Hypnose ériksonnienne', 'Thérapies brèves', 'Art du langage', 'Systémie', 'Relaxation', 'Contrôle respiratoire', 'Approche Neurocognitive et Comportementale', 'Préférences Motrices et Cognitives'];
+const outils = [
+  { titre: 'Le coaching', texte: 'les bonnes questions, pour que vous trouviez vos propres réponses' },
+  { titre: 'La PNL', texte: 'comprendre comment vous fonctionnez, et changer ce qui bloque' },
+  { titre: 'L’hypnose ériksonnienne', texte: 'accéder à vos ressources, en douceur' },
+  { titre: 'Les thérapies brèves', texte: 'avancer vite, sur ce qui compte pour vous' },
+  { titre: 'Le pouvoir des mots', texte: 'l’art du langage au service du changement' },
+  { titre: 'L’approche systémique', texte: 'vous regarder dans votre environnement : équipe, club, famille' },
+  { titre: 'La respiration et la relaxation', texte: 'calmer le corps pour libérer le mental' },
+  { titre: 'L’Approche Neurocognitive et Comportementale', texte: 'mieux comprendre votre stress et vos motivations' },
+  { titre: 'Les Préférences Motrices et Cognitives', texte: 'performer en respectant votre fonctionnement naturel' },
+];
 ---
 <Base
   title="Sabine Djaouane, coach et préparatrice mentale | Epsilon"
@@ -25,7 +35,7 @@ const outils = ['Techniques de coaching', 'PNL (Programmation Neuro-Linguistique
     <div class="wrap split">
       <img class="portrait sticky" src="/images/sabine-portrait-2.jpg" alt="Portrait de Sabine Djaouane" width="800" height="1200" />
       <div class="prose">
-        <p class="pull" id="parcours">Tout d'abord, je suis une passionnée !</p>
+        <p class="pull" id="parcours">Je suis une passionnée !</p>
         <p>
           Tout ce qui concerne les relations humaines, nos stratégies mentales, nos comportements, le sport me passionne ! C'est donc naturellement que je me suis dirigée vers le <a href="/coach-entreprise">coaching en entreprise</a> et la <a href="/preparation-mentale">préparation mentale</a>. Epsilon est né de ces deux passions.
         </p>
@@ -33,11 +43,14 @@ const outils = ['Techniques de coaching', 'PNL (Programmation Neuro-Linguistique
           Le sport fait aussi partie de ma vie : je suis ceinture noire de judo et j'ai été gardienne de hockey sur glace. Je connais la pression avant une compétition, le doute, et la concentration qu'il faut pour rester lucide quand tout s'accélère. Cette expérience, je la mets au service des sportifs que j'accompagne.
         </p>
         <p>
-          Coach professionnelle de dirigeants, de managers et de collaborateurs, préparatrice mentale pour sportifs, chefs d'entreprises, artistes et étudiants, formatrice en créativité &amp; communication, en management, en stratégie mentale, en PNL... J'ai passé 12 ans à la tête d'une PME, et je suis aussi chargée de projets RH : je m'occupe du déploiement d'un SIRH (système d'information des ressources humaines) dans un groupe de plus de 1&nbsp;000 salariés. Je connais donc de l'intérieur les contraintes des dirigeants, des services RH et de leurs équipes, et c'est ce qui nourrit mon accompagnement en entreprise.
+          Je suis coach professionnelle pour les dirigeants, les managers et les collaborateurs. Je suis aussi préparatrice mentale pour les sportifs, les chefs d'entreprise, les artistes et les étudiants. Et je forme à la créativité, à la communication, au management, à la stratégie mentale et à la PNL.
+        </p>
+        <p>
+          J'ai dirigé une PME pendant 12 ans. Aujourd'hui, je suis aussi chargée de projets RH : je m'occupe du déploiement d'un SIRH (système d'information des ressources humaines) dans un groupe de plus de 1&nbsp;000 salariés. Je connais donc de l'intérieur les contraintes des dirigeants, des services RH et des équipes. C'est ce qui nourrit mon accompagnement en entreprise.
         </p>
         <h2 id="outils">Mes outils</h2>
-        <ul class="tags">
-          {outils.map((o) => <li>{o}</li>)}
+        <ul class="outils">
+          {outils.map((o) => <li><strong>{o.titre}</strong> : {o.texte}</li>)}
         </ul>
         <h2 id="formation">Diplôme et certifications</h2>
         <div class="panel-card diploma">
@@ -52,7 +65,7 @@ const outils = ['Techniques de coaching', 'PNL (Programmation Neuro-Linguistique
           <li>Formation de formateur</li>
         </ul>
         <p>
-          J'ai été formée par des spécialistes mondialement reconnus dans ma profession, tels que Shelle Rose Charvet (Canada), Christina Hall (USA), Tony Robbins (USA), Christian Flèche (France), Maggy Philipps (USA), Robert Dilts (USA), Guillaume Poupard (France), Yancy DUFOUR (France), Nathalie CREPIN (France), Florence DELERUE (France)...
+          J'ai été formée par des spécialistes mondialement reconnus dans la profession, tels que Shelle Rose Charvet (Canada), Christina Hall (USA), Tony Robbins (USA), Christian Flèche (France), Maggy Philipps (USA), Robert Dilts (USA), Guillaume Poupard (France), Yancy DUFOUR (France), Nathalie CREPIN (France), Florence DELERUE (France)...
         </p>
         <p>
           Vous souhaitez avoir des informations ou obtenir un devis ? Contactez-moi par téléphone au <a href="tel:0670792463">06.70.79.24.63</a> ou via le formulaire de <a href="#contact">contact</a>.

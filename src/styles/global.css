@@ -499,3 +499,9 @@ ul, ol { margin: 0; padding-left: 1.2em; }
 .family-list li { display: grid; gap: 0.15rem; }
 .family-list strong { color: var(--ink); }
 .family-list span { color: var(--ink-soft); font-style: italic; line-height: 1.45; }
+
+/* À propos : les outils, présentés par ce qu'ils apportent */
+.outils { list-style: none; padding: 0; margin: 0; display: grid; gap: 0.7rem; }
+.outils li { position: relative; padding-left: 1.4rem; line-height: 1.5; color: var(--ink-soft); }
+.outils li::before { content: ""; position: absolute; left: 0.2rem; top: 0.6em; width: 0.45rem; height: 0.45rem; border-radius: 50%; background: var(--violet); }
+.outils strong { color: var(--ink); }
