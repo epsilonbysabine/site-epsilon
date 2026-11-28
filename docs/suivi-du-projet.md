@@ -80,4 +80,5 @@ Disponibles **courant janvier 2027**. Sabine enregistre elle-même les audios.
 - Autotest : **plus publié sur le site** (risque de copie). Il est envoyé par e-mail à qui le demande (bouton « Recevoir l'autotest par e-mail »). Le texte complet est dans un document privé Google Drive « Autotest – Audios de préparation mentale (réservé) », dossier « Epsilon by Sabine ». À terme : formulaire Wix + e-mail automatique.
 - Thèmes présentés par des questions, en 3 familles (Se préparer, Se maîtriser, Performer), sans détail de méthode. Mention « protégés par le droit d'auteur » en bas de la page.
 - Audios personnels, non transmissibles.
-- **À fournir** : prix des audios (à l'unité, par pack ?) ; outil de vente sécurisé (Wix : programme en ligne réservé aux membres, ou abonnement) ; formulaire d'inscription pour l'extrait gratuit.
+- Prix : **19 € l'audio, 50 € le pack de 3 audios au choix**.
+- **À fournir** : outil de vente sécurisé (Wix : programme en ligne réservé aux membres, ou abonnement) ; formulaire d'inscription pour l'extrait gratuit.
